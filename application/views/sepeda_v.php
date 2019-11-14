@@ -14,7 +14,7 @@
                                     <thead>
                                         <th>NO</th>
                                         <th>ID SEPEDA</th>
-                                        <th>ID PELANGGAN</th>
+                                        <th>ID PELANGGANN</th>
                                     	<th>NO POLISI</th>
                                     	<th>JENIS SEPEDA</th>
                                     	<th>MERK SEPEDA</th>
