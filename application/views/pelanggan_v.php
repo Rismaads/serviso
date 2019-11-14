@@ -39,7 +39,7 @@
                                 }
                                 ?>
 
-    <div class="modal" id="tambah">
+    <!-- <div class="modal" id="tambah">
         <div class="modal-dialog">
           <div class="modal-content">
           <div class="modal-header">
@@ -79,12 +79,12 @@
                                 <?php if($this->session->flashdata('pesan')!=null): ?>
       <div class="alert alert-danger"><?= $this->session->flashdata('pesan');?></div>
     <?php endif?>
-    </div>
+    </div> -->
   </div>
 </div>
 
 
-<div class="modal fade" id="update_pelanggan">
+<!-- <div class="modal fade" id="update_pelanggan">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -110,11 +110,13 @@
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+</div> -->
+
+<!-- /.modal -->
 
                             
 
-<script>
+<!-- <script>
   
   function tm_detail(id_pelanggan) {
     $.getJSON("<?=base_url()?>index.php/pelanggan/get_detail_pelanggan/"+id_pelanggan,function(data){
@@ -126,7 +128,7 @@
     });
   }
 
-</script>
+</script> -->
 
                             </div>
                         </div>
