@@ -10,7 +10,7 @@
                             <div class="content table-responsive table-full-width">
 
                                 <table class="table table-hover table-striped">
-                                <a href="#tambah" class="btn btn-primary" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> Tambah</a>                      
+                    
                                     <thead>
                                       <th>NO</th>
                                       <th>ID PELANGGAN</th>
@@ -33,7 +33,8 @@
                                 <td>'.$dt_pelanggan->nomer_hp.'</td>
                                 <td>'.$dt_pelanggan->email.'</td>
                                 <td>'.$dt_pelanggan->alamat.'</td>
-                               
+                      
+                                <a href="'.base_url('index.php/pelanggan/hapus_pelanggan/'.$dt_pelanggan->id_pelanggan).'" onclick="return confirm(\'anda yakin?\')" class="btn btn-danger">Delete</a></td>
                              </tr>';
                                 }
                                 ?>
