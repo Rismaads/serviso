@@ -12,8 +12,8 @@
                                 <table class="table table-hover table-striped">
                                 <a href="#tambah" class="btn btn-primary" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> Tambah</a>                      
                                     <thead>
-                                        <th>NO</th>
-                                        <th>ID PELANGGAN</th>
+                                      <th>NO</th>
+                                      <th>ID PELANGGAN</th>
                                     	<th>NAMA LENGKAP</th>
                                     	<th>NOMOR HP</th>
                                     	<th>EMAIL</th>
