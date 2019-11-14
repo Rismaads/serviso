@@ -33,8 +33,7 @@
                                 <td>'.$dt_pelanggan->nomer_hp.'</td>
                                 <td>'.$dt_pelanggan->email.'</td>
                                 <td>'.$dt_pelanggan->alamat.'</td>
-                                <td><a href="#update_pelanggan" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$dt_pelanggan->id_pelanggan.')">Update</a> 
-                                <a href="'.base_url('index.php/pelanggan/hapus_pelanggan/'.$dt_pelanggan->id_pelanggan).'" onclick="return confirm(\'anda yakin?\')" class="btn btn-danger">Delete</a></td>
+                               
                              </tr>';
                                 }
                                 ?>
