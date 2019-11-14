@@ -84,7 +84,7 @@
 
 
                                 <?php if($this->session->flashdata('pesan')!=null): ?>
-      <div class="alert alert-denger"><?= $this->session->flashdata('pesan');?></div>
+      <div class="alert alert-danger"><?= $this->session->flashdata('pesan');?></div>
     <?php endif?>
     </div>
   </div>
