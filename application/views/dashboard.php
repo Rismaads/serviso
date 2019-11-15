@@ -73,16 +73,17 @@
                 </li>
                 <li>
                 <a href="<?php echo base_url('index.php/sepeda')?>">
-                        <i class="pe-7s-news-paper"></i>
+                        <i class="pe-7s-bicycle"></i>
                         <p>Data Sepeda</p>
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>
+                <a href="<?php echo base_url('index.php/bengkel')?>">
+                <i class="pe-7s-tools"></i>
+                <p>Data Bengkel</p>   
+                </a>           
+                </li>                 
+                
                 <li>
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i>

@@ -23,4 +23,9 @@ class sepeda_m extends CI_Model {
       return $ql_masuk;
     }
 
+    public function hapus_sepeda($id_unit_sepeda)
+	{
+		return $this->db->where('id_unit_sepeda',$id_unit_sepeda)->delete('unit_sepeda');
+	}
+
 }

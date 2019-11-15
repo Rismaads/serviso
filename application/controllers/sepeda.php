@@ -89,16 +89,16 @@ class sepeda extends CI_Controller {
         
         }
         
-        public function hapus_pelanggan($id_pelanggan='')
+        public function hapus_sepeda($id_unit_sepeda='')
             {
-                $this->load->model('sepeda_m','pelanggan');
-                $hapus=$this->pelanggan->hapus_pelanggan($id_pelanggan);
+                $this->load->model('sepeda_m','sepeda');
+                $hapus=$this->sepeda->hapus_sepeda($id_unit_sepeda);
                 if($hapus){
                     $this->session->set_flashdata('pesan', 'sukses hapus data');
                     } else {
                         $this->session->set_flashdata('pesan', 'gagal hapus data');
                     }
-                    redirect(base_url('index.php/pelanggan'),'refresh');
+                    redirect(base_url('index.php/sepeda'),'refresh');
             }
 
             
