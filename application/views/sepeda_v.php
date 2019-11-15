@@ -15,7 +15,7 @@
                                         <th>NO</th>
                                         <th>ID SEPEDA</th>
                                         <th>ID PELANGGANN</th>
-                                    	<th>NO POLISI</th>
+                                    	<th>NOMOR POLISI</th>
                                     	<th>JENIS SEPEDA</th>
                                     	<th>MERK SEPEDA</th>
                                     	<th>KERUSAKAN</th>
@@ -51,15 +51,8 @@
           <div class="modal-body">
 
             <form action="<?php echo base_url('index.php/sepeda/add_sepeda') ?>" method="post">
-            ID Pelanggan
-            <select name="id_unit_sepeda" class="form-control">
-            <option></option>
-              <?php foreach ($data_sepeda as $sepeda): ?>
-                  <option value="<?=$sepeda->id_pelanggan?>"></option>
-              <?php endforeach ?>
-          </select>
            NOMOR POLISI
-            <input type="number" name="no_polisi" class="form-control"></br>
+            <input type="text" name="no_polisi" class="form-control"></br>
             JENIS SEPEDA
             <input type="text" name="jenis_sepeda" class="form-control"></br>
             MERK SEPEDA
@@ -102,15 +95,15 @@
         <form action="<?=base_url('index.php/pelanggan/update_sepeda')?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id_unit_sepeda" id="id_unit_sepeda">
           ID PELANGGAN 
-          <input id="id_unit_sepeda" type="text" name="id_unit_sepeda" class="form-control"><br>
+          <input id="id_pelanggan" type="text" name="id_pelanggan_edit" class="form-control"><br>
           Nomor POLISI
-          <input id="no_polisi" type="number" name="no_polisi" class="form-control"><br>
+          <input id="no_polisi" type="text" name="no_polisi_edit" class="form-control"><br>
           JENIS SEPEDA
-          <input id="jenis_sepeda" type="text" name="jenis_sepeda" class="form-control"><br>
+          <input id="jenis_sepeda" type="text" name="jenis_sepeda_edit" class="form-control"><br>
          MERK SEPEDA
-          <input id="merk_sepeda" type="text" name="merk_sepeda" class="form-control"><br>
+          <input id="merk_sepeda" type="text" name="merk_sepeda_edit" class="form-control"><br>
           KERUSAKAN
-          <input id="kerusakan" type="text" name="kerusakan" class="form-control"><br>
+          <input id="kerusakan" type="text" name="kerusakan_edit" class="form-control"><br>
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
         </form>
       </div>

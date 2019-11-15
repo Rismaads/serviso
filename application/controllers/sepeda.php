@@ -23,8 +23,6 @@ class sepeda extends CI_Controller {
 
         public function add_sepeda()
         {
-          $this->form_validation->set_rules('id_pelanggan','ID PELANGGAN', 'trim|required',
-          array('required' => 'Silahkan Isi Id Pelanggan'));
           $this->form_validation->set_rules('no_polisi','NOMOR POLISI', 'trim|required',
           array('required' => 'Silahkan Isi Nomor POLISI'));
           $this->form_validation->set_rules('jenis_sepeda','JENIS SEPEDA', 'trim|required',
@@ -62,28 +60,31 @@ class sepeda extends CI_Controller {
               public function update_sepeda()
               {
              
-                $this->form_validation->set_rules('nama_lengkap_edit','NAMA LENGKAP', 'trim|required');
+                $this->form_validation->set_rules('id_pelanggan_edit','NAMA LENGKAP', 'trim|required');
               
-                $this->form_validation->set_rules('nomer_hp_edit','NOMOR HP', 'trim|required');
+                $this->form_validation->set_rules('no_polisi_edit','NOMOR HP', 'trim|required');
               
-                $this->form_validation->set_rules('email_edit', 'EMAIL', 'trim|required');
+                $this->form_validation->set_rules('jenis_sepeda_edit', 'EMAIL', 'trim|required');
               
-                $this->form_validation->set_rules('alamat_edit','ALAMAT', 'trim|required');
+                $this->form_validation->set_rules('merk_sepeda_edit','ALAMAT', 'trim|required');
+
+                $this->form_validation->set_rules('kerusakan_edit','ALAMAT', 'trim|required');
+
               
                  
               
                 if ($this->form_validation->run() == FALSE) {
                   $this->session->set_flashdata('pesan', validation_errors());
-                  redirect(base_url('index.php/pelanggan'),'refresh');
+                  redirect(base_url('index.php/sepeda'),'refresh');
                 } else {
                   $this->load->model('sepeda_m');
-                  $proses_update=$this->sepeda_m->update_pelanggan();
+                  $proses_update=$this->sepeda_m->update_sepeda();
                   if($proses_update){
                     $this->session->set_flashdata('pesan', 'sukses update');
                   } else {
                     $this->session->set_flashdata('pesan', 'gagal update');
                   }
-                  redirect(base_url('index.php/pelanggan'),'refresh');
+                  redirect(base_url('index.php/sepeda'),'refresh');
                 }
         
         }
