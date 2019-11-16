@@ -65,7 +65,7 @@ class admin extends CI_Controller {
 				$this->session->set_flashdata('pesan', 'Ubah Data admin Berhasil!');
 				redirect('admin');
 		  
-			  }else{
+			   }else{
 				$this->session->set_flashdata('pesan', 'Ubah Data admin Gagal!');
 				redirect('admin');
 			  }

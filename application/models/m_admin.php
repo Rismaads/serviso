@@ -18,7 +18,7 @@ class m_admin extends CI_Model {
   return $ql_masuk;
 }
 
-public function detail_admin($id_admin)
+ public function detail_admin($id_admin)
 	{
 		return $this->db->where('id_admin',$id_pelanggan)->get('admin')->row();
 	}
