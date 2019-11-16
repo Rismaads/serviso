@@ -79,8 +79,8 @@
                 </li> -->
                 <li>
                 <a href="<?php echo base_url('index.php/sepeda')?>">
-                        <i class="pe-7s-bicycle"></i>
-                        <p>Data Sepeda</p>
+                        <i class="pe-7s-note2"></i>
+                        <p>Data Sepeda Pelanggan</p>
                     </a>
                 </li>
                 <li>
