@@ -59,7 +59,6 @@ class sepeda extends CI_Controller {
 
               public function update_sepeda()
               {
-             
                 $this->form_validation->set_rules('id_pelanggan_edit','NAMA LENGKAP', 'trim|required');
               
                 $this->form_validation->set_rules('no_polisi_edit','NOMOR HP', 'trim|required');
@@ -88,7 +87,6 @@ class sepeda extends CI_Controller {
                   }
                 
         }
-        
         public function hapus_sepeda($id_unit_sepeda='')
             {
                 $this->load->model('sepeda_m','sepeda');
