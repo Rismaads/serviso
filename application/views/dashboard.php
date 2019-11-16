@@ -60,6 +60,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="<?php echo base_url('index.php/level')?>">
+                        <i class="pe-7s-note2"></i>
+                        <p>Data Level</p>
+                    </a>
+                </li>
+                <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>
                         <p>User Profile</p>
