@@ -72,21 +72,21 @@ class sepeda extends CI_Controller {
 
               
                  
+                if($this->form_validation->run() == TRUE){
+
+                  if($this->sepeda_m->update_sepeda() == TRUE){
+                    $this->session->set_flashdata('pesan', 'Ubah Data Sepeda Berhasil!');
+                    redirect('sepeda');
               
-                if ($this->form_validation->run() == FALSE) {
-                  $this->session->set_flashdata('pesan', validation_errors());
-                  redirect(base_url('index.php/sepeda'),'refresh');
-                } else {
-                  $this->load->model('sepeda_m');
-                  $proses_update=$this->sepeda_m->update_sepeda();
-                  if($proses_update){
-                    $this->session->set_flashdata('pesan', 'sukses update');
-                  } else {
-                    $this->session->set_flashdata('pesan', 'gagal update');
+                  }else{
+                    $this->session->set_flashdata('pesan', 'Ubah Data Sepeda Gagal!');
+                    redirect('sepeda');
                   }
-                  redirect(base_url('index.php/sepeda'),'refresh');
-                }
-        
+                }else{
+                    $this->session->set_flashdata('pesan', validation_errors());
+                    redirect('sepeda');
+                  }
+                
         }
         
         public function hapus_sepeda($id_unit_sepeda='')

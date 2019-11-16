@@ -50,6 +50,13 @@ class bengkel extends CI_Controller {
 
 }
 
+public function get_detail_bengkel($id_bengkel='')
+{
+  $this->load->model('bengkel_m');
+  $data_detail=$this->bengkel_m->detail_bengkel($id_bengkel);
+  echo json_encode($data_detail);
+}
+
 public function update_bengkel()
 {
 

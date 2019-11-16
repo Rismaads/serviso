@@ -23,6 +23,19 @@ class sepeda_m extends CI_Model {
       return $ql_masuk;
     }
 
+    public function update_sepeda()
+	{
+		
+		$dt_up_sepeda=array(
+      'id_pelanggan'=>$this->input->post('id_pelanggan_edit'),
+      'no_polisi'=>$this->input->post('no_polisi_edit'),
+      'jenis_sepeda'=>$this->input->post('jenis_sepeda_edit'),
+      'merk_sepeda'=>$this->input->post('merk_sepeda_edit'),
+      'kerusakan'=>$this->input->post('kerusakan_edit'),
+		);
+	return $this->db->where('id_unit_sepeda',$this->input->post('id_unit_sepeda'))->update('unit_sepeda', $dt_up_sepeda);
+  }
+  
     public function hapus_sepeda($id_unit_sepeda)
 	{
 		return $this->db->where('id_unit_sepeda',$id_unit_sepeda)->delete('unit_sepeda');
