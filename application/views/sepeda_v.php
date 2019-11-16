@@ -14,7 +14,7 @@
                                     <thead>
                                         <th>NO</th>
                                         <th>ID SEPEDA</th>
-                                        <th>ID PELANGGANN</th>
+                                        <th>NAMA PELANGGANN</th>
                                     	<th>NOMOR POLISI</th>
                                     	<th>JENIS SEPEDA</th>
                                     	<th>MERK SEPEDA</th>
@@ -29,8 +29,7 @@
                                         echo '<tr>
                                 <td>'.$no.'</td>
                                 <td>'.$dt_sepeda->id_unit_sepeda.'</td>
-                                <td>'.$dt_sepeda->id_unit_sepeda.'</td>
-                                
+                                <td>'.$dt_sepeda->nama_pelanggan.'</td>
                                 <td>'.$dt_sepeda->no_polisi.'</td>
                                 <td>'.$dt_sepeda->jenis_sepeda.'</td>
                                 <td>'.$dt_sepeda->merk_sepeda.'</td>
@@ -51,7 +50,9 @@
           <div class="modal-body">
 
             <form action="<?php echo base_url('index.php/sepeda/add_sepeda') ?>" method="post">
-           NOMOR POLISI
+            NAMA PELANGGAN
+            <input type="text" name="nama_pelanggan" class="form-control"></br>
+             NOMOR POLISI
             <input type="text" name="no_polisi" class="form-control"></br>
             JENIS SEPEDA
             <input type="text" name="jenis_sepeda" class="form-control"></br>
@@ -94,8 +95,8 @@
       <div class="modal-body">
         <form action="<?=base_url('index.php/pelanggan/update_sepeda')?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id_unit_sepeda" id="id_unit_sepeda">
-          ID PELANGGAN 
-          <input id="id_pelanggan" type="text" name="id_pelanggan_edit" class="form-control"><br>
+          NAMA PELANGGAN 
+          <input id="nama_pelanggan" type="text" name="nama_pelanggan_edit" class="form-control"><br>
           Nomor POLISI
           <input id="no_polisi" type="text" name="no_polisi_edit" class="form-control"><br>
           JENIS SEPEDA
@@ -121,7 +122,7 @@
   function tm_detail(id_unit_sepeda) {
     $.getJSON("<?=base_url()?>index.php/sepeda/get_detail_sepeda/"+id_unit_sepeda,function(data){
         $("#id_unit_sepeda").val(data['id_unit_sepeda']);
-        $("#id_pelanggan").val(data['id_pelanggan']);
+        $("#nama_pelanggan").val(data['nama_pelanggan']);
         $("#no_polisi").val(data['no_polisi']);
         $("#jenis_sepeda").val(data['jenis_sepeda']);
         $("#merk_sepeda").val(data['merk_sepeda']);

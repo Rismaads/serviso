@@ -23,6 +23,8 @@ class sepeda extends CI_Controller {
 
         public function add_sepeda()
         {
+          $this->form_validation->set_rules('nama_pelanggan','NAMA PELANGGAN', 'trim|required',
+          array('required' => 'Silahkan Isi NAMA PELANGGAN'));
           $this->form_validation->set_rules('no_polisi','NOMOR POLISI', 'trim|required',
           array('required' => 'Silahkan Isi Nomor POLISI'));
           $this->form_validation->set_rules('jenis_sepeda','JENIS SEPEDA', 'trim|required',
@@ -59,15 +61,15 @@ class sepeda extends CI_Controller {
 
               public function update_sepeda()
               {
-                $this->form_validation->set_rules('id_pelanggan_edit','NAMA LENGKAP', 'trim|required');
+                $this->form_validation->set_rules('nama_pelanggan_edit','NAMA PELANGGAN', 'trim|required');
               
-                $this->form_validation->set_rules('no_polisi_edit','NOMOR HP', 'trim|required');
+                $this->form_validation->set_rules('no_polisi_edit','NOMOR POLISI', 'trim|required');
               
-                $this->form_validation->set_rules('jenis_sepeda_edit', 'EMAIL', 'trim|required');
+                $this->form_validation->set_rules('jenis_sepeda_edit', 'JENIS SEPEDA', 'trim|required');
               
-                $this->form_validation->set_rules('merk_sepeda_edit','ALAMAT', 'trim|required');
+                $this->form_validation->set_rules('merk_sepeda_edit','MERK SEPEDA', 'trim|required');
 
-                $this->form_validation->set_rules('kerusakan_edit','ALAMAT', 'trim|required');
+                $this->form_validation->set_rules('kerusakan_edit','KERUSAKAN', 'trim|required');
 
               
                  
