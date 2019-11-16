@@ -14,6 +14,8 @@ class sepeda_m extends CI_Model {
 	public function add_sepeda()
     {
       $arr['nama_pelanggan'] = $this->input->post('nama_pelanggan');
+      $arr['no_hp'] = $this->input->post('no_hp');
+      $arr['alamat'] = $this->input->post('alamat');
       $arr['no_polisi'] = $this->input->post('no_polisi');
       $arr['jenis_sepeda'] = $this->input->post('jenis_sepeda');
       $arr['merk_sepeda'] = $this->input->post('merk_sepeda');
@@ -28,6 +30,8 @@ class sepeda_m extends CI_Model {
 		
 		$dt_up_sepeda=array(
       'nama_pelanggan'=>$this->input->post('nama_pelanggan_edit'),
+      'no_hp'=>$this->input->post('no_hp_edit'),
+      'alamat'=>$this->input->post('alamat_edit'),
       'no_polisi'=>$this->input->post('no_polisi_edit'),
       'jenis_sepeda'=>$this->input->post('jenis_sepeda_edit'),
       'merk_sepeda'=>$this->input->post('merk_sepeda_edit'),
