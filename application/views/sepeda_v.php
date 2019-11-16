@@ -15,10 +15,12 @@
                                         <th>NO</th>
                                         <th>ID SEPEDA</th>
                                         <th>NAMA PELANGGANN</th>
-                                    	<th>NOMOR POLISI</th>
-                                    	<th>JENIS SEPEDA</th>
-                                    	<th>MERK SEPEDA</th>
-                                    	<th>KERUSAKAN</th>
+                                        <th>NO HP</th>
+                                        <th>ALAMAT</th>
+                                        <th>NOMOR POLISI</th>
+                                        <th>JENIS SEPEDA</th>
+                                        <th>MERK SEPEDA</th>
+                                        <th>KERUSAKAN</th>
                                         <th>ACTION</th>
                                     </thead>
                                 
@@ -30,6 +32,8 @@
                                 <td>'.$no.'</td>
                                 <td>'.$dt_sepeda->id_unit_sepeda.'</td>
                                 <td>'.$dt_sepeda->nama_pelanggan.'</td>
+                                <td>'.$dt_sepeda->no_hp.'</td>
+                                <td>'.$dt_sepeda->alamat.'</td>
                                 <td>'.$dt_sepeda->no_polisi.'</td>
                                 <td>'.$dt_sepeda->jenis_sepeda.'</td>
                                 <td>'.$dt_sepeda->merk_sepeda.'</td>
@@ -52,6 +56,10 @@
             <form action="<?php echo base_url('index.php/sepeda/add_sepeda') ?>" method="post">
             NAMA PELANGGAN
             <input type="text" name="nama_pelanggan" class="form-control"></br>
+            NO HP
+            <input type="text" name="no_hp" class="form-control"></br>
+             ALAMAT
+            <input type="text" name="alamat" class="form-control"></br>
              NOMOR POLISI
             <input type="text" name="no_polisi" class="form-control"></br>
             JENIS SEPEDA
@@ -97,6 +105,10 @@
           <input type="hidden" name="id_unit_sepeda" id="id_unit_sepeda">
           NAMA PELANGGAN 
           <input id="nama_pelanggan" type="text" name="nama_pelanggan_edit" class="form-control"><br>
+          NO HP
+          <input id="no_hp" type="text" name="no_hp_edit" class="form-control"><br>
+          Alamat
+          <input id="alamat" type="text" name="alamat_edit" class="form-control"><br>
           Nomor POLISI
           <input id="no_polisi" type="text" name="no_polisi_edit" class="form-control"><br>
           JENIS SEPEDA
@@ -123,6 +135,8 @@
     $.getJSON("<?=base_url()?>index.php/sepeda/get_detail_sepeda/"+id_unit_sepeda,function(data){
         $("#id_unit_sepeda").val(data['id_unit_sepeda']);
         $("#nama_pelanggan").val(data['nama_pelanggan']);
+        $("#no_hp").val(data['no_hp']);
+        $("#alamat").val(data['alamat']);
         $("#no_polisi").val(data['no_polisi']);
         $("#jenis_sepeda").val(data['jenis_sepeda']);
         $("#merk_sepeda").val(data['merk_sepeda']);
