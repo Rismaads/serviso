@@ -5,7 +5,7 @@ class m_login extends CI_Model {
 
 	public function cek_user()
 	{
-		$login_user = $this->db->join('level', 'level.id_level=admin.id_level')
+		$login_user = $this->db
 						->where('username', $this->input->post('username'))
 						->where('password', $this->input->post('password'))
 						->get('admin');

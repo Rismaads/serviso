@@ -21,7 +21,7 @@ class Login extends CI_Controller {
 
 			if ($this->form_validation->run() == TRUE) {
 				if($this->login->cek_user() == TRUE){
-					redirect('Dashboard','refresh');
+					redirect('dashboard_c','refresh');
 				} else {
 					$this->session->set_flashdata('notif', 'Login gagal');
 					redirect('Login','refresh');
@@ -32,7 +32,7 @@ class Login extends CI_Controller {
 			}
 
 		} else {
-			redirect('Dashboard','refresh');
+			redirect('dashboard_c','refresh');
 		}
 	}
 
