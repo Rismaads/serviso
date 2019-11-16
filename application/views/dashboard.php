@@ -14,7 +14,7 @@
 
     <!-- Bootstrap core CSS     -->
     <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
-
+ 
     <!-- Animation library for notifications   -->
     <link href="<?php echo base_url(); ?>/assets/css/animate.min.css" rel="stylesheet"/>
 
@@ -66,7 +66,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="<?php echo base_url('index.php/admin')?>">
                         <i class="pe-7s-user"></i>
                         <p>User Profile</p>
                     </a>
