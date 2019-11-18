@@ -1,24 +1,27 @@
-<div class="block-header">
-    <h2>Data Admin</h2>
-</div>
+<div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Striped Table with Hover</h4>
+                                <p class="category">Here is a subtitle for this table</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
 
-<div class="row clearfix">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="body">
-                <a href="#tambah" class="btn btn-primary" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> Tambah</a>                      
-                <table class="table table-hover table-striped">
-                    <tr>
-                        <th>NO</th>
+                                <table class="table table-hover table-striped">
+                                <a href="#tambah" class="btn btn-primary" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> Tambah</a>                      
+                                    <thead>
+                                    <th>NO</th>
                         <th>ID ADMIN</th>
                         <th>NAMA ADMIN</th>
                         <th>USERNAME</th>
                         <th>PASSWORD</th>
                         <th>ID LEVEL</th>
                         <th>AKSI</th>
-                    </tr>
-                   
-                    <?php 
+                                    </thead>
+                                
+                                    <?php 
                     $no=0;
                     foreach ($Data_admin1 as $dt_admin) {
                         $no++;
@@ -33,18 +36,7 @@
                              </tr>';
                     }
                     ?>
-                 </table>
 
-
-                <?php 
-                  if($this->session->flashdata('pesan')!=null){
-                    echo '<div class="alert alert-danger">'.$this->session->flashdata('pesan').'</div>';
-                  }
-                ?>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="modal fade" id="tambah">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -52,30 +44,44 @@
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <h4 class="modal-title">Tambah admin</h4>
       </div>
-      <div class="modal-body">
-        <form action="<?=base_url('index.php/admin/add_admin')?>" method="post" enctype="multipart/form-data">
-          Nama admin 
-          <input type="text" class="form-control" name="nama_admin">
-          <br>
-          Username 
-          <input type="text" class="form-control" name="username">
-          <br>
-         Password
-          <input type="text" class="form-control" name="password">
-          <br>
-          Level 
-          <input type="text" class="form-control" name="id_level">
-          <br>
-         
+          <div class="modal-body">
+
+          <form action="<?=base_url('index.php/admin/add_admin')?>" method="post" enctype="multipart/form-data">
+            NAMA ADMIN
+            <input type="text" name="nama_admin" class="form-control"></br>
+            USURNAME
+            <input type="text" name="username" class="form-control"></br>
+           PASSWORD
+            <input type="number" name="password" class="form-control"></br>
+            EMAIL
+            <input type="text" name="email" class="form-control"></br>
+            LEVEL
+            <input type="text" name="level" class="form-control"></br>
+            
+           
+            <br>
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
-        </form>
+      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+          </form>
+        </div>
+
+
+                                </table>
+
+
+
+                                <?php if($this->session->flashdata('pesan')!=null): ?>
+      <div class="alert alert-danger"><?= $this->session->flashdata('pesan');?></div>
+    <?php endif?>
+    </div>
+  </div>
+</div>
+
+
 
 <div class="modal fade" id="update_admin">
   <div class="modal-dialog">
@@ -103,10 +109,12 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-  
+
                             
 
 <script>
+  
+  <script>
   
   function tm_detail(id_admin) {
     $.getJSON("<?=base_url()?>index.php/admin/get_detail_admin/"+id_admin,function(data){
@@ -118,3 +126,46 @@
   }
 
 </script>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                               Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                </p>
+            </div>
+        </footer>
