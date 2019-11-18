@@ -103,7 +103,7 @@ class Nota extends CI_Controller {
                 } else {
                 $this->session->set_flashdata('pesan', 'gagal hapus data');
 				}
-				redirect(base_url('index.php/admin'),'refresh');
+				redirect(base_url('index.php/nota'),'refresh');
 		}
 	
 	}
