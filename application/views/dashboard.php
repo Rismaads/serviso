@@ -61,7 +61,7 @@
                 </li>
                 <li>
                     <a href="<?php echo base_url('index.php/level')?>">
-                        <i class="pe-7s-note2"></i>
+                        <i class="pe-7s-news-paper"></i>
                         <p>Data Level</p>
                     </a>
                 </li>
