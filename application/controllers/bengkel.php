@@ -30,8 +30,10 @@ class bengkel extends CI_Controller {
   array('required' => 'Silahkan Isi deskripsi'));
   $this->form_validation->set_rules('alamat','ALAMAT', 'trim|required',
   array('required' => 'Silahkan Isi Alamat'));
-  $this->form_validation->set_rules('jawal','JADWAL', 'trim|required',
+  $this->form_validation->set_rules('jadwal','JADWAL', 'trim|required',
   array('required' => 'Silahkan Isi Jadwal '));
+  $this->form_validation->set_rules('jam_tutup','JAM TUTUP', 'trim|required',
+  array('required' => 'Silahkan Isi Jam Tutup '));
 
   if ($this->form_validation->run() == TRUE)
   {
@@ -67,6 +69,8 @@ public function update_bengkel()
   $this->form_validation->set_rules('alamat_edit', 'ALAMAT', 'trim|required');
 
   $this->form_validation->set_rules('jadwal_edit','JADWAL', 'trim|required');
+
+  $this->form_validation->set_rules('jam_tutup_edit','JAM TUTUP', 'trim|required');
 
    
 
