@@ -3,9 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class m_nota extends CI_Model {
 
-	public function get_Data_nota()
+	public function get_nota()
 	{
-		return $this->db->get('nota')->result();
+		return $this->db->join('bengkel','bengkel.id_bengkel=nota.id_bengkel')->get('nota')->result();
 	}
 	public function add_nota()
 {
@@ -41,10 +41,6 @@ class m_nota extends CI_Model {
 	{
 		return $this->db->where('id_nota',$id_nota)->delete('nota');
 	}
-	public function get_level()
-	{
-		return $this->db->get('level')->result();
-		
-	}
+	
 }
 

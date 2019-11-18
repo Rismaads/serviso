@@ -88,6 +88,12 @@
                 <i class="pe-7s-tools"></i>
                 <p>Data Bengkel</p>   
                 </a>           
+                </li>
+                <li>
+                <a href="<?php echo base_url('index.php/Nota')?>">
+                <i class="pe-7s-news-paper"></i>
+                <p>Nota</p>   
+                </a>           
                 </li>                 
                 
                 <li>

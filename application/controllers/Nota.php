@@ -1,7 +1,7 @@
 <?PHP 
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
-class nota extends CI_Controller {
+class Nota extends CI_Controller {
 
 	
 	public function __construct()
@@ -14,8 +14,8 @@ class nota extends CI_Controller {
     public function index()
     {
 		$data['konten'] = "v_nota";
-        $this->load->model('m_nota', ' nota');
-        $data['nota1']=$this->Data_nota->get_nota();
+        $this->load->model('m_nota', 'knota');
+        $data['nota1']=$this->knota->get_nota();
         
         $this->load->view('dashboard', $data, FALSE);
     }
@@ -64,13 +64,13 @@ class nota extends CI_Controller {
 		  {
          
 		 
-            $this->form_validation->set_rules('tanggal_edit','Tanggal', 'trim|required',
+            // $this->form_validation->set_rules('tanggal_edit','Tanggal', 'trim|required');
             
-            $this->form_validation->set_rules('no_antrian_edit',' NO ANTRIAN', 'trim|required',
+            // $this->form_validation->set_rules('no_antrian_edit',' NO ANTRIAN', 'trim|required');
             
-            $this->form_validation->set_rules('id_bengkel_edit','ID BENGKEL', 'trim|required',
+            $this->form_validation->set_rules('id_bengkel_edit','ID BENGKEL', 'trim|required');
             
-            $this->form_validation->set_rules('jadwal_edit',' JADWAL', 'trim|required',
+            $this->form_validation->set_rules('jadwal_edit',' JADWAL', 'trim|required');
             
         
            
@@ -100,5 +100,12 @@ class nota extends CI_Controller {
 			$hapus=$this->nota->hapus_nota($id_nota);
 			if($hapus){
 				$this->session->set_flashdata('pesan', 'sukses hapus data');
-				} else {
-		
+                } else {
+                $this->session->set_flashdata('pesan', 'gagal hapus data');
+				}
+				redirect(base_url('index.php/admin'),'refresh');
+		}
+	
+	}
+	
+?>
