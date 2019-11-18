@@ -13,6 +13,8 @@ class admin extends CI_Controller {
 	
     public function index()
     {
+		
+		
 		$data['konten'] = "v_admin";
 		$data['data_level']=$this->ma->get_level();
         $this->load->model('m_admin', 'Data_admin');

@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>/assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>SERVISO</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                     <a href="<?php echo base_url('index.php/level')?>">
-                        <i class="pe-7s-note2"></i>
+                        <i class="pe-7s-news-paper"></i>
                         <p>Data Level</p>
                     </a>
                 </li>
@@ -96,12 +96,7 @@
                         <p>Maps</p>
                     </a>
                 </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
+               
 				
             </ul>
     	</div>

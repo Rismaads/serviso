@@ -4,8 +4,8 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Striped Table with Hover</h4>
-                                <p class="category">Here is a subtitle for this table</p>
+                            <h4 class="title">DATA SEPEDA PELANGGAN</h4>
+                                <p class="category">Data Sepeda Pelanggan Aplikasi Serviso</p>
                             </div>
                             <div class="content table-responsive table-full-width">
 

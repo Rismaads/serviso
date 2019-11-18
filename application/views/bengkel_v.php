@@ -4,8 +4,8 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Striped Table with Hover</h4>
-                                <p class="category">Here is a subtitle for this table</p>
+                            <h4 class="title">DATA BENGKEL</h4>
+                                <p class="category">Data Bengkel Aplikasi Serviso</p>
                             </div>
                             <div class="content table-responsive table-full-width">
 
@@ -17,7 +17,8 @@
                                       <th>NAMA BENGKEL</th>
                                     	<th>DESKRIPSI</th>
                                     	<th>ALAMAT</th>
-                                    	<th>JADWAL</th>
+                                      <th>JAM BUKA</th>
+                                      <th>JAM TUTUP</th>
                                     
                                         <th>ACTION</th>
                                     </thead>
@@ -34,6 +35,7 @@
                                 <td>'.$dt_bengkel->deskripsi.'</td>
                                 <td>'.$dt_bengkel->alamat.'</td>
                                 <td>'.$dt_bengkel->jadwal.'</td>
+                                <td>'.$dt_bengkel->jam_tutup.'</td>
                                 <td><a href="#update_bengkel" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$dt_bengkel->id_bengkel.')">Update</a> 
                                 <a href="'.base_url('index.php/bengkel/hapus_bengkel/'.$dt_bengkel->id_bengkel).'" onclick="return confirm(\'anda yakin ingin menghaus data?\')" class="btn btn-danger">Delete</a></td>
                              </tr>';
@@ -56,8 +58,11 @@
             <input type="text" name="deskripsi" class="form-control"></br>
            ALAMAT
             <input type="text" name="alamat" class="form-control"></br>
-           JADWAL
-            <input type="time" name="jadwal" class="form-control"></br>
+           JAM BUKA
+            <input type="datetime-local" name="jadwal" class="form-control"></br>
+            JAM TUTUP
+            <input type="datetime-local" name="jam_tutup" class="form-control"></br>
+            
            
            
             <br>
@@ -99,9 +104,12 @@
           <input id="deskripsi" type="text" name="deskripsi_edit" class="form-control"><br>
           ALAMAT
           <input id="alamat" type="text" name="alamat_edit" class="form-control"><br>
-         JADWAL
-          <input id="jadwal" type="date" name="jadwal_edit" class="form-control"><br>
+          JAM BUKA
+          <input id="jadwal" type="datetime-local" name="jadwal_edit" class="form-control"><br>
+          JAM TUTUP
+          <input id="jam_tutup" type="datetime-local" name="jam_tutup_edit" class="form-control"><br>
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
+
         </form>
       </div>
       <div class="modal-footer">
@@ -122,6 +130,7 @@
         $("#deskripsi").val(data['deskripsi']);
         $("#alamat").val(data['alamat']);
         $("#jadwal").val(data['jadwal']);
+        $("#jam_tutup").val(data['jam_tutup']);
     });
   }
 
