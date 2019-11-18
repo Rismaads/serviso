@@ -3,9 +3,18 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 
 class admin extends CI_Controller {
 
+	
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('m_admin','ma');
+		
+	}
+	
     public function index()
     {
-        $data['konten'] = "v_admin";
+		$data['konten'] = "v_admin";
+		$data['data_level']=$this->ma->get_level();
         $this->load->model('m_admin', 'Data_admin');
         $data['Data_admin1']=$this->Data_admin->get_Data_admin();
         

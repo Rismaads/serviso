@@ -11,7 +11,7 @@ class m_admin extends CI_Model {
 {
   $arr['nama_admin'] = $this->input->post('nama_admin');
   $arr['username'] = $this->input->post('username');
-  $arr['password'] = $this->input->post('password');
+  $arr['password'] = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
   $arr['id_level'] = $this->input->post('id_level');
  
   $ql_masuk=$this->db->insert('admin', $arr);
@@ -28,7 +28,7 @@ class m_admin extends CI_Model {
 		$dt_up_pelanggan=array(
       'nama_admin'=>$this->input->post('nama_admin_edit'),
       'username'=>$this->input->post('username_edit'),
-      'password'=>$this->input->post('password_edit')
+      'password'=> $this->input->post('password_edit')
       
 		);
 	return $this->db->where('id_admin',$this->input->post('id_admin'))->update('admin', $dt_up_admin);
@@ -36,6 +36,11 @@ class m_admin extends CI_Model {
 	public function hapus_admin($id_admin)
 	{
 		return $this->db->where('id_admin',$id_admin)->delete('admin');
+	}
+	public function get_level()
+	{
+		return $this->db->get('level')->result();
+		
 	}
 }
 

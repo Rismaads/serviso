@@ -25,6 +25,12 @@ class sepeda_m extends CI_Model {
       return $ql_masuk;
     }
 
+    public function detail_sepeda($id_unit_sepeda)
+    {
+        return $this->db->where('id_unit_sepeda', $id_unit_sepeda)->get('unit_sepeda')->row();
+        
+    }
+
     public function update_sepeda()
 	{
 		

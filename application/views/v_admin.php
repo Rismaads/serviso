@@ -52,11 +52,16 @@
             USURNAME
             <input type="text" name="username" class="form-control"></br>
            PASSWORD
-            <input type="number" name="password" class="form-control"></br>
+            <input type="password" name="password" class="form-control"></br>
             EMAIL
             <input type="text" name="email" class="form-control"></br>
             LEVEL
-            <input type="text" name="level" class="form-control"></br>
+            <select name="id_level" class="form-control">
+              <option></option>
+              <?php foreach ($data_level as $level): ?>
+                  <option value="<?=$level->id_level?>"><?=$level->nama_level?></option>
+              <?php endforeach ?>
+          </select>
             
            
             <br>
@@ -112,7 +117,7 @@
 
                             
 
-<script>
+
   
   <script>
   

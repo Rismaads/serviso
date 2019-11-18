@@ -57,7 +57,7 @@
            ALAMAT
             <input type="text" name="alamat" class="form-control"></br>
            JADWAL
-            <input type="date" name="jadwal" class="form-control"></br>
+            <input type="time" name="jadwal" class="form-control"></br>
            
            
             <br>
