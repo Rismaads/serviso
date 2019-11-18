@@ -62,15 +62,13 @@ class admin extends CI_Controller {
 		  
 			$this->form_validation->set_rules('username_edit','USERNAME', 'trim|required');
 		  
-			$this->form_validation->set_rules('passwordl_edit', 'PASSWORD', 'trim|required');
+			$this->form_validation->set_rules('password_edit', 'PASSWORD', 'trim|required');
+			// $this->form_validation->set_rules('id_level_edit', 'ID LEVEL', 'trim|required');
 		  
 		
-		  
-			 
-		  
 			if($this->form_validation->run() == TRUE){
-	
-			  if($this->m_admin->update_admin() == TRUE){
+			  
+				if($this->ma->update_admin() == TRUE){
 				$this->session->set_flashdata('pesan', 'Ubah Data admin Berhasil!');
 				redirect('admin');
 		  

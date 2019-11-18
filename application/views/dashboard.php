@@ -68,7 +68,7 @@
                 <li>
                     <a href="<?php echo base_url('index.php/admin')?>">
                         <i class="pe-7s-user"></i>
-                        <p>User Profile</p>
+                        <p>DATA ADMIN</p>
                     </a>
                 </li>
                 <!-- <li>

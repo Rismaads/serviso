@@ -98,12 +98,14 @@
       <div class="modal-body">
         <form action="<?=base_url('index.php/admin/update_admin')?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id_admin" id="id_admin">
-          Nama Admin
+          NAMA ADMIN
           <input id="nama_admin" type="text" name="nama_admin_edit" class="form-control"><br>
-          Userame
-          <input id="username" type="number" name="username_edit" class="form-control"><br>
-          Password
+         USERNAME
+          <input id="username" type="text" name="username_edit" class="form-control"><br>
+          PASSWORD
           <input id="password" type="text" name="password_edit" class="form-control"><br>
+          <!-- ID LEVEL
+          <input id="id_level" type="number" name="id_level_edit" class="form-control"><br> -->
         
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
         </form>

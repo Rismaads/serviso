@@ -20,16 +20,16 @@ class m_admin extends CI_Model {
 
  public function detail_admin($id_admin)
 	{
-		return $this->db->where('id_admin',$id_pelanggan)->get('admin')->row();
+		return $this->db->where('id_admin',$id_admin)->get('admin')->row();
 	}
 	public function update_admin()
 	{
 		
-		$dt_up_pelanggan=array(
+		$dt_up_admin=array(
       'nama_admin'=>$this->input->post('nama_admin_edit'),
       'username'=>$this->input->post('username_edit'),
       'password'=> $this->input->post('password_edit')
-      
+	//   'id_level'=> $this->input->post('id_level_edit'),
 		);
 	return $this->db->where('id_admin',$this->input->post('id_admin'))->update('admin', $dt_up_admin);
 	}
