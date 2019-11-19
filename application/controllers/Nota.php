@@ -14,6 +14,14 @@ class Nota extends CI_Controller {
     public function index()
     {
 		$data['konten'] = "v_nota";
+		$this->load->model('pelanggan_m', 'pel');
+		$data['data_pelanggan']=$this->pel->get_pelanggan();
+		$this->load->model('m_admin', 'adm');
+		$data['data_admin']=$this->adm->get_Data_admin();
+		$this->load->model('bengkel_m', 'beng');
+		$data['data_bengkel']=$this->beng->get_bengkel();
+		$this->load->model('sepeda_m', 'sep');
+		$data['data_unit_sepeda']=$this->sep->get_sepeda();
         $this->load->model('m_nota', 'knota');
         $data['nota1']=$this->knota->get_nota();
         

@@ -4,9 +4,8 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Striped Table with Hover</h4>
-                                <p class="category">Here is a subtitle for this table</p>
-                            </div>
+                                <h4 class="title">NOTA </h4>
+                                <p class="category">Data Nota Aplikasi Serviso
                             <div class="content table-responsive table-full-width">
 
                                 <table class="table table-hover table-striped">
@@ -55,19 +54,39 @@
 
           <form action="<?=base_url('index.php/nota/add_nota')?>" method="post" enctype="multipart/form-data">
             ID PELANGGAN
-            <input type="text" name="id_pelanggan" class="form-control"></br>
+            <select name="id_pelanggan" class="form-control">
+              <option></option>
+              <?php foreach ($data_pelanggan as $pelanggan): ?>
+                  <option value="<?=$pelanggan->id_pelanggan?>"><?=$pelanggan->nama_lengkap?></option>
+              <?php endforeach ?>
+          </select>
             TANGGAL
             <input type="datetime-local" name="tanggal" class="form-control"></br>
            NO ANTRIAN
             <input type="text" name="no_antrian" class="form-control"></br>
            ID BENGKEL
-            <input type="text" name="id_bengkel" class="form-control"></br>
+           <select name="id_bengkel" class="form-control">
+              <option></option>
+              <?php foreach ($data_bengkel as $bengkel): ?>
+                  <option value="<?=$bengkel->id_bengkel?>"><?=$bengkel->id_bengkel?></option>
+              <?php endforeach ?>
+          </select>
             JADWAL
             <input type="datetime-local" name="jadwal" class="form-control"></br>
-           ID UNIT SEPEDA
-            <input type="text" name="id_unit_sepeda" class="form-control"></br>
+           NAMA PELANGGAN
+           <select name="id_unit_sepeda" class="form-control">
+              <option></option>
+              <?php foreach ($data_unit_sepeda as $unit_sepeda): ?>
+                  <option value="<?=$unit_sepeda->id_unit_sepeda?>"><?=$unit_sepeda->nama_pelanggan?></option>
+              <?php endforeach ?>
+          </select>
            ID ADMIN
-           <input type="text" name="id_admin" class="form-control"></br>
+           <select name="id_admin" class="form-control">
+              <option></option>
+              <?php foreach ($data_admin as $admin): ?>
+                  <option value="<?=$admin->id_admin?>"><?=$admin->nama_admin?></option>
+              <?php endforeach ?>
+          </select>
             
            
             <br>
