@@ -60,7 +60,14 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                         <?php if ($this->session->userdata('login_user') == FALSE) : ?>
                          <li class="section-btn"><a href="#modal-form" data-toggle="modal" data-target="#modal-form">Sign in</a></li>
+
+                         <?php else : ?>
+
+                              <li><a href="<?php echo base_url('index.php/Login/logout') ?>"><i class="fa fa-sign-out"></i></a></li>
+
+                         <?php endif ; ?>
                     </ul>
                </div>
 
@@ -146,7 +153,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-4 col-sm-12">
                          <div class="about-image">
-                              <img src="images/about-image.jpg" class="img-responsive" alt="">
+                              <img src="<?php echo base_url(); ?>user/images/about-image.jpg" class="img-responsive" alt="">
                          </div>
                     </div>
                     
@@ -171,7 +178,7 @@ http://www.templatemo.com/tm-509-hydro
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image1.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 22, 2017</small>
@@ -186,7 +193,7 @@ http://www.templatemo.com/tm-509-hydro
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="images/blog-image2.jpg" class="img-responsive" alt=""></a>
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image2.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 18, 2017</small>
@@ -201,7 +208,7 @@ http://www.templatemo.com/tm-509-hydro
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="images/blog-image3.jpg" class="img-responsive" alt=""></a>
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image3.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 14, 2017</small>
@@ -216,7 +223,7 @@ http://www.templatemo.com/tm-509-hydro
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="images/blog-image4.jpg" class="img-responsive" alt=""></a>
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image4.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 10, 2017</small>
@@ -247,8 +254,8 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="images/work-image1.jpg" class="image-popup">
-                                   <img src="images/work-image1.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/work-image1.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/work-image1.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Clean &amp; Minimal</h3>
@@ -261,8 +268,8 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="images/work-image2.jpg" class="image-popup">
-                                   <img src="images/work-image2.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/work-image2.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/work-image2.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Studio Bag</h3>
@@ -275,8 +282,8 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="images/work-image3.jpg" class="image-popup">
-                                   <img src="images/work-image3.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/work-image3.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/work-image3.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Frame Design</h3>
@@ -289,8 +296,8 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="images/work-image4.jpg" class="image-popup">
-                                   <img src="images/work-image4.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/work-image4.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/work-image4.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Paint Work</h3>
