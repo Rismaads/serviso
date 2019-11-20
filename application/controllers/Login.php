@@ -21,24 +21,30 @@ class Login extends CI_Controller {
 
 			if ($this->form_validation->run() == TRUE) {
 				if($this->login->cek_user() == TRUE){
-					redirect('dashboard_c','refresh');
+
+					if ($this->session->userdata('id_level') == '2') {
+						redirect('dashboard_c','refresh');
+					}
+					elseif ($this->session->userdata('id_level') == '1') {
+						redirect('home_user', 'refresh');
+					
+					}
+					
 				} else {
 					$this->session->set_flashdata('notif', 'Login gagal');
-					redirect('Login','refresh');
+					redirect('home_user','refresh');
 				}
 			} else {
 				$this->session->set_flashdata('notif', validation_errors());
-					redirect('Login','refresh');
+					redirect('home_user','refresh');
 			}
 
-		} else {
-			redirect('dashboard_c','refresh');
 		}
 	}
 
 	public function logout(){
 		$this->session->sess_destroy();
-		redirect('Login');
+		redirect('home_user');
 	}
 
 }

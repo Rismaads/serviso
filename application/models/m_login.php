@@ -7,7 +7,7 @@ class m_login extends CI_Model {
 	{
 		$login_user = $this->db
 						->where('username', $this->input->post('username'))
-						->where('password', $this->input->post('password'))
+						->where('password', password_verify($this->input->post('password')))
 						->get('admin');
 	
 	if ($this->db->affected_rows()>0){
@@ -16,6 +16,7 @@ class m_login extends CI_Model {
 											'username' => $data->username,
 											'password' => $data->password,
 											'nama_level' => $data->nama_level,
+											'id_level' => $data->id_level,
 											'login_user' => true
 											);
 		$this->session->set_userdata($array);
