@@ -480,7 +480,7 @@ http://www.templatemo.com/tm-509-hydro
 
                                              <div role="tabpanel" class="tab-pane fade in" id="sign_in">
                                                   <form action="#" method="post">
-                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                       <input type="username" class="form-control" name="username" placeholder="Username" required>
                                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
                                                        <input type="submit" class="form-control" name="submit" value="Submit Button">
                                                        <a href="https://www.facebook.com/templatemo">Forgot your password?</a>
