@@ -97,9 +97,9 @@
                 </li>                 
                 
                 <li>
-                    <a href="maps.html">
+                    <a href="<?php echo base_url('index.php/Riwayat_transaksi')?>">
                         <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
+                        <p>Riwayat Transaksi</p>
                     </a>
                 </li>
                
