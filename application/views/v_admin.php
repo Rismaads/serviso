@@ -49,7 +49,7 @@
           <form action="<?=base_url('index.php/admin/add_admin')?>" method="post" enctype="multipart/form-data">
             NAMA ADMIN
             <input type="text" name="nama_admin" class="form-control"></br>
-            USURNAME
+            USERNAME
             <input type="text" name="username" class="form-control"></br>
            PASSWORD
             <input type="password" name="password" class="form-control"></br>
