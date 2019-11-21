@@ -23,10 +23,10 @@ class Login extends CI_Controller {
 				if($this->login->cek_user() == TRUE){
 
 					if ($this->session->userdata('id_level') == '2') {
-						redirect('dashboard_c','refresh');
+						 redirect('dashboard_c','refresh');
 					}
 					elseif ($this->session->userdata('id_level') == '1') {
-						redirect('home_user', 'refresh');
+						 redirect('home_user', 'refresh');
 					
 					}
 					

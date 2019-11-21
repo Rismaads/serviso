@@ -475,11 +475,9 @@ http://www.templatemo.com/tm-509-hydro
                                         <!-- TAB PANES -->
                                         <div class="tab-content">
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
-                                                  <form action="" method="post">
-                                                       <input type="text" class="form-control" name="nama" placeholder="Nama" required>
-                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
-                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                                       <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
+                                                  <form action="<?=base_url()?>index.php/Register/simpan_pelanggan" method="post">
+                                                       <input type="text" class="form-control" name="nama_admin" placeholder="Nama Lengkap" required>
+                                                       <input type="text" class="form-control" name="username" placeholder="Username" required>
                                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
                                                        <input type="submit" class="form-control" name="submit" value="Submit Button">
                                                   </form>
