@@ -29,7 +29,7 @@ class Register extends CI_Controller {
 				
 				 if ($this->form_validation->run() == TRUE) {
 					 # code...
-					 $this->load->model('m_pelanggan', 'level');
+					 $this->load->model('m_register', 'level');
 					 $masuk=$this->mr->masuk_db();
 					 if ($masuk==TRUE) {
 						 # code...
