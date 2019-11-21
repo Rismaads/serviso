@@ -6,8 +6,8 @@ class dashboard_c extends CI_Controller {
 	public function index()
 	{
 	
-		$data['konten']="dashboard";
-			$this->load->view('dashboard');
+		$data['konten']="home";
+			$this->load->view('dashboard',$data);
 		}
 			
 		
