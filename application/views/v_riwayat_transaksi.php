@@ -9,7 +9,7 @@
                             <div class="content table-responsive table-full-width">
 
                                 <table class="table table-hover table-striped">
-                                <a href="#tambah" class="btn btn-primary" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span> Tambah</a>                      
+                                                     
                                     <thead>
                                     <th>NO</th>
                                     <th>ID RIWAYAT TRANSAKSI</th>
@@ -25,12 +25,12 @@
                         $no++;
                         echo '<tr>
                                 <td>'.$no.'</td>
-                                <td>'.$tr->id_riwayat_transaksi.'</td>
-                                <td>'.$tr->id_pelanggan.'</td>
+                                <td>'.$tr->id_nota.'</td>
+                                <td>'.$tr->nama_pelanggan.'</td>
                                 <td>'.$tr->id_bengkel.'</td>
-                                <td>'.$tr->kerusakan.'</td>
+                                <td>'.$tr->keterangan.'</td>
                                
-                                <td><a href="#update_riwayat_transaksi" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$tr->id_riwayat_transaksi.')">Update</a>  <a href="'.base_url('index.php/Riwayat_transaksi/hapus_riwayat_transaksi/'.$tr->id_riwayat_transaksi).'" onclick="return confirm(\'anda yakin?\')" class="btn btn-danger">Delete</a></td>
+                                <td><a href="'.base_url('index.php/nota/hapus_nota/'.$tr->id_nota).'" onclick="return confirm(\'anda yakin?\')" class="btn btn-danger">Delete</a></td>
                              </tr>';
                     }
                     ?>
@@ -44,13 +44,13 @@
       </div>
           <div class="modal-body">
 
-          <form action="<?=base_url('index.php/riwayat_transaksi/add_riwayat_transaksi')?>" method="post" enctype="multipart/form-data">
+          <form action="<?=base_url('index.php/Riwayat_transaksi/add_nota')?>" method="post" enctype="multipart/form-data">
           
             ID PELANGGAN
-            <select name="id_pelanggan" class="form-control">
+            <select name="id_unit_sepeda" class="form-control">
               <option></option>
               <?php foreach ($data_pelanggan as $pelanggan): ?>
-                  <option value="<?=$pelanggan->id_pelanggan?>"><?=$pelanggan->nama_lengkap?></option>
+                  <option value="<?=$pelanggan->id_unit_sepeda?>"><?=$pelanggan->nama_pelanggan?></option>
               <?php endforeach ?>
           </select>
            
@@ -90,7 +90,7 @@
 
 
 
-<div class="modal fade" id="update_riwayat_transaksi">
+<div class="modal fade" id="update_nota">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -98,8 +98,8 @@
         <h4 class="modal-title">Update riwayat transaksi</h4>
       </div>
       <div class="modal-body">
-        <form action="<?=base_url('index.php/riwayat_transaksi/update_riwayat_transaksi')?>" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="id_riwayat_transaksi" id="id_riwayat_transaksi">
+        <form action="<?=base_url('index.php/Riwayat_transaksi/update_nota')?>" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id_nota" id="id_nota">
         
           Kerusakan
             <input type="text" name="kerusakan_edit" id="kerusakan_edit" class="form-control"></br>
@@ -121,9 +121,9 @@
   
   <script>
   
-  function tm_detail(id_riwayat_transaksi) {
-    $.getJSON("<?=base_url()?>index.php/riwayat_transaksi/get_detail_riwayat_transaksi/"+id_riwayat_transaksi,function(data){
-        $("#id_riwayat_transaksi").val(data['id_riwayat_transaksi']);
+  function tm_detail(id_nota) {
+    $.getJSON("<?=base_url()?>index.php/nota/get_detail_nota/"+id_nota,function(data){
+        $("#id_nota").val(data['id_nota']);
         $("#id_pelanggan").val(data['id_pelanggan']);
         $("#id_bengkel").val(data['id_bengkel']);
         $("#kerusakan_edit").val(data['kerusakan']);
