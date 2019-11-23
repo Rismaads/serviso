@@ -5,15 +5,14 @@ class m_nota extends CI_Model {
 
 	public function get_nota()
 	{
-		return $this->db->join('pelanggan','pelanggan.id_pelanggan=nota.id_pelanggan')
-						->join('bengkel','bengkel.id_bengkel=nota.id_bengkel')
+		return $this->db->join('bengkel','bengkel.id_bengkel=nota.id_bengkel')
 						->join('admin','admin.id_admin=nota.id_admin')
 						->join('unit_sepeda','unit_sepeda.id_unit_sepeda=nota.id_unit_sepeda')
 						->get('nota')->result();
 	}
 	public function add_nota()
 {
-  $arr['id_pelanggan'] = $this->input->post('id_pelanggan');
+  
   $arr['tanggal'] = $this->input->post('tanggal');
   $arr['no_antrian'] = $this->input->post('no_antrian');
   $arr['id_bengkel'] = $this->input->post('id_bengkel');

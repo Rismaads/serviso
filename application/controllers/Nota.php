@@ -14,8 +14,6 @@ class Nota extends CI_Controller {
     public function index()
     {
 		$data['konten'] = "v_nota";
-		$this->load->model('pelanggan_m', 'pel');
-		$data['data_pelanggan']=$this->pel->get_pelanggan();
 		$this->load->model('m_admin', 'adm');
 		$data['data_admin']=$this->adm->get_Data_admin();
 		$this->load->model('bengkel_m', 'beng');
@@ -29,8 +27,7 @@ class Nota extends CI_Controller {
     }
 	public function add_nota()
 	{
-     $this->form_validation->set_rules('id_pelanggan','ID PELANGGAN', 'trim|required',
-	  array('required' => 'Silahkan Isi ID PELANGGAN'));
+ 
 	  $this->form_validation->set_rules('tanggal','Tanggal', 'trim|required',
 	  array('required' => 'Silahkan Isi TANGGAL'));
 	  $this->form_validation->set_rules('no_antrian',' NO ANTRIAN', 'trim|required',

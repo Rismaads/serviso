@@ -13,7 +13,7 @@
                                     <thead>
                                     <th>NO</th>
                                     <th>ID NOTA</th>
-                                    <th>ID PELANGGAN</th>
+                                    <th>NAMA PELANGGAN</th>
                                     <th>TANGGAL</th>
                                     <th>NO ANTRIAN</th>
                                     <th>ID BENGKEL</th>
@@ -30,7 +30,7 @@
                         echo '<tr>
                                 <td>'.$no.'</td>
                                 <td>'.$dt_nota->id_nota.'</td>
-                                <td>'.$dt_nota->id_pelanggan.'</td>
+                                <td>'.$dt_nota->nama_pelanggan.'</td>
                                 <td>'.$dt_nota->tanggal.'</td>
                                 <td>'.$dt_nota->no_antrian.'</td>
                                 <td>'.$dt_nota->id_bengkel.'</td>
@@ -38,7 +38,7 @@
                                 <td>'.$dt_nota->id_unit_sepeda.'</td>
                                 <td>'.$dt_nota->id_admin.'</td>
                                
-                                <td><a href="#update_nota" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$dt_nota->id_nota.')">Update</a>  <a href="'.base_url('index.php/nota/hapus_nota/'.$dt_nota->id_nota).'" onclick="return confirm(\'anda yakin?\')" class="btn btn-danger">Delete</a></td>
+                                <td>  <a href="'.base_url('index.php/nota/hapus_nota/'.$dt_nota->id_nota).'" onclick="return confirm(\'anda yakin?\')" class="btn btn-danger">Delete</a></td>
                              </tr>';
                     }
                     ?>
@@ -53,13 +53,7 @@
           <div class="modal-body">
 
           <form action="<?=base_url('index.php/nota/add_nota')?>" method="post" enctype="multipart/form-data">
-            ID PELANGGAN
-            <select name="id_pelanggan" class="form-control">
-              <option></option>
-              <?php foreach ($data_pelanggan as $pelanggan): ?>
-                  <option value="<?=$pelanggan->id_pelanggan?>"><?=$pelanggan->nama_lengkap?></option>
-              <?php endforeach ?>
-          </select>
+           
             TANGGAL
             <input type="datetime-local" name="tanggal" class="form-control"></br>
            NO ANTRIAN
