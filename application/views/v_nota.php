@@ -4,7 +4,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">NOTA </h4>
+                                <h4 class="title">NOTA A</h4>
                                 <p class="category">Data Nota Aplikasi Serviso
                             <div class="content table-responsive table-full-width">
 
