@@ -15,6 +15,7 @@
                                       <th>NO</th>
                                       <th>ID BENGKEL</th>
                                       <th>NAMA BENGKEL</th>
+                                      <th>STOK</th>
                                     	<th>DESKRIPSI</th>
                                     	<th>ALAMAT</th>
                                       <th>JAM BUKA</th>
@@ -31,7 +32,7 @@
                                 <td>'.$no.'</td>
                                 <td>'.$dt_bengkel->id_bengkel.'</td>
                                 <td>'.$dt_bengkel->nama_bengkel.'</td>
-                                
+                                <td>'.$dt_bengkel->stok.'</td>
                                 <td>'.$dt_bengkel->deskripsi.'</td>
                                 <td>'.$dt_bengkel->alamat.'</td>
                                 <td>'.$dt_bengkel->jadwal.'</td>
@@ -54,6 +55,8 @@
             <form action="<?php echo base_url('index.php/bengkel/add_bengkel') ?>" method="post">
             NAMA BENGKEL
             <input type="text" name="nama_bengkel" class="form-control"></br>
+            STOK
+            <input type="text" name="stok" class="form-control"></br>
             DESKRIPSI
             <input type="text" name="deskripsi" class="form-control"></br>
            ALAMAT
@@ -100,6 +103,8 @@
           <input type="hidden" name="id_bengkel" id="id_bengkel">
           NAMA BENGKEL
           <input id="nama_bengkel" type="text" name="nama_bengkel_edit" class="form-control"><br>
+          STOK
+          <input id="stok" type="text" name="stok_edit" class="form-control"><br>
           DESKRIPSI
           <input id="deskripsi" type="text" name="deskripsi_edit" class="form-control"><br>
           ALAMAT
@@ -127,6 +132,7 @@
     $.getJSON("<?=base_url()?>index.php/bengkel/get_detail_bengkel/"+id_bengkel,function(data){
         $("#id_bengkel").val(data['id_bengkel']);
         $("#nama_bengkel").val(data['nama_bengkel']);
+        $("#stok").val(data['stok']);
         $("#deskripsi").val(data['deskripsi']);
         $("#alamat").val(data['alamat']);
         $("#jadwal").val(data['jadwal']);
