@@ -21,7 +21,7 @@ class Register extends CI_Controller {
     public function simpan_pelanggan(){
 		
 				$this->form_validation->set_rules('nama_admin', 'Nama Lengkap', 'trim|required|alpha',
-                array('required' => 'Nama Lengkap harus diisi'));
+                array('required' => 'nama Lengkap harus diisi'));
                 $this->form_validation->set_rules('username', 'Username', 'trim|required|alpha',
                 array('required' => 'Username harus diisi'));
                 $this->form_validation->set_rules('password', 'Password', 'trim|required|alpha',
