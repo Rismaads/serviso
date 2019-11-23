@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>WELCOME TO SERVISO</title>
+     <title>Welcome to Serviso</title>
 <!-- 
 Hydro Template 
 http://www.templatemo.com/tm-509-hydro
@@ -84,7 +84,7 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-6 col-sm-12">
                          <div class="home-info">
                               <h1>Kami adalah sebuah Website yang membuat hidup anda semakin mudah</h1>
-                              <a href="blog-detail.html" class="btn section-btn smoothScroll">About Us</a>
+                              <a href="<?php echo base_url(); ?>index.php/about_us" class="btn section-btn smoothScroll">About Us</a>
                               <span>
                                    Cepat dan terpercaya
                                    <small>Gunakan jasa kami dan anda tidak akan menyesal</small>
@@ -95,7 +95,7 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-6 col-sm-12">
                          <div class="home-video">
                               <div class="embed-responsive embed-responsive-16by9">
-                                   <iframe src="https://www.youtube.com/embed/u_tpis8b1ps" frameborder="0" allowfullscreen></iframe>
+                                   <iframe src="https://www.youtube.com/embed/-JSM3MTINTs" frameborder="0" allowfullscreen></iframe>
                               </div>
                          </div>
                     </div>
@@ -169,7 +169,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Our Blog</h2>
+                              <h2>Our Cooperation with Workshop </h2>
                               <span class="line-bar">...</span>
                          </div>
                     </div>
@@ -181,10 +181,10 @@ http://www.templatemo.com/tm-509-hydro
                                    <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image1.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> December 22, 2017</small>
-                                   <h3><a href="blog-detail.html">How To Find Out Beautiful Workspace.</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
+                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
+                                   <h3><a href="blog-detail.html">Jln. Danau Singkarak no. 30</a></h3>
+                                   <p>If you dont have so please register</p>
+                                   <!-- <a href="blog-detail.html" class="btn section-btn">Read article</a> -->
                               </div>
                          </div>
                     </div>
@@ -196,10 +196,10 @@ http://www.templatemo.com/tm-509-hydro
                                    <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image2.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> December 18, 2017</small>
-                                   <h3><a href="blog-detail.html">woman sportwear.</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
+                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
+                                   <h3><a href="blog-detail.html">Jln. Suhat no.45</a></h3>
+                                   <p>Then click menu pemesanan and please fill the identity of your motor </p>
+                                   <!-- <a href="blog-detail.html" class="btn section-btn">Read more</a> -->
                               </div>
                          </div>
                     </div>
@@ -211,10 +211,10 @@ http://www.templatemo.com/tm-509-hydro
                                    <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image3.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> December 14, 2017</small>
-                                   <h3><a href="blog-detail.html">new creative fashion.</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
+                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
+                                   <h3><a href="blog-detail.html"> Jln. Bululawang Raya no.25 </a></h3>
+                                   <p>Go to workshop menu then please adjust your schedule whatever you wqnt</p>
+                                   <!-- <a href="blog-detail.html" class="btn section-btn">Read article</a> -->
                               </div>
                          </div>
                     </div>
@@ -226,10 +226,10 @@ http://www.templatemo.com/tm-509-hydro
                                    <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image4.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> December 10, 2017</small>
-                                   <h3><a href="blog-detail.html">minimalist design trend in 2018.</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="blog-detail.html" class="btn section-btn">View Detail</a>
+                                   <small><i class="fa fa-clock-o"></i> Fourth </small>
+                                   <h3><a href="blog-detail.html"> Go to workshop </a></h3>
+                                   <p>Or contact them to pick up your motor if you too busy, please click this button to read more </p>
+                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
                               </div>
                          </div>
                     </div>
@@ -246,7 +246,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Our work</h2>
+                              <h2>Our Story</h2>
                               <span class="line-bar">...</span>
                          </div>
                     </div>
@@ -258,8 +258,9 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="<?php echo base_url(); ?>user/images/work-image1.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Clean &amp; Minimal</h3>
-                                        <small>Product Design</small>
+                                        <!-- <h3>Clean &amp; Minimal</h3> -->
+                                        <h3>Refanza Pradhipta</h3>
+                                        <small>This web is very help me</small>
                                    </div>
                               </a>
                          </div>
@@ -272,8 +273,8 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="<?php echo base_url(); ?>user/images/work-image2.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Studio Bag</h3>
-                                        <small>Branding</small>
+                                        <h3>Muhammad Fani</h3>
+                                        <small>I am a very lazy person... so this web is very help me to repair my motor without spending my time</small>
                                    </div>
                               </a>
                          </div>
@@ -286,8 +287,8 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="<?php echo base_url(); ?>user/images/work-image3.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Frame Design</h3>
-                                        <small>Photography</small>
+                                        <h3>Hafiyyan Faza</h3>
+                                        <small>Such a breakthrough things to help our daily activities</small>
                                    </div>
                               </a>
                          </div>
@@ -300,8 +301,8 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="<?php echo base_url(); ?>user/images/work-image4.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Paint Work</h3>
-                                        <small>Art, Design</small>
+                                        <h3>Raihan Ahnaf</h3>
+                                        <small>Say goodbye to spend our time waiting for the motor to be fixed</small>
                                    </div>
                               </a>
                          </div>
@@ -310,74 +311,6 @@ http://www.templatemo.com/tm-509-hydro
                </div>
           </div>
      </section>
-
-     <!-- CONTACT -->
-     <section id="contact" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title">
-                              <h2>Contact us</h2>
-                              <span class="line-bar">...</span>
-                         </div>
-                    </div>
-
-                    <div class="col-md-8 col-sm-8">
-                        
-                         <!-- CONTACT FORM HERE -->
-                         <form id="contact-form" role="form" action="#" method="post">
-                              <div class="col-md-6 col-sm-6">
-                                   <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
-                              </div>
-
-                              <div class="col-md-6 col-sm-6">
-                                   <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="cf-email" required="">
-                              </div>
-
-                              <div class="col-md-6 col-sm-6">
-                                   <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number" name="cf-number" required="">
-                              </div>
-
-                              <div class="col-md-6 col-sm-6">
-                                   <select class="form-control" id="cf-budgets" name="cf-budgets">
-                                        <option>Budget Level</option>
-                                        <option>$500 to $1,000</option>
-                                        <option>$1,000 to $2,200</option>
-                                        <option>$2,200 to $4,500</option>
-                                        <option>$4,500 to $7,500</option>
-                                        <option>$7,500 to $12,000</option>
-                                        <option>$12,000 or more</option>
-                                   </select>
-                              </div>
-
-                              <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>
-                              </div>
-
-                              <div class="col-md-4 col-sm-12">
-                                   <input type="submit" class="form-control" name="submit" value="Send Message">
-                              </div>
-
-                         </form>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                         <div class="google-map">
-	<!-- How to change your own map point
-            1. Go to Google Maps
-            2. Click on your location point
-            3. Click "Share" and choose "Embed map" tab
-            4. Copy only URL and paste it within the src="" field below
-	-->
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" allowfullscreen></iframe>
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
 
      <!-- FOOTER -->
      <footer data-stellar-background-ratio="0.5">
@@ -413,24 +346,33 @@ http://www.templatemo.com/tm-509-hydro
                               </ul>
                          </div>
                     </div>
-
-                    <div class="col-md-3 col-sm-4"> 
-                         <div class="footer-thumb"> 
-                              <h2>Find us</h2>
-                              <p>123 Grand Rama IX, <br> Krung Thep Maha Nakhon 10400</p>
+                    
+                    <div class="col-md-4 col-sm-4">
+                         <div class="map">
+                         <div class="google-map">
+	<!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" allowfullscreen></iframe>
                          </div>
-                    </div>                    
+
+                         </div>
+                         
+                    </div>                   
 
                     <div class="col-md-12 col-sm-12">
                          <div class="footer-bottom">
                               <div class="col-md-6 col-sm-5">
                                    <div class="copyright-text"> 
-                                        <p>Copyright &copy; 2017 Your Company</p>
+                                        <p>Copyright &copy; 2019 Your Company</p>
                                    </div>
                               </div>
                               <div class="col-md-6 col-sm-7">
                                    <div class="phone-contact"> 
-                                        <p>Call us <span>(+66) 010-020-0340</span></p>
+                                        <p> <span> </span></p>
                                    </div>
                                    <ul class="social-icon">
                                         <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
@@ -475,7 +417,7 @@ http://www.templatemo.com/tm-509-hydro
                                         <!-- TAB PANES -->
                                         <div class="tab-content">
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
-                                                  <form action="" method="post">
+                                                  <form action="#" method="post">
                                                        <input type="text" class="form-control" name="nama" placeholder="Nama" required>
                                                        <input type="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
                                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
@@ -486,7 +428,7 @@ http://www.templatemo.com/tm-509-hydro
                                              </div>
 
                                              <div role="tabpanel" class="tab-pane fade in" id="sign_in">
-                                                  <form action="<?=base_url()?>index.php/Login/login_cek" method="post">
+                                             <form action="<?=base_url()?>index.php/Login/login_cek" method="post">
                                                        <input type="username" class="form-control" name="username" placeholder="Username" required>
                                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
                                                        <input type="submit" class="form-control" name="submit" value="Submit Button">
@@ -503,9 +445,7 @@ http://www.templatemo.com/tm-509-hydro
                </div>
           </div>
      </section>
-     
 
-   
      <!-- SCRIPTS -->
      <script src="<?php echo base_url(); ?>user/js/jquery.js"></script>
      <script src="<?php echo base_url(); ?>user/js/bootstrap.min.js"></script>
