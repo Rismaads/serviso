@@ -37,19 +37,31 @@ class bengkel extends CI_Controller {
 
   if ($this->form_validation->run() == TRUE)
   {
-    $this->load->model('bengkel_m', 'bengkel');
-    $masuk=$this->bengkel->add_bengkel();
-    if($masuk==true){
-      $this->session->set_flashdata('pesan', 'Berhasil Masuk');
+    $config['upload_path'] = './assets/cover_bengkel/';
+				$config['allowed_types'] = 'gif|jpg|png';
+				$config['max_size'] = '2000000';
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('foto')){
+          if($this->bengkel_m->add_bengkel($this->upload->data()) == TRUE)
+          {
+      $this->session->set_flashdata('pesan', 'Berhasil Tambah Bengkel');
+      redirect('bengkel');
   }else {
-  $this->session->set_flashdata('pesan', 'Gagal Masuk');
+  $this->session->set_flashdata('pesan', 'Gagal Tambah Bengkel');
+  redirect('bengkel');
   }
-  redirect(base_url('index.php/bengkel'),'refresh');
+} else {
+    $this->session->set_flashdata('notif', 'Tambah Bengkel gagal upload');
+					redirect('bengkel');
+  
 
   }
+  } else {
   $this->session->set_flashdata('pesan', validation_errors());
-  redirect(base_url('index.php/bengkel'), 'refresh');
+  redirect(base_url('bengkel'), 'refresh');
 
+}
+  
 }
 
 public function get_detail_bengkel($id_bengkel='')
@@ -62,34 +74,15 @@ public function get_detail_bengkel($id_bengkel='')
 public function update_bengkel()
 {
 
-  $this->form_validation->set_rules('nama_bengkel_edit','NAMA BENGKEL', 'trim|required');
 
-  $this->form_validation->set_rules('stok_edit','STOK', 'trim|required');
+  if($this->bengkel_m->update_bengkel()){
+    $this->session->set_flashdata('pesan', 'Ubah Data bengkel Berhasil!');
+    redirect('bengkel');
 
-  $this->form_validation->set_rules('deskripsi_edit','DESKRIPSI', 'trim|required');
-
-  $this->form_validation->set_rules('alamat_edit', 'ALAMAT', 'trim|required');
-
-  $this->form_validation->set_rules('jadwal_edit','JADWAL', 'trim|required');
-
-  $this->form_validation->set_rules('jam_tutup_edit','JAM TUTUP', 'trim|required');
-
-   
-
-  if($this->form_validation->run() == TRUE){
-
-    if($this->bengkel_m->update_bengkel() == TRUE){
-      $this->session->set_flashdata('pesan', 'Ubah Data bengkel Berhasil!');
-      redirect('bengkel');
-
-    }else{
-      $this->session->set_flashdata('pesan', 'Ubah Data bengkel Gagal!');
-      redirect('bengkel');
-    }
   }else{
-      $this->session->set_flashdata('pesan', validation_errors());
-      redirect('bengkel');
-    }
+    $this->session->set_flashdata('pesan', 'Ubah Data bengkel Gagal!');
+    redirect('bengkel');
+  }
   
 
 }

@@ -15,6 +15,7 @@
                                       <th>NO</th>
                                       <th>ID BENGKEL</th>
                                       <th>NAMA BENGKEL</th>
+                                      <th>FOTO</th>
                                       <th>STOK</th>
                                     	<th>DESKRIPSI</th>
                                     	<th>ALAMAT</th>
@@ -32,6 +33,7 @@
                                 <td>'.$no.'</td>
                                 <td>'.$dt_bengkel->id_bengkel.'</td>
                                 <td>'.$dt_bengkel->nama_bengkel.'</td>
+                                <td><img src="'.base_url().'assets/cover_bengkel/'.$dt_bengkel->foto.'" width="50px" /></td>
                                 <td>'.$dt_bengkel->stok.'</td>
                                 <td>'.$dt_bengkel->deskripsi.'</td>
                                 <td>'.$dt_bengkel->alamat.'</td>
@@ -52,7 +54,7 @@
           </div>
           <div class="modal-body">
 
-            <form action="<?php echo base_url('index.php/bengkel/add_bengkel') ?>" method="post">
+            <form action="<?php echo base_url('index.php/bengkel/add_bengkel') ?>" method="post"  enctype="multipart/form-data">
             NAMA BENGKEL
             <input type="text" name="nama_bengkel" class="form-control"></br>
             STOK
@@ -62,10 +64,11 @@
            ALAMAT
             <input type="text" name="alamat" class="form-control"></br>
            JAM BUKA
-            <input type="datetime-local" name="jadwal" class="form-control"></br>
+            <input type="time" name="jadwal" class="form-control"></br>
             JAM TUTUP
-            <input type="datetime-local" name="jam_tutup" class="form-control"></br>
-            
+            <input type="time" name="jam_tutup" class="form-control"></br>
+            <input type="file" class="form-control" placeholder="Foto" name="foto">
+
            
            
             <br>
@@ -100,21 +103,26 @@
       </div>
       <div class="modal-body">
         <form action="<?=base_url('index.php/bengkel/update_bengkel')?>" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="id_bengkel" id="id_bengkel">
-          NAMA BENGKEL
-          <input id="nama_bengkel" type="text" name="nama_bengkel_edit" class="form-control"><br>
-          STOK
-          <input id="stok" type="text" name="stok_edit" class="form-control"><br>
-          DESKRIPSI
-          <input id="deskripsi" type="text" name="deskripsi_edit" class="form-control"><br>
-          ALAMAT
-          <input id="alamat" type="text" name="alamat_edit" class="form-control"><br>
-          JAM BUKA
-          <input id="jadwal" type="datetime-local" name="jadwal_edit" class="form-control"><br>
-          JAM TUTUP
-          <input id="jam_tutup" type="datetime-local" name="jam_tutup_edit" class="form-control"><br>
-          <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
-
+        <div class="modal-body">
+	        	<input type="hidden" name="ubah_id_bengkel"  id="ubah_id_bengkel">
+	        	<br>
+	        	<input type="text" class="form-control" placeholder="Stok" name="ubah_stok" id="ubah_stok">
+	        	<br>
+	        	<input type="text" class="form-control" placeholder="Deskripsi" name="ubah_deskripsi"  id="ubah_deskripsi">
+	        	<br>
+	        	<input type="text" class="form-control" placeholder="Alamat" name="ubah_alamat" id="ubah_alamat">
+	        	<br>
+	        	<input type="time" class="form-control" placeholder="Jam Buka" name="ubah_jadwal" id="ubah_jadwal">
+	        	<br>
+	        	<input type="time" class="form-control" placeholder="Jam Tutup" name="ubah_jam_tutup" id="ubah_jam_tutup">
+	        	<br>
+	        	<input type="text" class="form-control" placeholder="Nama Bengkel" name="ubah_nama_bengkel" id="ubah_nama_bengkel">
+	        	<br>
+           
+            <br>
+            <input type="file" class="form-control" placeholder="Foto" name="ubah_foto" id="data_foto"><br>
+            <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
+	      </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -126,17 +134,20 @@
 
                             
 
-<script>
+<script type="text/javascript">
   
   function tm_detail(id_bengkel) {
+    
+
     $.getJSON("<?=base_url()?>index.php/bengkel/get_detail_bengkel/"+id_bengkel,function(data){
-        $("#id_bengkel").val(data['id_bengkel']);
-        $("#nama_bengkel").val(data['nama_bengkel']);
-        $("#stok").val(data['stok']);
-        $("#deskripsi").val(data['deskripsi']);
-        $("#alamat").val(data['alamat']);
-        $("#jadwal").val(data['jadwal']);
-        $("#jam_tutup").val(data['jam_tutup']);
+      $("#ubah_id_bengkel").val(data.id_bengkel);
+			$("#ubah_stok").val(data.stok);
+			$("#ubah_deskripsi").val(data.deskripsi);
+			$("#ubah_alamat").val(data.alamat);
+			$("#ubah_jadwal").val(data.jadwal);
+			$("#ubah_jam_tutup").val(data.jam_tutup);
+			$("#ubah_nama_bengkel").val(data.nama_bengkel);
+			$("#data_foto").val(data.foto);
     });
   }
 
