@@ -1,13 +1,16 @@
 <?PHP 
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
-class admin extends CI_Controller {
+class Riwayat_transaksi extends CI_Controller {
 
 	
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('m_admin','ma');
+		$this->load->model('m_nota','ma');
+		$this->load->model('bengkel_m', 'beng');
+		$this->load->model('sepeda_m', 'sep');
+		$this->load->model('m_riwayat_transaksi', 'trans');
 		
 	}
 	
@@ -15,87 +18,58 @@ class admin extends CI_Controller {
     {
 		
 		
-		$data['konten'] = "v_admin";
-		$data['data_level']=$this->ma->get_level();
-        $this->load->model('m_admin', 'Data_admin');
-        $data['Data_admin1']=$this->Data_admin->get_Data_admin();
+		$data['konten'] = "v_riwayat_transaksi";
+		$data['data_bengkel']=$this->beng->get_bengkel();
+		$data['data_pelanggan']=$this->sep->get_sepeda();
+        $data['DataRiwayat']= $this->trans->get_Data_nota();
         
-        $this->load->view('dashboard', $data, FALSE);
+        $this->load->view('dashboard', $data);
     }
-	public function add_admin()
+	public function add_nota()
 	{
-	  $this->form_validation->set_rules('nama_admin','NAMA ADMIN', 'trim|required',
-	  array('required' => 'Silahkan Isi NAMA LENGKAP'));
-	  $this->form_validation->set_rules('username','USERNAME', 'trim|required',
-	  array('required' => 'Silahkan Isi USERNAME'));
-	  $this->form_validation->set_rules('password','PASSWORD', 'trim|required',
-	  array('required' => 'Silahkan Isi PASSWORD'));
-	  $this->form_validation->set_rules('id_level',' ID LEVEL', 'trim|required',
-	  array('required' => 'Silahkan Isi LEVEL'));
+	  
+	  $this->form_validation->set_rules('id_pelanggan','ID PELANGGAN', 'trim|required',
+	  array('required' => 'Silahkan Isi ID PELANGGAN'));
+	  $this->form_validation->set_rules('id_bengkel','ID BENGKEL', 'trim|required',
+	  array('required' => 'Silahkan Isi ID BENGKEL'));
+	  $this->form_validation->set_rules('kerusakan','KERUSAKAN', 'trim|required',
+	  array('required' => 'Silahkan Isi KERUSAKAN'));
 	
 	  if ($this->form_validation->run() == TRUE)
 	  {
-		$this->load->model('m_admin', 'admin');
-		$masuk=$this->admin->add_admin();
+		$this->load->model('m_Riwayat_transaksi', 'nota');
+		$masuk=$this->nota->add_nota();
 		if($masuk==true){
 		  $this->session->set_flashdata('pesan', 'Berhasil Masuk');
 	  }else {
 	  $this->session->set_flashdata('pesan', 'Gagal Masuk');
 	  }
-	  redirect(base_url('index.php/admin'),'refresh');
+	  redirect(base_url('index.php/Riwayat_transaksi'),'refresh');
 	
 	  }
 	  $this->session->set_flashdata('pesan', validation_errors());
-	  redirect(base_url('index.php/admin'), 'refresh');
+	  redirect(base_url('index.php/Riwayat_transaksi'), 'refresh');
 	
 	}
 	
-	public function get_detail_admin($id_admin='')
+	public function get_detail_nota($id_nota='')
 	{
-	  $this->load->model('m_admin');
-	  $data_detail=$this->m_admin->detail_admin($id_admin);
+	  $this->load->model('m_Riwayat_transaksi');
+	  $data_detail=$this->m_nota->detail_nota($id_nota);
 	  echo json_encode($data_detail);
 	}
 	
-		  public function update_admin()
-		  {
-		 
-			$this->form_validation->set_rules('nama_admin_edit','NAMA ADMIN', 'trim|required');
-		  
-			$this->form_validation->set_rules('username_edit','USERNAME', 'trim|required');
-		  
-			$this->form_validation->set_rules('password_edit', 'PASSWORD', 'trim|required');
-			// $this->form_validation->set_rules('id_level_edit', 'ID LEVEL', 'trim|required');
-		  
-		
-			if($this->form_validation->run() == TRUE){
-			  
-				if($this->ma->update_admin() == TRUE){
-				$this->session->set_flashdata('pesan', 'Ubah Data admin Berhasil!');
-				redirect('admin');
-		  
-			   }else{
-				$this->session->set_flashdata('pesan', 'Ubah Data admin Gagal!');
-				redirect('admin');
-			  }
-			}else{
-				$this->session->set_flashdata('pesan', validation_errors());
-				redirect('admin');
-			  }
-			
 	
-	}
-	
-	public function hapus_admin($id_admin='')
+	public function hapus_nota($id_nota='')
 		{
-			$this->load->model('m_admin','admin');
-			$hapus=$this->admin->hapus_admin($id_admin);
+			$this->load->model('m_Riwayat_transaksi','nota');
+			$hapus=$this->nota->hapus_nota($id_nota);
 			if($hapus){
 				$this->session->set_flashdata('pesan', 'sukses hapus data');
 				} else {
 					$this->session->set_flashdata('pesan', 'gagal hapus data');
 				}
-				redirect(base_url('index.php/admin'),'refresh');
+				redirect(base_url('index.php/Riwayat_transaksi'),'refresh');
 		}
 	
 	}

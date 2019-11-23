@@ -54,7 +54,7 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                <a href="<?php echo base_url('index.php/home_user')?>">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
@@ -180,7 +180,7 @@
                         <li>
                             <a href="<?php echo base_url('index.php/Login/logout') ?>">
                                 <p>Log out</p>
-                            </a>
+                            </a> 
                         </li>
 						<li class="separator hidden-lg"></li>
                     </ul>

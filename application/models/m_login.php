@@ -5,26 +5,22 @@ class m_login extends CI_Model {
 
 	public function cek_user()
 	{
-		$login_user = $this->db
-						->where('username', $this->input->post('username'))
-						->where('password', password_verify($this->input->post('password')))
-						->get('admin');
-	
-	if ($this->db->affected_rows()>0){
-		$data=$login_user->row();
-		$array = array('id_admin' => $data->id_admin,
-											'username' => $data->username,
-											'password' => $data->password,
-											'nama_level' => $data->nama_level,
-											'id_level' => $data->id_level,
+		$passwod = $this->input->post('password');
+		$user = $this->db->get_where('admin', ['username' => $this->input->post('username')])->row_array();
+		if (password_verify($passwod,$user['password'])) {
+			$array = array('id_admin' => $user['id_admin'],
+											'username' => $user['username'],
+											'password' => $user['password'],
+											'id_level' => $user['id_level'],
 											'login_user' => true
 											);
-		$this->session->set_userdata($array);
-		return true;
-	}
-	else{
-		return false;
-	}
+			$this->session->set_userdata($array);
+			return true;
+		} 
+		else 
+		{
+			return false;
+		}
   
   }
 
