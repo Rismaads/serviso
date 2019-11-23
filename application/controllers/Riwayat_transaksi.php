@@ -16,8 +16,6 @@ class Riwayat_transaksi extends CI_Controller {
 	
     public function index()
     {
-		
-		
 		$data['konten'] = "v_riwayat_transaksi";
 		$data['data_bengkel']=$this->beng->get_bengkel();
 		$data['data_pelanggan']=$this->sep->get_sepeda();
