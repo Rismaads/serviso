@@ -13,7 +13,7 @@
                                     <thead>
                                     <th>NO</th>
                                     <th>ID RIWAYAT TRANSAKSI</th>
-                                    <th>ID PELANGGAN</th>
+                                    <th>NAMA PELANGGAN</th>
                                     <th>ID BENGKEL</th>
                                     <TH>KERUSAKAN</th>
                                     <th>AKSI</th>
