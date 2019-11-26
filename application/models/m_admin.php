@@ -29,7 +29,7 @@ class m_admin extends CI_Model {
       'nama_admin'=>$this->input->post('nama_admin_edit'),
       'username'=>$this->input->post('username_edit'),
       'password'=> $this->input->post('password_edit')
-	//   'id_level'=> $this->input->post('id_level_edit'),
+	//   'id_level'=> $this->input->post('id_level_edit'3),
 		);
 	return $this->db->where('id_admin',$this->input->post('id_admin'))->update('admin', $dt_up_admin);
 	}
