@@ -110,20 +110,31 @@ http://www.templatemo.com/tm-509-hydro
                                    <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
                                    <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
                               </ul>
-                         <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
-                                  
-                         <div class="col-md-3 col-sm-6">
-                         <div class="section-title">
-                              <h2>Our Story</h2>
-                              <span class="line-bar">...</span>
+                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
+                              <div class="blog-social-share">
+                                   <h4>Share this article</h4>
+                                   <a href="https://www.facebook.com/templatemo" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
+                                   <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
+                                   <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>google plus</a>
+                              </div>
                          </div>
                     </div>
+                    
+               </div>
+          </div>
+     </section>
 
-                         
-                         <!-- WORK -->
+     <!-- WORK -->
      <section id="work" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Our Story</h2>
+                              <span class="line-bar">___</span>
+                         </div>
+                    </div>
 
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
@@ -166,13 +177,11 @@ http://www.templatemo.com/tm-509-hydro
                                    </div>
                               </a>
                          </div>
-                         </div>
                     </div>
-                    
+
                </div>
           </div>
      </section>
-
 
      <!-- FOOTER -->
      <footer data-stellar-background-ratio="0.5">

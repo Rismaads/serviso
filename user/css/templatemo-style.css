@@ -902,9 +902,32 @@ footer span,
   height: 50px;
 }
 
+.tab-pane form .form-control2{
+  border-radius: 5px;
+  border: 2px solid #c8c8c8;
+  background: transparent;
+  box-shadow: none;
+  margin: 15px 10px 10px 15px;
+  height: 35px;
+  width: 825px;
+}
+
+.tab-pane form .form-control2:hover,
+.tab-pane form .form-control2:focus {
+  border-color: #00a2ff;
+}
+
 .modal-dialog form .form-control:hover,
 .modal-dialog form .form-control:focus {
   border-color: #ffffff;
+}
+
+.tab-pane form input[type="submit"] {
+  background: #1100ff;
+  border-color: transparent;
+  border-radius: 50px;
+  color: #ffffff;
+  margin-top: 20px;
 }
 
 .modal-dialog form input[type="submit"] {
