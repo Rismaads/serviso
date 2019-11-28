@@ -76,7 +76,7 @@ public function update_bengkel()
 
 
   if($this->bengkel_m->update_bengkel()){
-    $this->session->set_flashdata('pesan', 'Ubah Data bengkel Berhasil!');
+    $this->session->set_flashdata('pesan', 'Ubah Data bengkel Berhasil!'  );
     redirect('bengkel');
 
   }else{

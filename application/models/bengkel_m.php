@@ -31,7 +31,7 @@ public function detail_bengkel($id_bengkel)
 	public function update_bengkel()
 	{
 		
-		if ($_FILES['cover_bengkel']['name']!="") 
+		if ($_FILES['ubah_foto']['name']!="") 
 		{
 			$config['upload_path'] = './assets/cover_bengkel/';
 			$config['allowed_types'] = 'gif|jpg|png|jpeg';
