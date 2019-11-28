@@ -78,5 +78,9 @@ public function detail_bengkel($id_bengkel)
 	{
 		return $this->db->where('id_bengkel',$id_bengkel)->delete('bengkel');
 	}
+	public function tampil_jadwal()
+	{
+		return $this->db->get('jadwal')->result();
+	}
 
 }
