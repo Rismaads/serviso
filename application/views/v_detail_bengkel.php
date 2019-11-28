@@ -286,6 +286,14 @@ http://www.templatemo.com/tm-509-hydro
                                                        <input type="text" class="form-control" name="nopol" placeholder="Nopol" required>
                                                        <input type="text" class="form-control" name="merek" placeholder="Merek Sepeda" required>
                                                        <input type="text" class="form-control" name="rusak" placeholder="Kerusakkan" required>
+                                                       <select name="jadwal" id="" class="form-control"> 
+                                                            <?php
+                                                                 foreach($jadwal as $jw)
+                                                                 {
+                                                                      echo '<option value="'.$jw->id_jadwal.'">'.$jw->jadwal.'-'.$jw->jadwal_selesai.' </option>';
+                                                                 }
+                                                            ?>
+                                                       </select>
                                                        <input type="telephone" class="form-control" name="telephon" placeholder="No Telepon" required>
                                                        <input type="address" class="form-control" name="alamat" placeholder="Alamat" required>
                                                        <input type="submit" class="form-control" name="submit" value="Submit Button">
