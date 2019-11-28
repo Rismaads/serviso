@@ -45,7 +45,7 @@ class bengkel extends CI_Controller {
           if($this->bengkel_m->add_bengkel($this->upload->data()) == TRUE)
           {
       $this->session->set_flashdata('pesan', 'Berhasil Tambah Bengkel');
-      redirect('bengkel');
+      redirect('/bengkel');
   }else {
   $this->session->set_flashdata('pesan', 'Gagal Tambah Bengkel');
   redirect('bengkel');

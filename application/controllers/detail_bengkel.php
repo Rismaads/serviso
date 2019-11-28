@@ -5,10 +5,10 @@ class detail_bengkel extends CI_Controller {
 	
 	public function index()
 	{
-	
-		
-			$this->load->view('v_detail_bengkel');
-		}
+		$this->load->model('bengkel_m','bm');
+		$data['jadwal']=$this->bm->tampil_jadwal();
+		$this->load->view('v_detail_bengkel',$data);
+	}
 			
 		
 			
