@@ -14,32 +14,25 @@
                                     <thead>
                                         <th>NO</th>
                                         <th>ID JADWAL</th>
-                                        <th>NAMA PELANGGANN</th>
-                                        <th>NO HP</th>
-                                        <th>ALAMAT</th>
-                                        <th>NOMOR POLISI</th>
-                                        <th>JENIS SEPEDA</th>
-                                        <th>MERK SEPEDA</th>
-                                        <th>KERUSAKAN</th>
+                                        <th>JAM MULAI SERVIS</th>
+                                        <th>JAM SELESAI SERVIS</th>
+                                        <th>ID BENGKEL</th>
                                         <th>ACTION</th>
                                     </thead>
                                 
                                     <?php 
                                      $no=0;
-                                 foreach ($arr as $dt_sepeda) {
+                                 foreach ($arr as $dt_jadwal) {
                                     $no++;
                                         echo '<tr>
                                 <td>'.$no.'</td>
-                                <td>'.$dt_sepeda->id_unit_sepeda.'</td>
-                                <td>'.$dt_sepeda->nama_pelanggan.'</td>
-                                <td>'.$dt_sepeda->no_hp.'</td>
-                                <td>'.$dt_sepeda->alamat.'</td>
-                                <td>'.$dt_sepeda->no_polisi.'</td>
-                                <td>'.$dt_sepeda->jenis_sepeda.'</td>
-                                <td>'.$dt_sepeda->merk_sepeda.'</td>
-                                <td>'.$dt_sepeda->kerusakan.'</td>
-                                <td><a href="#update_sepeda" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$dt_sepeda->id_unit_sepeda.')">Update</a> 
-                                <a href="'.base_url('index.php/sepeda/hapus_sepeda/'.$dt_sepeda->id_unit_sepeda).'" onclick="return confirm(\'anda yakin?\')" class="btn btn-danger">Delete</a></td>
+                                <td>'.$dt_jadwal->id_jadwal.'</td>
+                                <td>'.$dt_jadwal->jadwal_mulai.'</td>
+                                <td>'.$dt_jadwal->jadwal_selesai.'</td>
+                                <td>'.$dt_jadwal->id_bengkel.'</td>
+                              
+                                <td><a href="#update_jadwal" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$dt_jadwal->id_jadwal.')">Update</a> 
+                                <a href="'.base_url('index.php/jadwal/hapus_jadwal/'.$dt_jadwal->id_jadwal).'" onclick="return confirm(\'anda yakin?\')" class="btn btn-danger">Delete</a></td>
                              </tr>';
                                 }
                                 ?>
@@ -49,25 +42,22 @@
           <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="myModalLabel"> Tambah Unit Sepeda</h4>
+            <h4 class="modal-title" id="myModalLabel"> Tambah jadwal</h4>
           </div>
           <div class="modal-body">
 
-            <form action="<?php echo base_url('index.php/sepeda/add_sepeda') ?>" method="post">
-            NAMA PELANGGAN
-            <input type="text" name="nama_pelanggan" class="form-control"></br>
-            NO HP
-            <input type="text" name="no_hp" class="form-control"></br>
-             ALAMAT
-            <input type="text" name="alamat" class="form-control"></br>
-             NOMOR POLISI
-            <input type="text" name="no_polisi" class="form-control"></br>
-            JENIS SEPEDA
-            <input type="text" name="jenis_sepeda" class="form-control"></br>
-            MERK SEPEDA
-            <input type="text" name="merk_sepeda" class="form-control"></br>
-            KERUSAKAN
-            <input type="text" name="kerusakan" class="form-control"></br>
+            <form action="<?php echo base_url('index.php/jadwal/add_jadwal') ?>" method="post">
+            JAM MULAI SERVIS
+            <input type="time" name="jadwal_mulai" class="form-control"></br>
+            JAM SELESAI SERVIS
+            <input type="time" name="jadwal_selesai" class="form-control"></br>
+            ID BENGKEL
+           <select name="id_bengkel" class="form-control">
+              <option></option>
+              <?php foreach ($data_bengkel as $bengkel): ?>
+                  <option value="<?=$bengkel->id_bengkel?>"><?=$bengkel->id_bengkel?></option>
+              <?php endforeach ?>
+          </select>
             
            
             <br>
@@ -93,30 +83,23 @@
 </div>
 
 
-<div class="modal fade" id="update_sepeda">
+<div class="modal fade" id="update_jadwal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">Update Sepeda</h4>
+        <h4 class="modal-title">Update jadwal</h4>
       </div>
       <div class="modal-body">
-        <form action="<?=base_url('index.php/pelanggan/update_sepeda')?>" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="id_unit_sepeda" id="id_unit_sepeda">
-          NAMA PELANGGAN 
-          <input id="nama_pelanggan" type="text" name="nama_pelanggan_edit" class="form-control"><br>
-          NO HP
-          <input id="no_hp" type="text" name="no_hp_edit" class="form-control"><br>
-          Alamat
-          <input id="alamat" type="text" name="alamat_edit" class="form-control"><br>
-          Nomor POLISI
-          <input id="no_polisi" type="text" name="no_polisi_edit" class="form-control"><br>
-          JENIS SEPEDA
-          <input id="jenis_sepeda" type="text" name="jenis_sepeda_edit" class="form-control"><br>
-         MERK SEPEDA
-          <input id="merk_sepeda" type="text" name="merk_sepeda_edit" class="form-control"><br>
-          KERUSAKAN
-          <input id="kerusakan" type="text" name="kerusakan_edit" class="form-control"><br>
+        <form action="<?=base_url('index.php/jadwal/update_jadwal')?>" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id_jadwal" id="id_jadwal">
+          JAM MULAI SERVIS
+          <input id="jadwal_mulai" type="time" name="jadwal_mulai_edit" class="form-control"><br>
+          JAM SELESAI SERVIS
+          <input id="jadwal_selesai" type="time" name="jadwal_selesai_edit" class="form-control"><br>
+          ID BENGKEL
+          <input id="id_bengkel" type="TEXT" name="id_bengkel_edit" class="form-control"><br>
+         
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
         </form>
       </div>
@@ -131,16 +114,13 @@
 
 <script>
   
-  function tm_detail(id_unit_sepeda) {
-    $.getJSON("<?=base_url()?>index.php/sepeda/get_detail_sepeda/"+id_unit_sepeda,function(data){
-        $("#id_unit_sepeda").val(data['id_unit_sepeda']);
-        $("#nama_pelanggan").val(data['nama_pelanggan']);
-        $("#no_hp").val(data['no_hp']);
-        $("#alamat").val(data['alamat']);
-        $("#no_polisi").val(data['no_polisi']);
-        $("#jenis_sepeda").val(data['jenis_sepeda']);
-        $("#merk_sepeda").val(data['merk_sepeda']);
-        $("#kerusakan").val(data['kerusakan']);
+  function tm_detail(id_jadwal) {
+    $.getJSON("<?=base_url()?>index.php/jadwal/get_detail_jadwal/"+id_jadwal,function(data){
+        $("#id_jadwal").val(data['id_jadwal']);
+        $("#jadwal_mulai").val(data['jadwal_mulai']);
+        $("#jadwal_selesai").val(data['jadwal_selesai']);
+        $("#id_bengkel").val(data['id_bengkel']);
+       
     });
   }
 
