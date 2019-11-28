@@ -90,6 +90,13 @@
                 </a>           
                 </li>
                 <li>
+                <a href="<?php echo base_url('index.php/jadwal')?>">
+                        <i class="pe-7s-note2"></i>
+                        <p>Data Jadwal Servis</p>
+                    </a>
+                </li>
+                <li>
+                <li>
                 <a href="<?php echo base_url('index.php/Nota')?>">
                 <i class="pe-7s-news-paper"></i>
                 <p>Nota</p>   

@@ -20,6 +20,8 @@ http://www.templatemo.com/tm-509-hydro
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="<?php echo base_url(); ?>user/css/templatemo-style.css">
+
+     <script src="<?php echo base_url(); ?>user/js/jquery.js"></script>
 </head>
 <body>
 
@@ -61,7 +63,7 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                          <?php if ($this->session->userdata('login_user') == FALSE) : ?>
-                         <li class="section-btn"><a href="#modal-form" data-toggle="modal" data-target="#modal-form">Sign in</a></li>
+                         <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Sign in</a></li>
 
                          <?php else : ?>
 
@@ -173,67 +175,9 @@ http://www.templatemo.com/tm-509-hydro
                               <span class="line-bar">...</span>
                          </div>
                     </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="<?php echo base_url(); ?>index.php/abut"><img src="<?php echo base_url(); ?>user/images/blog-image1.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
-                                   <h3><a href="blog-detail.html">Jln. Danau Singkarak no. 30</a></h3>
-                                   <p>If you dont have so please register</p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
-                              </div>
-                         </div>
+                    <div id="tampil_bengkel">
+                         
                     </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image2.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
-                                   <h3><a href="blog-detail.html">Jln. Suhat no.45</a></h3>
-                                   <p>Then click menu pemesanan and please fill the identity of your motor </p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image3.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
-                                   <h3><a href="blog-detail.html"> Jln. Bululawang Raya no.25 </a></h3>
-                                   <p>Go to workshop menu then please adjust your schedule whatever you wqnt</p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image4.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <!-- <small><i class="fa fa-clock-o"></i> Fourth </small> -->
-                                   <h3><a href="blog-detail.html"> Go to workshop </a></h3>
-                                   <p>Or contact them to pick up your motor if you too busy, please click this button to read more </p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
-                              </div>
-                         </div>
-                    </div>
-                    
                </div>
           </div>
      </section>
@@ -448,12 +392,33 @@ http://www.templatemo.com/tm-509-hydro
      </section>
 
      <!-- SCRIPTS -->
-     <script src="<?php echo base_url(); ?>user/js/jquery.js"></script>
+     
      <script src="<?php echo base_url(); ?>user/js/bootstrap.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/jquery.stellar.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/jquery.magnific-popup.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/smoothscroll.js"></script>
      <script src="<?php echo base_url(); ?>user/js/custom.js"></script>
-
+     <script type="text/javascript">
+          $.getJSON("<?= base_url()?>index.php/home_user/get_bengkel",function(data){
+               var tampil="";
+               $.each(data,function(key,dt){
+                    tampil+=
+                    '<div class="col-md-6 col-sm-6">'+
+                              '<div class="media blog-thumb">'+
+                                   '<div class="media-object media-left">'+
+                                        '<a href="<?php echo base_url(); ?>index.php/abut"><img src="<?php echo base_url('assets/cover_bengkel/');?>'+dt['foto']+'" class="img-responsive" alt=""></a>'+
+                                   '</div>'+
+                                   '<div class="media-body blog-info">'+
+                                      
+                                        '<h3>'+dt['nama_bengkel']+'</h3>'+
+                                        '<p>'+dt['alamat']+'</p>'+
+                                        '<a href="<?php echo base_url(); ?>index.php/detail_bengkel" class="btn section-btn">Read article</a>'+
+                                   '</div>'+
+                              '</div>'+
+                         '</div>';
+               });
+               $('#tampil_bengkel').html(tampil);
+          });
+     </script>
 </body>
 </html>
