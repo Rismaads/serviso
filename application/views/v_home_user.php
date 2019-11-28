@@ -63,7 +63,7 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                          <?php if ($this->session->userdata('login_user') == FALSE) : ?>
-                         <li class="section-btn"><a href="#modal-form" data-toggle="modal" data-target="#modal-form">Sign in</a></li>
+                         <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Sign in</a></li>
 
                          <?php else : ?>
 
