@@ -53,7 +53,7 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">About</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#blog" class="smoothScroll">Blog</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#work" class="smoothScroll">Our Work</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#panggil" class="smoothScroll">Contacts</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user#contact" class="smoothScroll">Contacts</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -84,95 +84,110 @@ http://www.templatemo.com/tm-509-hydro
 
 
      <!-- BLOG DETAIL -->
-     <section id="blog-detail" data-stellar-background-ratio="0.5">
+     <section id="blog" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
 
-                    <div class="col-md-offset-1 col-md-10 col-sm-12">
-                         <!-- BLOG THUMB -->
-                         <div class="blog-detail-thumb">
-                              <div class="blog-image">
-                                   <img src="<?php echo base_url(); ?>user/images/blog-detail-image.jpg" class="img-responsive" alt="Blog Image">
-                              </div>
-                              <h2>What makes you happy everyday?</h2>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque</p>
-
-                              <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quisquam, aut, eum, natus excepturi impedit ipsa rerum ratione id dolores ducimus minus eos veniam similique.</blockquote>
-
-                              <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
-
-                              <div class="blog-ads">
-                                   <h4>Blog Sample Advertising</h4>
-                              </div>
-                              
-                              <ul>
-                                   <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
-                                   <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
-                                   <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
-                              </ul>
-                         <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
-                                  
-                         <div class="col-md-3 col-sm-6">
+                    <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Our Story</h2>
+                         <a href="<?php echo base_url(); ?>index.php/bengkel_user"><h2> Our Cooperation with Workshop </h2></a>
                               <span class="line-bar">...</span>
                          </div>
                     </div>
 
-                         
-                         <!-- WORK -->
-     <section id="work" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image1.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image1.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <!-- <h3>Clean &amp; Minimal</h3> -->
-                                        <h3>Refanza Pradhipta</h3>
-                                        <small>This web is very help me</small>
-                                   </div>
-                              </a>
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="<?php echo base_url(); ?>index.php/detail_bengkel"><img src="<?php echo base_url(); ?>user/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
+                                   <h3><a href="blog-detail.html">Jln. Danau Singkarak no. 30</a></h3>
+                                   <p>If you dont have so please register</p>
+                                   <a href="<?php echo base_url(); ?>index.php/detail_bengkel" class="btn section-btn">Read article</a>
+                              </div>
                          </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image2.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image2.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <h3>Muhammad Fani</h3>
-                                        <small>I am a very lazy person... so this web is very help me to repair my motor without spending my time</small>
-                                   </div>
-                              </a>
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image2.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
+                                   <h3><a href="blog-detail.html">Jln. Suhat no.45</a></h3>
+                                   <p>Then click menu pemesanan and please fill the identity of your motor </p>
+                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
+                              </div>
                          </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image3.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image3.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <h3>Hafiyyan Faza</h3>
-                                        <small>Such a breakthrough things to help our daily activities</small>
-                                   </div>
-                              </a>
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image3.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
+                                   <h3><a href="blog-detail.html"> Jln. Bululawang Raya no.25 </a></h3>
+                                   <p>Go to workshop menu then please adjust your schedule whatever you wqnt</p>
+                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
+                              </div>
                          </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image4.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <!-- <small><i class="fa fa-clock-o"></i> Fourth </small> -->
+                                   <h3><a href="blog-detail.html"> Go to workshop </a></h3>
+                                   <p>Or contact them to pick up your motor if you too busy, please click this button to read more </p>
+                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image4.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <!-- <small><i class="fa fa-clock-o"></i> Fourth </small> -->
+                                   <h3><a href="blog-detail.html"> Go to workshop </a></h3>
+                                   <p>Or contact them to pick up your motor if you too busy, please click this button to read more </p>
+                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image4.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <!-- <small><i class="fa fa-clock-o"></i> Fourth </small> -->
+                                   <h3><a href="blog-detail.html"> Go to workshop </a></h3>
+                                   <p>Or contact them to pick up your motor if you too busy, please click this button to read more </p>
+                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
+                              </div>
                          </div>
                     </div>
                     
                </div>
           </div>
      </section>
-
 
      <!-- FOOTER -->
      <footer data-stellar-background-ratio="0.5">

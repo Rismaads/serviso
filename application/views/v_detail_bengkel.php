@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Serviso - About Us</title>
+     <title>Serviso - Detail Bengkel</title>
 <!-- 
 Hydro Template 
 http://www.templatemo.com/tm-509-hydro
@@ -50,17 +50,16 @@ http://www.templatemo.com/tm-509-hydro
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#home" class="smoothScroll">Home</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">About</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#blog" class="smoothScroll">Blog</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#work" class="smoothScroll">Our Work</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#panggil" class="smoothScroll">Contacts</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">Workshop</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user#work" class="smoothScroll">Testimonials</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user#contact" class="smoothScroll">Contacts</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in / Join</a></li>
+                         <li class="section-btn" href="#" data-toggle="modal" data-target="#modal-form" ><a >Sign in</a></li>
                     </ul>
                </div>
 
@@ -110,62 +109,10 @@ http://www.templatemo.com/tm-509-hydro
                                    <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
                                    <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
                               </ul>
-                         <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
-                                  
-                         <div class="col-md-3 col-sm-6">
-                         <div class="section-title">
-                              <h2>Our Story</h2>
-                              <span class="line-bar">...</span>
-                         </div>
-                    </div>
-
-                         
-                         <!-- WORK -->
-     <section id="work" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image1.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image1.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <!-- <h3>Clean &amp; Minimal</h3> -->
-                                        <h3>Refanza Pradhipta</h3>
-                                        <small>This web is very help me</small>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image2.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image2.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <h3>Muhammad Fani</h3>
-                                        <small>I am a very lazy person... so this web is very help me to repair my motor without spending my time</small>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image3.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image3.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <h3>Hafiyyan Faza</h3>
-                                        <small>Such a breakthrough things to help our daily activities</small>
-                                   </div>
-                              </a>
-                         </div>
+                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
+                              <div class="blog-social-share"> 
+                                   <a class="section-btn2" data-toggle="modal" data-target="#modal-pesan" >Sign in</a>
+                              </div>
                          </div>
                     </div>
                     
@@ -305,6 +252,55 @@ http://www.templatemo.com/tm-509-hydro
                </div>
           </div>
      </section>
+
+     <!-- MODAL -->
+     <section class="modal fade" id="modal-pesan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+               <div class="modal-content modal-popup">
+
+                    <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+
+                    <div class="modal-body">
+                         <div class="container-fluid">
+                              <div class="row">
+
+                                   <div class="col-md-12 col-sm-12">
+                                        <div class="modal-title">
+                                             <h2>Reservation</h2>
+                                        </div>
+
+                                        <!-- NAV TABS -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Please fill your motorcycles data</a></li>
+                                        </ul>
+
+                                        <!-- TAB PANES -->
+                                        <div class="tab-content">
+                                             <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
+                                                  <form action="#" method="post">
+                                                       <input type="name" class="form-control" name="name" placeholder="Nama Lengkap" required>
+                                                       <input type="text" class="form-control" name="nopol" placeholder="Nopol" required>
+                                                       <input type="text" class="form-control" name="merek" placeholder="Merek Sepeda" required>
+                                                       <input type="text" class="form-control" name="rusak" placeholder="Kerusakkan" required>
+                                                       <input type="telephone" class="form-control" name="telephon" placeholder="No Telepon" required>
+                                                       <input type="address" class="form-control" name="alamat" placeholder="Alamat" required>
+                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
+                                                  </form>
+                                             </div>
+                                        </div>
+                                        </div>
+
+                                   </div>
+                              </div>
+                         </div>
+
+               </div>
+          </div>
+</section>
 
      <!-- SCRIPTS -->
      <script src="<?php echo base_url(); ?>user/js/jquery.js"></script>

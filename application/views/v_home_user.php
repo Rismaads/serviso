@@ -51,9 +51,9 @@ http://www.templatemo.com/tm-509-hydro
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="#home" class="smoothScroll">Home</a></li>
                          <!-- <li><a href="#about" class="smoothScroll">About</a></li> -->
-                         <li><a href="#blog" class="smoothScroll">Services</a></li>
+                         <li><a href="#blog" class="smoothScroll">Workshop</a></li>
                          <li><a href="#work" class="smoothScroll">Testimonials</a></li>
-                         <li><a href="#contact" class="smoothScroll">Contacts</a></li>
+                         <li><a href="#panggil" class="smoothScroll">Contacts</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -113,7 +113,7 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-5 col-sm-6">
                          <div class="about-info">
                               <div class="section-title">
-                                   <h2>Let us introduce</h2>
+                                   <h2>Our Guarantee</h2>
                                    <span class="line-bar">...</span>
                               </div>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
@@ -124,25 +124,25 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <div class="about-info skill-thumb">
 
-                              <strong>Web Design</strong>
+                              <strong>Fast</strong>
                                    <span class="pull-right">85%</span>
                                         <div class="progress">
                                              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
                                         </div>
 
-                              <strong>Photography</strong>
+                              <strong>Safe</strong>
                                    <span class="pull-right">90%</span>
                                         <div class="progress">
                                              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
                                         </div>
 
-                              <strong>Content Marketing</strong>
+                              <strong>Don't spend our time</strong>
                                    <span class="pull-right">75%</span>
                                         <div class="progress">
                                              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
                                         </div>
 
-                              <strong>CMS Admin</strong>
+                              <strong>Back like a new</strong>
                                    <span class="pull-right">70%</span>
                                         <div class="progress">
                                              <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
@@ -169,7 +169,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Our Cooperation with Workshop </h2>
+                         <a href="<?php echo base_url(); ?>index.php/bengkel_user"><h2> Our Cooperation with Workshop </h2></a>
                               <span class="line-bar">...</span>
                          </div>
                     </div>
@@ -178,13 +178,13 @@ http://www.templatemo.com/tm-509-hydro
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   <a href="<?php echo base_url(); ?>index.php/abut"><img src="<?php echo base_url(); ?>user/images/blog-image1.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
                                    <h3><a href="blog-detail.html">Jln. Danau Singkarak no. 30</a></h3>
                                    <p>If you dont have so please register</p>
-                                   <!-- <a href="blog-detail.html" class="btn section-btn">Read article</a> -->
+                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
                               </div>
                          </div>
                     </div>
@@ -199,7 +199,7 @@ http://www.templatemo.com/tm-509-hydro
                                    <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
                                    <h3><a href="blog-detail.html">Jln. Suhat no.45</a></h3>
                                    <p>Then click menu pemesanan and please fill the identity of your motor </p>
-                                   <!-- <a href="blog-detail.html" class="btn section-btn">Read more</a> -->
+                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
                               </div>
                          </div>
                     </div>
@@ -214,7 +214,7 @@ http://www.templatemo.com/tm-509-hydro
                                    <!-- <small><i class="fa fa-clock-o"></i>  </small> -->
                                    <h3><a href="blog-detail.html"> Jln. Bululawang Raya no.25 </a></h3>
                                    <p>Go to workshop menu then please adjust your schedule whatever you wqnt</p>
-                                   <!-- <a href="blog-detail.html" class="btn section-btn">Read article</a> -->
+                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
                               </div>
                          </div>
                     </div>
@@ -226,7 +226,7 @@ http://www.templatemo.com/tm-509-hydro
                                    <a href="blog-detail.html"><img src="<?php echo base_url(); ?>user/images/blog-image4.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> Fourth </small>
+                                   <!-- <small><i class="fa fa-clock-o"></i> Fourth </small> -->
                                    <h3><a href="blog-detail.html"> Go to workshop </a></h3>
                                    <p>Or contact them to pick up your motor if you too busy, please click this button to read more </p>
                                    <a href="blog-detail.html" class="btn section-btn">Read more</a>
@@ -313,7 +313,7 @@ http://www.templatemo.com/tm-509-hydro
      </section>
 
      <!-- FOOTER -->
-     <footer data-stellar-background-ratio="0.5">
+     <footer id="panggil" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
 
@@ -410,12 +410,22 @@ http://www.templatemo.com/tm-509-hydro
 
                                         <!-- NAV TABS -->
                                         <ul class="nav nav-tabs" role="tablist">
-                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create an account</a></li>
-                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
+                                             <li class="active"><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
+                                             <li><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create an account</a></li>
                                         </ul>
 
                                         <!-- TAB PANES -->
                                         <div class="tab-content">
+                                             
+                                        <div role="tabpanel" class="tab-pane fade in" id="sign_in">
+                                             <form action="<?=base_url()?>index.php/Login/login_cek" method="post">
+                                                       <input type="username" class="form-control" name="username" placeholder="Username" required>
+                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                       <input type="submit" class="form-control" name="submit" value="Submit">
+                                                       <a href="https://www.facebook.com/templatemo">Forgot your password?</a>
+                                                  </form>
+                                             </div>
+                                        
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
 
                                                   <form action="<?=base_url()?>index.php/Register/simpan_pelanggan" method="post">
@@ -426,14 +436,6 @@ http://www.templatemo.com/tm-509-hydro
                                                   </form>
                                              </div>
 
-                                             <div role="tabpanel" class="tab-pane fade in" id="sign_in">
-                                             <form action="<?=base_url()?>index.php/Login/login_cek" method="post">
-                                                       <input type="username" class="form-control" name="username" placeholder="Username" required>
-                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit" value="Submit">
-                                                       <a href="https://www.facebook.com/templatemo">Forgot your password?</a>
-                                                  </form>
-                                             </div>
                                         </div>
                                    </div>
 

@@ -43,7 +43,7 @@ http://www.templatemo.com/tm-509-hydro
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="<?php echo base_url(); ?>index.php/home_user" class="navbar-brand">Serviso</a>
+                    <a href="<?php echo base_url(); ?>index.php/home_user" class="navbar-brand">Hydro</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -53,14 +53,14 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">About</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#blog" class="smoothScroll">Blog</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#work" class="smoothScroll">Our Work</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#panggil" class="smoothScroll">Contacts</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user#contact" class="smoothScroll">Contacts</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in / Join</a></li>
+                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in</a></li>
                     </ul>
                </div>
 
@@ -110,62 +110,13 @@ http://www.templatemo.com/tm-509-hydro
                                    <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
                                    <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
                               </ul>
-                         <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
-                                  
-                         <div class="col-md-3 col-sm-6">
-                         <div class="section-title">
-                              <h2>Our Story</h2>
-                              <span class="line-bar">...</span>
-                         </div>
-                    </div>
-
-                         
-                         <!-- WORK -->
-     <section id="work" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image1.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image1.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <!-- <h3>Clean &amp; Minimal</h3> -->
-                                        <h3>Refanza Pradhipta</h3>
-                                        <small>This web is very help me</small>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image2.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image2.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <h3>Muhammad Fani</h3>
-                                        <small>I am a very lazy person... so this web is very help me to repair my motor without spending my time</small>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image3.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image3.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <h3>Hafiyyan Faza</h3>
-                                        <small>Such a breakthrough things to help our daily activities</small>
-                                   </div>
-                              </a>
-                         </div>
+                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
+                              <div class="blog-social-share">
+                                   <h4>Share this article</h4>
+                                   <a href="https://www.facebook.com/templatemo" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
+                                   <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
+                                   <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>google plus</a>
+                              </div>
                          </div>
                     </div>
                     
@@ -181,7 +132,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-5 col-sm-12">
                          <div class="footer-thumb footer-info"> 
-                              <h2>Serviso</h2>
+                              <h2>Hydro Company</h2>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                          </div>
                     </div>
@@ -266,7 +217,7 @@ http://www.templatemo.com/tm-509-hydro
 
                                    <div class="col-md-12 col-sm-12">
                                         <div class="modal-title">
-                                             <h2>Serviso</h2>
+                                             <h2>Hydro Co</h2>
                                         </div>
 
                                         <!-- NAV TABS -->

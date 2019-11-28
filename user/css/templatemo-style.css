@@ -120,6 +120,19 @@ a:hover, a:active, a:focus {
   transition: 0.5s;
 }
 
+.section-btn2 {
+  background: #0ce0b2;
+  border: 0;
+  border-radius: 100px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 15px 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .section-btn:hover,
 .section-btn:focus {
   background: #00F260;  /* fallback for old browsers */
@@ -127,6 +140,15 @@ a:hover, a:active, a:focus {
   background: linear-gradient(to right, #ABDCFF, #736EFE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-color: transparent;
   color: #393939;
+}
+
+.section-btn2:hover,
+.section-btn2:focus {
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ABDCFF, #736EFE);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ABDCFF, #736EFE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-color: transparent;
+  color: #ffffff;
 }
 
 .overlay {
@@ -573,6 +595,8 @@ section {
   color: #ffffff;
 }
 
+
+
 .blog-thumb ul {
   margin: 32px 12px 22px 0px;
 }
@@ -634,8 +658,8 @@ section {
 
 #contact {
   background: #00F260;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #ABDCFF, #736EFE);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ABDCFF, #736EFE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #contact .section-title h2 {
