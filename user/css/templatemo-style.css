@@ -133,6 +133,15 @@ a:hover, a:active, a:focus {
   transition: 0.5s;
 }
 
+.your_id2{
+  background-color: #e7d3c8;
+  color: #615956;
+  width: 280px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
 .section-btn:hover,
 .section-btn:focus {
   background: #00F260;  /* fallback for old browsers */

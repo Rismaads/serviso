@@ -100,141 +100,32 @@ http://www.templatemo.com/tm-509-hydro
     </aside><!-- /.blog-sidebar -->
 
     <div class="col-md-9 blog-main">
-      <a href="index.php?pages=histori" class="btn btn-add mt-5" style="color:#615956;"> < </a>
+      <!-- <a href="index.php?pages=histori" class="btn btn-add mt-5" style="color:#615956;"> < </a> -->
       <!-- <h3 class=" mt-4">
         Detail Histori
       </h3> -->
 
-        <h5 class="your_id2">YOUR ID ORDER KC1234567</h5>
+        <h5 class="your_id2">YOUR ID RESERVATION KC1234567</h5>
           <div class="row">
             <div class="col-md-4">
               <div class="body-checkout">
-                <p>Order Date</p>
-                <p>Status</p>
-                <p>Total</p>
-                <p>Delivery/Pickup Date</p>
+                <p>No. Antrian</p>
+                <p>Tanggal</p>
+                <p>Jadwal</p>
+                <p>Unit Sepeda</p>
+                <p>Keterangan</p>
               </div>
             </div>
             <div class="col-md-8">
               <div class="body-checkout">
-                <p>12 Juli 2019</p>
-                <p>PENDING</p>
-                <p>Rp.50.000</p>
-                <p>13 Juli 2019</p>
+                <p>26</p>
+                <p>13-11-19</p>
+                <p>14:00-15:00</p>
+                <p>3214</p>
+                <p>Rusak serusak rusaknya</p>
               </div>
             </div>
           </div>
-          <h5 class="font-weight-bold mt-4 mb-3" >BILLING INFORMATION</h5>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="body-checkout">
-                <p>Name</p>
-                <p>Username</p>
-                <p>Address</p>
-                <p>City</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="body-checkout mb-5">
-                <p>Tini Wini Biti</p>
-                <p>Tini</p>
-                <p>JL Danau Ranau</p>
-                <p>Malang</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="body-checkout">
-                <p>Phone Number</p>
-                <p>Email</p>
-                <p>Province</p>
-                <p>Sub-district</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="body-checkout">
-                <p>0813364298342</p>
-                <p>tini@gmail.com</p>
-                <p>Jawa Timur</p>
-                <p>Malang</p>
-              </div>
-            </div>
-          </div>
-
-          <h5 class="font-weight-bold  mb-3" >SHIPPING INFORMATION</h5>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="body-checkout">
-                <p>Name</p>
-                <p>Username</p>
-                <p>Address</p>
-                <p>City</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="body-checkout mb-5">
-                <p>Tini Wini Biti</p>
-                <p>Tini</p>
-                <p>JL Danau Ranau</p>
-                <p>Malang</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="body-checkout">
-                <p>Phone Number</p>
-                <p>Email</p>
-                <p>Province</p>
-                <p>Sub-district</p>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="body-checkout">
-                <p>0813364298342</p>
-                <p>tini@gmail.com</p>
-                <p>Jawa Timur</p>
-                <p>Malang</p>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="cart-header">
-            <div class="row">
-              <div class="col-md-4">
-                <h5>PRODUCT</h5>
-              </div>
-              <div class="col-md-3">
-                <h5>PRICE</h5>
-              </div>
-              <div class="col-md-2">
-                <h5>QTY</h5>
-              </div>
-              <div class="col-md-3">
-                <h5>SUB TOTAL</h5>
-              </div>
-            </div>
-          </div>
-          <div class="cart-body">
-            <div class="row mt-4">
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="image-detailh">
-                    <img src="themes/images/coklat.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <h5 class="ml-3 mt-2">CHOCO <br> BOOM</h5>
-                </div>
-              </div>
-              <div class="col-md-3 text-center">
-                <p>Rp. 25.000</p>
-              </div>
-              <div class="col-md-2 text-center">
-                <input type="number" name="" value=""class="qty ">
-              </div>
-              <div class="col-md-3 text-center">
-                <p>Rp. 25.000</p>
-              </div>
-            </div>
-
 
   </div><!-- /.row -->
 
