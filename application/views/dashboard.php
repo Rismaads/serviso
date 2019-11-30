@@ -48,7 +48,7 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                    ADMIN SERVISO
+                    ADMIN SERVISOoo
                 </a>
             </div>
 
