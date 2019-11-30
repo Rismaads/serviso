@@ -83,46 +83,163 @@ http://www.templatemo.com/tm-509-hydro
      </section>
 
 
-     <!-- BLOG DETAIL -->
-     <section id="blog-detail" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
+     <div class="container">
+  <h3 class="text-center mt-5  varian-cake">MY ACCOUNT</h3>
+  <hr class="mb-4">
+</div>
 
-                    <div class="col-md-offset-1 col-md-10 col-sm-12">
-                         <!-- BLOG THUMB -->
-                         <div class="blog-detail-thumb">
-                              <div class="blog-image">
-                                   <img src="<?php echo base_url(); ?>user/images/blog-detail-image.jpg" class="img-responsive" alt="Blog Image">
-                              </div>
-                              <h2>What makes you happy everyday?</h2>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque</p>
+<main role="main" class="container">
+  <div class="row">
+    <aside class="col-md-3 blog-sidebar">
+      <div class="p-4 account-tab-menu">
 
-                              <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quisquam, aut, eum, natus excepturi impedit ipsa rerum ratione id dolores ducimus minus eos veniam similique.</blockquote>
+        <ol class="list-unstyled mt-4">
+          
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
 
-                              <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
+    <div class="col-md-9 blog-main">
+      <a href="index.php?pages=histori" class="btn btn-add mt-5" style="color:#615956;"> < </a>
+      <!-- <h3 class=" mt-4">
+        Detail Histori
+      </h3> -->
 
-                              <div class="blog-ads">
-                                   <h4>Blog Sample Advertising</h4>
-                              </div>
-                              
-                              <ul>
-                                   <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
-                                   <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
-                                   <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
-                              </ul>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
-                              <div class="blog-social-share">
-                                   <h4>Share this article</h4>
-                                   <a href="https://www.facebook.com/templatemo" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
-                                   <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
-                                   <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>google plus</a>
-                              </div>
-                         </div>
-                    </div>
-                    
-               </div>
+        <h5 class="your_id2">YOUR ID ORDER KC1234567</h5>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="body-checkout">
+                <p>Order Date</p>
+                <p>Status</p>
+                <p>Total</p>
+                <p>Delivery/Pickup Date</p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="body-checkout">
+                <p>12 Juli 2019</p>
+                <p>PENDING</p>
+                <p>Rp.50.000</p>
+                <p>13 Juli 2019</p>
+              </div>
+            </div>
           </div>
-     </section>
+          <h5 class="font-weight-bold mt-4 mb-3" >BILLING INFORMATION</h5>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="body-checkout">
+                <p>Name</p>
+                <p>Username</p>
+                <p>Address</p>
+                <p>City</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="body-checkout mb-5">
+                <p>Tini Wini Biti</p>
+                <p>Tini</p>
+                <p>JL Danau Ranau</p>
+                <p>Malang</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="body-checkout">
+                <p>Phone Number</p>
+                <p>Email</p>
+                <p>Province</p>
+                <p>Sub-district</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="body-checkout">
+                <p>0813364298342</p>
+                <p>tini@gmail.com</p>
+                <p>Jawa Timur</p>
+                <p>Malang</p>
+              </div>
+            </div>
+          </div>
+
+          <h5 class="font-weight-bold  mb-3" >SHIPPING INFORMATION</h5>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="body-checkout">
+                <p>Name</p>
+                <p>Username</p>
+                <p>Address</p>
+                <p>City</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="body-checkout mb-5">
+                <p>Tini Wini Biti</p>
+                <p>Tini</p>
+                <p>JL Danau Ranau</p>
+                <p>Malang</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="body-checkout">
+                <p>Phone Number</p>
+                <p>Email</p>
+                <p>Province</p>
+                <p>Sub-district</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="body-checkout">
+                <p>0813364298342</p>
+                <p>tini@gmail.com</p>
+                <p>Jawa Timur</p>
+                <p>Malang</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="cart-header">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>PRODUCT</h5>
+              </div>
+              <div class="col-md-3">
+                <h5>PRICE</h5>
+              </div>
+              <div class="col-md-2">
+                <h5>QTY</h5>
+              </div>
+              <div class="col-md-3">
+                <h5>SUB TOTAL</h5>
+              </div>
+            </div>
+          </div>
+          <div class="cart-body">
+            <div class="row mt-4">
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="image-detailh">
+                    <img src="themes/images/coklat.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <h5 class="ml-3 mt-2">CHOCO <br> BOOM</h5>
+                </div>
+              </div>
+              <div class="col-md-3 text-center">
+                <p>Rp. 25.000</p>
+              </div>
+              <div class="col-md-2 text-center">
+                <input type="number" name="" value=""class="qty ">
+              </div>
+              <div class="col-md-3 text-center">
+                <p>Rp. 25.000</p>
+              </div>
+            </div>
+
+
+  </div><!-- /.row -->
+
+</main><!-- /.container -->
+
 
 
      <!-- FOOTER -->

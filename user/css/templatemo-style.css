@@ -153,8 +153,8 @@ a:hover, a:active, a:focus {
 
 .overlay {
   background: #00F260;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ABDCFF, #736EFE);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ABDCFF, #736EFE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #000, #000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000, #000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 0.7;
   position: absolute;
   width: 100%;
@@ -341,7 +341,7 @@ section {
 -----------------------------------------*/
 
 #home {
-  background: url('../images/home-bg1.jpg') no-repeat center center;
+  background: url('../images/home_bg5.jpg') no-repeat center center;
   background-size: cover;
   vertical-align: middle;
   display: -webkit-box;
@@ -902,32 +902,9 @@ footer span,
   height: 50px;
 }
 
-.tab-pane form .form-control2{
-  border-radius: 5px;
-  border: 2px solid #c8c8c8;
-  background: transparent;
-  box-shadow: none;
-  margin: 15px 10px 10px 15px;
-  height: 35px;
-  width: 825px;
-}
-
-.tab-pane form .form-control2:hover,
-.tab-pane form .form-control2:focus {
-  border-color: #00a2ff;
-}
-
 .modal-dialog form .form-control:hover,
 .modal-dialog form .form-control:focus {
   border-color: #ffffff;
-}
-
-.tab-pane form input[type="submit"] {
-  background: #1100ff;
-  border-color: transparent;
-  border-radius: 50px;
-  color: #ffffff;
-  margin-top: 20px;
 }
 
 .modal-dialog form input[type="submit"] {

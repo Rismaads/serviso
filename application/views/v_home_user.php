@@ -94,13 +94,13 @@ http://www.templatemo.com/tm-509-hydro
                          </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-12">
+                    <!-- <div class="col-md-6 col-sm-12">
                          <div class="home-video">
                               <div class="embed-responsive embed-responsive-16by9">
                                    <iframe src="https://www.youtube.com/embed/-JSM3MTINTs" frameborder="0" allowfullscreen></iframe>
                               </div>
                          </div>
-                    </div>
+                    </div> -->
                     
                </div>
           </div>
@@ -116,7 +116,7 @@ http://www.templatemo.com/tm-509-hydro
                          <div class="about-info">
                               <div class="section-title">
                                    <h2>Our Guarantee</h2>
-                                   <span class="line-bar">...</span>
+                                   <span class="line-bar">___</span>
                               </div>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -172,7 +172,7 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
                          <a href="<?php echo base_url(); ?>index.php/bengkel_user"><h2> Our Cooperation with Workshop </h2></a>
-                              <span class="line-bar">...</span>
+                              <span class="line-bar">___</span>
                          </div>
                     </div>
                     <div id="tampil_bengkel">
@@ -191,7 +191,7 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
                               <h2>Our Story</h2>
-                              <span class="line-bar">...</span>
+                              <span class="line-bar">___</span>
                          </div>
                     </div>
 
@@ -354,8 +354,8 @@ http://www.templatemo.com/tm-509-hydro
 
                                         <!-- NAV TABS -->
                                         <ul class="nav nav-tabs" role="tablist">
-                                             <li class="active"><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
-                                             <li><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create an account</a></li>
+                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign in</a></li>
+                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create an account</a></li>
                                         </ul>
 
                                         <!-- TAB PANES -->
@@ -366,7 +366,7 @@ http://www.templatemo.com/tm-509-hydro
                                                        <input type="username" class="form-control" name="username" placeholder="Username" required>
                                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
                                                        <input type="submit" class="form-control" name="submit" value="Submit">
-                                                       <a href="https://www.facebook.com/templatemo">Forgot your password?</a>
+                                                       <a href="#sign_up" data-toggle="tab"> Have an account? </a>
                                                   </form>
                                              </div>
                                         

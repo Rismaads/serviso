@@ -100,9 +100,9 @@ http://www.templatemo.com/tm-509-hydro
 
                               <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
 
-                              <div class="blog-ads">
-                                   <h4>Blog Sample Advertising</h4>
-                              </div>
+                              <section id="section-map" class="clearfix">
+                                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+                               </section>
                               
                               <ul>
                                    <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
@@ -239,7 +239,6 @@ http://www.templatemo.com/tm-509-hydro
                                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
                                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
                                                        <input type="submit" class="form-control" name="submit" value="Submit Button">
-                                                       <a href="https://www.facebook.com/templatemo">Forgot your password?</a>
                                                   </form>
                                              </div>
                                         </div>
@@ -296,7 +295,7 @@ http://www.templatemo.com/tm-509-hydro
                                                        </select>
                                                        <input type="telephone" class="form-control" name="telephon" placeholder="No Telepon" required>
                                                        <input type="address" class="form-control" name="alamat" placeholder="Alamat" required>
-                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
+                                                       <input type="submit" class="form-control " name="submit" value="Submit Button">
                                                   </form>
                                              </div>
                                         </div>
