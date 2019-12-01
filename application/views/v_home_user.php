@@ -88,7 +88,7 @@ http://www.templatemo.com/tm-509-hydro
                               <h1>Kami adalah sebuah Website yang membuat hidup anda semakin mudah</h1>
                               <a href="<?php echo base_url(); ?>index.php/about_us" class="btn section-btn smoothScroll">About Us</a>
                               <span>
-                                   Cepat dan terpercaya
+                                   Cepat dan sangat terpercaya
                                    <small>Gunakan jasa kami dan anda tidak akan menyesal</small>
                               </span>
                          </div>
