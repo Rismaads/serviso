@@ -402,7 +402,7 @@ http://www.templatemo.com/tm-509-hydro
                                       
                                         '<h3>'+dt['nama_bengkel']+'</h3>'+
                                         '<p>'+dt['alamat']+'</p>'+
-                                        '<a href="<?php echo base_url(); ?>index.php/detail_bengkel" class="btn section-btn">Read article</a>'+
+                                        '<a href="<?php echo base_url(); ?>index.php/detail_bengkel/index/'+dt['id_bengkel']+'" class="btn section-btn">Read article</a>'+
                                    '</div>'+
                               '</div>'+
                          '</div>';
