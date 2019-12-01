@@ -119,13 +119,11 @@
 	        	<br>
 	        	<input type="time" class="form-control" placeholder="Jam Tutup" name="ubah_jam_tutup" id="ubah_jam_tutup">
 	        	<br>
+            <input type="text" class="form-control" placeholder="Link Maps" name="ubah_maps" id="ubah_maps">
+	        	<br>
 	        	<input type="text" class="form-control" placeholder="Nama Bengkel" name="ubah_nama_bengkel" id="ubah_nama_bengkel">
 	        	<br>
         
-	        	<input type="text" class="form-control" placeholder="Link Maps" name="ubah_maps" id="ubah_maps">
-	        	<br>
-           
-            <br>
             <input type="file" class="form-control" placeholder="Foto" name="ubah_foto" id="data_foto"><br>
             <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
 	      </div>
@@ -153,6 +151,7 @@
 			$("#ubah_jadwal").val(data.jadwal);
 			$("#ubah_jam_tutup").val(data.jam_tutup);
 			$("#ubah_nama_bengkel").val(data.nama_bengkel);
+      $("#ubah_maps").val(data.maps);
 			$("#data_foto").val(data.foto);
       $("#ubah_maps").val(data.maps);
     });

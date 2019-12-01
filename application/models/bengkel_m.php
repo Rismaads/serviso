@@ -74,7 +74,7 @@ public function detail_bengkel($id_bengkel)
 				'alamat'		=> $this->input->post('ubah_alamat'),
 				'jadwal'		=> $this->input->post('ubah_jadwal'),
 				'jam_tutup'		=> $this->input->post('ubah_jam_tutup'),
-				'maps'		=> $this->input->post('ubah_maps'),
+				'maps'			=> $this->input->post('ubah_maps'),
 	
 			);
 			return $this->db->where('id_bengkel',$this->input->post('id_bengkel'))->update('bengkel', $dt_up_bengkel);
