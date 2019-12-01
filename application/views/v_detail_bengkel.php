@@ -90,12 +90,16 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-offset-1 col-md-10 col-sm-12">
                          <!-- BLOG THUMB -->
                          <div class="blog-detail-thumb">
-                              <div class="blog-image">
-                                   <img src="<?php echo base_url(); ?>user/images/blog-detail-image.jpg" class="img-responsive" alt="Blog Image">
-                              </div>
-                              <h2>What makes you happy everyday?</h2>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque</p>
-
+                                   <?php
+                                        foreach($bengkel as $b){
+                                             echo ' <div class="blog-image">
+                                                       <img src="'.base_url().'assets/cover_bengkel/'.$b->foto.'" class="img-responsive" alt="Blog Image">
+                                                  </div>
+                                                  <h2>Deskripsi</h2>
+                                                  <p>'.$b->deskripsi.'</p>
+                                                  ';
+                                        }
+                                   ?>
                               <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quisquam, aut, eum, natus excepturi impedit ipsa rerum ratione id dolores ducimus minus eos veniam similique.</blockquote>
 
                               <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
@@ -289,7 +293,7 @@ http://www.templatemo.com/tm-509-hydro
                                                             <?php
                                                                  foreach($jadwal as $jw)
                                                                  {
-                                                                      echo '<option value="'.$jw->id_jadwal.'">'.$jw->jadwal.'-'.$jw->jadwal_selesai.' </option>';
+                                                                      echo '<option value="'.$jw->id_jadwal.'">'.$jw->jadwal_mulai.' - '.$jw->jadwal_selesai.' </option>';
                                                                  }
                                                             ?>
                                                        </select>
@@ -316,6 +320,9 @@ http://www.templatemo.com/tm-509-hydro
      <script src="<?php echo base_url(); ?>user/js/jquery.magnific-popup.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/smoothscroll.js"></script>
      <script src="<?php echo base_url(); ?>user/js/custom.js"></script>
+     <script type="text/javascript">
+
+     </script>
 
 </body>
 </html>

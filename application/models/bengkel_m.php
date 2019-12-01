@@ -9,6 +9,10 @@ class bengkel_m extends CI_Model {
 	   $arr= $this->db->get('bengkel')->result();
 	   return $arr;
 	}
+	public function get_bengkel_by_id($id_bengkel){
+		return $this->db->where('id_bengkel', $id_bengkel)->get('bengkel')->result();
+			
+	}
 
 	public function add_bengkel($foto)
 {
