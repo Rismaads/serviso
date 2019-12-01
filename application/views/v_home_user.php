@@ -51,17 +51,15 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#home" class="smoothScroll">Home</a></li>
+                         <li><a href="#home" class="smoothScroll">Halaman Utama</a></li>
                          <!-- <li><a href="#about" class="smoothScroll">About</a></li> -->
-                         <li><a href="#blog" class="smoothScroll">Workshop</a></li>
-                         <li><a href="#work" class="smoothScroll">Testimonials</a></li>
-                         <li><a href="#panggil" class="smoothScroll">Contacts</a></li>
+                         <li><a href="#blog" class="smoothScroll">Bengkel</a></li>
+                         <li><a href="#work" class="smoothScroll">Kesan</a></li>
+                         <li><a href="#panggil" class="smoothScroll">Kontak</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                         
                          <?php if ($this->session->userdata('login_user') == FALSE) : ?>
                          <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Sign in</a></li>
 
@@ -83,24 +81,16 @@ http://www.templatemo.com/tm-509-hydro
           <div class="container">
                <div class="row">
 
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-7 col-sm-12">
                          <div class="home-info">
-                              <h1>Kami adalah sebuah Website yang membuat hidup anda semakin mudah</h1>
+                              <h1>Serviso Membantu Hidup Anda Mulai Dari Hal-Hal Kecil Seperti memperbaiki Sepeda Motor</h1>
                               <a href="<?php echo base_url(); ?>index.php/about_us" class="btn section-btn smoothScroll">About Us</a>
                               <span>
-                                   Cepat dan sangat terpercaya
-                                   <small>Gunakan jasa kami dan anda tidak akan menyesal</small>
+                              Gunakan jasa kami dan
+                                   <small>anda bisa lebih menghemat waktu</small>
                               </span>
                          </div>
                     </div>
-
-                    <!-- <div class="col-md-6 col-sm-12">
-                         <div class="home-video">
-                              <div class="embed-responsive embed-responsive-16by9">
-                                   <iframe src="https://www.youtube.com/embed/-JSM3MTINTs" frameborder="0" allowfullscreen></iframe>
-                              </div>
-                         </div>
-                    </div> -->
                     
                </div>
           </div>
@@ -115,10 +105,10 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-5 col-sm-6">
                          <div class="about-info">
                               <div class="section-title">
-                                   <h2>Our Guarantee</h2>
+                                   <h2>Jaminan Kami </h2>
                                    <span class="line-bar">___</span>
                               </div>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                              <p>Kami Menjamin bahwa motor anda akan kembali dengan keadaan yang lebih baik dari sebelumnya dan  </p>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
                          </div>
                     </div>
