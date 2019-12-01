@@ -22,6 +22,7 @@ class bengkel_m extends CI_Model {
 			$arr['alamat'] = $this->input->post('alamat');
 			$arr['jadwal'] = $this->input->post('jadwal');
 			$arr['jam_tutup'] = $this->input->post('jam_tutup');
+			$arr['maps'] = $this->input->post('maps');
 			$arr['foto'] = $foto['file_name'];
 
   $ql_masuk=$this->db->insert('bengkel', $arr);
@@ -57,6 +58,7 @@ public function detail_bengkel($id_bengkel)
 					'alamat'		=> $this->input->post('ubah_alamat'),
 					'jadwal'		=> $this->input->post('ubah_jadwal'),
 					'jam_tutup'		=> $this->input->post('ubah_jam_tutup'),
+					'maps'		=> $this->input->post('ubah_maps'),
 					'foto' => $this->upload->data('file_name')
 		
 				);
@@ -72,6 +74,7 @@ public function detail_bengkel($id_bengkel)
 				'alamat'		=> $this->input->post('ubah_alamat'),
 				'jadwal'		=> $this->input->post('ubah_jadwal'),
 				'jam_tutup'		=> $this->input->post('ubah_jam_tutup'),
+				'maps'		=> $this->input->post('ubah_maps'),
 	
 			);
 			return $this->db->where('id_bengkel',$this->input->post('id_bengkel'))->update('bengkel', $dt_up_bengkel);
