@@ -10,8 +10,11 @@ class bengkel_m extends CI_Model {
 	   return $arr;
 	}
 	public function get_bengkel_by_id($id_bengkel){
-		return $this->db->where('id_bengkel', $id_bengkel)->get('bengkel')->result();
-			
+		return $this->db->where('id_bengkel', $id_bengkel)->get('bengkel')->result();	
+	}
+
+	public function get_bengkel_by_id2($id_bengkel){
+		return $this->db->where('id_bengkel', $id_bengkel)->get('bengkel')->row();	
 	}
 
 	public function add_bengkel($foto)
@@ -22,7 +25,6 @@ class bengkel_m extends CI_Model {
 			$arr['alamat'] = $this->input->post('alamat');
 			$arr['jadwal'] = $this->input->post('jadwal');
 			$arr['jam_tutup'] = $this->input->post('jam_tutup');
-			$arr['maps'] = $this->input->post('maps');
 			$arr['foto'] = $foto['file_name'];
 
   $ql_masuk=$this->db->insert('bengkel', $arr);
@@ -46,9 +48,8 @@ public function detail_bengkel($id_bengkel)
 			
 			$this->load->library('upload', $config);
 			
-			if ( ! $this->upload->do_upload('foto')){
-				$this->session->set_flashdata('pesan' , $this->upload->display_errors());
-				return false;
+			if ( ! $this->upload->do_upload('ubah_foto')){
+				$error = array('error' => $this->upload->display_errors());
 			}
 			else
 			{
@@ -59,7 +60,6 @@ public function detail_bengkel($id_bengkel)
 					'alamat'		=> $this->input->post('ubah_alamat'),
 					'jadwal'		=> $this->input->post('ubah_jadwal'),
 					'jam_tutup'		=> $this->input->post('ubah_jam_tutup'),
-					'maps'		=> $this->input->post('ubah_maps'),
 					'foto' => $this->upload->data('file_name')
 		
 				);
@@ -70,12 +70,11 @@ public function detail_bengkel($id_bengkel)
 		{
 			$dt_up_bengkel=array(
 				'nama_bengkel' 	=> $this->input->post('ubah_nama_bengkel'),
-				'stok' 			=> $this->input->post('ubah_stok'),
-				'deskripsi'		=> $this->input->post('ubah_deskripsi'),
+				'stok' 		=> $this->input->post('ubah_stok'),
+				'deskripsi'			=> $this->input->post('ubah_deskripsi'),
 				'alamat'		=> $this->input->post('ubah_alamat'),
 				'jadwal'		=> $this->input->post('ubah_jadwal'),
 				'jam_tutup'		=> $this->input->post('ubah_jam_tutup'),
-				'maps'			=> $this->input->post('ubah_maps'),
 	
 			);
 			return $this->db->where('id_bengkel',$this->input->post('id_bengkel'))->update('bengkel', $dt_up_bengkel);
@@ -89,6 +88,22 @@ public function detail_bengkel($id_bengkel)
 	public function tampil_jadwal()
 	{
 		return $this->db->get('jadwal')->result();
+	}
+	public function add_antrian($id_bengkel)
+	{
+		$data = array(
+			'nama_pelanggan' => $this->input->post('nama_pelanggan'),
+			'no_polisi' => $this->input->post('no_polisi'),
+			'jenis_sepeda' => $this->input->post('jenis_sepeda'),
+			'merk_sepeda' => $this->input->post('merk_sepeda'),
+			'kerusakan' => $this->input->post('kerusakan'),
+			'no_hp' => $this->input->post('no_hp'),  
+			'alamat' => $this->input->post('alamat'),
+			'id_jadwal' => $this->input->post('id_jadwal'),
+			'id_bengkel' => $id_bengkel
+		);
+
+		return $this->db->insert('unit_sepeda', $data);
 	}
 
 }

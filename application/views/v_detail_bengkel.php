@@ -20,6 +20,8 @@ http://www.templatemo.com/tm-509-hydro
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="<?php echo base_url(); ?>user/css/templatemo-style.css">
+
+     <script src="<?php echo base_url(); ?>user/js/jquery.js"></script>
 </head>
 <body>
 
@@ -96,10 +98,11 @@ http://www.templatemo.com/tm-509-hydro
                                                        <img src="'.base_url().'assets/cover_bengkel/'.$b->foto.'" class="img-responsive" alt="Blog Image">
                                                   </div>
                                                   <h2>Deskripsi</h2>
-                                                  <p>'.$b->deskripsi.'</p>
+                                                  <p>'.$b->deskripsi.'</p><br>
+                                                  <a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Repair</a>
                                                   ';
                                         }
-                                   ?>
+                                   ?> 
                               <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quisquam, aut, eum, natus excepturi impedit ipsa rerum ratione id dolores ducimus minus eos veniam similique.</blockquote>
 
                               <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
@@ -115,7 +118,7 @@ http://www.templatemo.com/tm-509-hydro
                               </ul>
                               <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
                               <div class="blog-social-share"> 
-                                   <a class="section-btn2" data-toggle="modal" data-target="#modal-pesan" >Sign in</a>
+                                  
                               </div>
                          </div>
                     </div>
@@ -283,13 +286,17 @@ http://www.templatemo.com/tm-509-hydro
 
                                         <!-- TAB PANES -->
                                         <div class="tab-content">
-                                             <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
-                                                  <form action="#" method="post">
-                                                       <input type="name" class="form-control" name="name" placeholder="Nama Lengkap" required>
-                                                       <input type="text" class="form-control" name="nopol" placeholder="Nopol" required>
-                                                       <input type="text" class="form-control" name="merek" placeholder="Merek Sepeda" required>
-                                                       <input type="text" class="form-control" name="rusak" placeholder="Kerusakkan" required>
-                                                       <select name="jadwal" id="" class="form-control"> 
+                                             <div role="tabpanel" class="tab-pane fade in active">
+                                                  <form  method="post" id="tambah_antri">
+                                                  <div id="pesan_kirim"></div>
+                                                       <input type="hidden" id="id_bengkel">
+                                                       <input type="name" class="form-control" id="nama_pelanggan" name="nama_pelanggan" placeholder="Nama Lengkap" required>
+                                                       <input type="text" class="form-control" id="no_polisi" name="no_polisi" placeholder="Nomer Polisi" required>
+                                                       <input type="text" class="form-control" id="jenis_sepeda" name="jenis_sepeda" placeholder="Jenis Sepeda" required>
+                                                       <input type="text" class="form-control" id="merk_sepeda" name="merk_sepeda" placeholder="Merek Sepeda" required>
+                                                       <input type="text" class="form-control" id="kerusakan" name="kerusakan" placeholder="Kerusakkan" required>
+                                                       <textarea class="form-control" name="alamat" id="alamat" cols="30" rows="10" placeholder="Alamat" required></textarea>
+                                                       <select name="id_jadwal" id="id_jadwal" class="form-control"> 
                                                             <?php
                                                                  foreach($jadwal as $jw)
                                                                  {
@@ -297,9 +304,11 @@ http://www.templatemo.com/tm-509-hydro
                                                                  }
                                                             ?>
                                                        </select>
-                                                       <input type="telephone" class="form-control" name="telephon" placeholder="No Telepon" required>
-                                                       <input type="address" class="form-control" name="alamat" placeholder="Alamat" required>
-                                                       <input type="submit" class="form-control " name="submit" value="Submit Button">
+                                                       <input type="telephone" class="form-control" id="no_hp" name="no_hp" placeholder="No Telepon" required>
+                                                       
+                                                       
+                                                       <button type="submit" class="btn btn-success">Submit</button>
+                                                       
                                                   </form>
                                              </div>
                                         </div>
@@ -314,14 +323,66 @@ http://www.templatemo.com/tm-509-hydro
 </section>
 
      <!-- SCRIPTS -->
-     <script src="<?php echo base_url(); ?>user/js/jquery.js"></script>
+    
      <script src="<?php echo base_url(); ?>user/js/bootstrap.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/jquery.stellar.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/jquery.magnific-popup.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/smoothscroll.js"></script>
      <script src="<?php echo base_url(); ?>user/js/custom.js"></script>
      <script type="text/javascript">
+          function tm_detail(id_bengkel)
+          {
+               $.getJSON("<?= base_url()?>index.php/detail_bengkel/detail_beng/"+id_bengkel,function(data){
+                    $('#id_bengkel').val(data['id_bengkel']);
+               });
+          }
 
+
+         $('#tambah_antri').submit(function(event){
+              event.preventDefault();
+              var id_bengkel = $('#id_bengkel').val();
+              var url="<?= base_url()?>index.php/detail_bengkel/tambah_antri/"+id_bengkel;
+              var formData = new FormData($("#tambah_antri")[0]);
+               $.ajax({
+                    url:url,
+                    type:"post",
+                    data:formData,
+                    contentType: false,
+                    processData: false,
+                    dataType:"json",
+                    success:function(hasil)
+                    {
+                         if(hasil['status']==1)
+                         {
+                              $("#pesan_kirim").html("Berhasil Menambahkan ke Antrian");
+                              $("#pesan_kirim").show("fade");
+                              $("#pesan_kirim").addClass("alert alert-success");
+                              setTimeout(function()
+                              {
+                                   $("#pesan_kirim").hide("fade");
+                                   setTimeout(function() 
+                                   {
+                                        $("#pesan_kirim").removeClass("alert alert-success");    
+                                   }, 500);
+                              }, 2000);
+                         }
+                         else
+                         {
+                              $("#pesan_kirim").html("Gagal Menambahkan ke Antrian");
+                              $("#pesan_kirim").show("fade");
+                              $("#pesan_kirim").addClass("alert alert-danger");
+                              setTimeout(function()
+                              {
+                                   $("#pesan_kirim").hide("fade");
+                                   setTimeout(function() 
+                                   {
+                                        $("#pesan_kirim").removeClass("alert alert-danger");    
+                                   }, 500);
+                              }, 2000);
+                         }
+                    }
+               });
+         });
      </script>
 
 </body>
