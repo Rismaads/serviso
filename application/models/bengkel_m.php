@@ -47,7 +47,8 @@ public function detail_bengkel($id_bengkel)
 			$this->load->library('upload', $config);
 			
 			if ( ! $this->upload->do_upload('foto')){
-				$error = array('error' => $this->upload->display_errors());
+				$this->session->set_flashdata('pesan' , $this->upload->display_errors());
+				return false;
 			}
 			else
 			{
