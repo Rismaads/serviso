@@ -45,7 +45,7 @@ public function detail_bengkel($id_bengkel)
 			
 			$this->load->library('upload', $config);
 			
-			if ( ! $this->upload->do_upload('ubah_foto')){
+			if ( ! $this->upload->do_upload('foto')){
 				$error = array('error' => $this->upload->display_errors());
 			}
 			else
@@ -67,8 +67,8 @@ public function detail_bengkel($id_bengkel)
 		{
 			$dt_up_bengkel=array(
 				'nama_bengkel' 	=> $this->input->post('ubah_nama_bengkel'),
-				'stok' 		=> $this->input->post('ubah_stok'),
-				'deskripsi'			=> $this->input->post('ubah_deskripsi'),
+				'stok' 			=> $this->input->post('ubah_stok'),
+				'deskripsi'		=> $this->input->post('ubah_deskripsi'),
 				'alamat'		=> $this->input->post('ubah_alamat'),
 				'jadwal'		=> $this->input->post('ubah_jadwal'),
 				'jam_tutup'		=> $this->input->post('ubah_jam_tutup'),

@@ -14,6 +14,7 @@
                                     <thead>
                                         <th>NO</th>
                                         <th>ID SEPEDA</th>
+                                        <th>ID JADWAL</th>
                                         <th>NAMA PELANGGANN</th>
                                         <th>NO HP</th>
                                         <th>ALAMAT</th>
@@ -31,6 +32,7 @@
                                         echo '<tr>
                                 <td>'.$no.'</td>
                                 <td>'.$dt_sepeda->id_unit_sepeda.'</td>
+                                <td>'.$dt_sepeda->id_jadwal.'</td>
                                 <td>'.$dt_sepeda->nama_pelanggan.'</td>
                                 <td>'.$dt_sepeda->no_hp.'</td>
                                 <td>'.$dt_sepeda->alamat.'</td>
@@ -68,8 +70,13 @@
             <input type="text" name="merk_sepeda" class="form-control"></br>
             KERUSAKAN
             <input type="text" name="kerusakan" class="form-control"></br>
-            
-           
+            ID JADWAL
+            <select name="id_jadwal" class="form-control">
+              <option></option>
+              <?php foreach ($data_jadwal as  $jadwal): ?>
+                  <option value="<?= $jadwal->id_jadwal?>"><?= $jadwal->id_jadwal?></option>
+              <?php endforeach ?>
+          </select>
             <br>
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
       
@@ -101,7 +108,7 @@
         <h4 class="modal-title">Update Sepeda</h4>
       </div>
       <div class="modal-body">
-        <form action="<?=base_url('index.php/pelanggan/update_sepeda')?>" method="post" enctype="multipart/form-data">
+        <form action="<?=base_url('index.php/sepeda/update_sepeda')?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id_unit_sepeda" id="id_unit_sepeda">
           NAMA PELANGGAN 
           <input id="nama_pelanggan" type="text" name="nama_pelanggan_edit" class="form-control"><br>
@@ -117,6 +124,14 @@
           <input id="merk_sepeda" type="text" name="merk_sepeda_edit" class="form-control"><br>
           KERUSAKAN
           <input id="kerusakan" type="text" name="kerusakan_edit" class="form-control"><br>
+          ID JADWAL
+          <select name="id_jadwal_edit" input id="id_jadwal" class="form-control">
+              <option></option>
+              <?php foreach ($data_jadwal as  $jadwal): ?>
+                  <option value="<?= $jadwal->id_jadwal?>"><?= $jadwal->id_jadwal?></option>
+              <?php endforeach ?>
+          </select>
+          <br>
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
         </form>
       </div>
@@ -141,6 +156,7 @@
         $("#jenis_sepeda").val(data['jenis_sepeda']);
         $("#merk_sepeda").val(data['merk_sepeda']);
         $("#kerusakan").val(data['kerusakan']);
+        $("#id_jadwal").val(data['id_jadwal']);
     });
   }
 

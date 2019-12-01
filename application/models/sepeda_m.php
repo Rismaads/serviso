@@ -6,7 +6,8 @@ class sepeda_m extends CI_Model {
 
 	public function get_sepeda()
 	{
-	   $arr= $this->db->get('unit_sepeda')->result();
+     $arr= $this->db->join('jadwal','jadwal.id_jadwal=unit_sepeda.id_jadwal')
+     ->get('unit_sepeda')->result();
 	   return $arr;
     }
     
@@ -20,6 +21,7 @@ class sepeda_m extends CI_Model {
       $arr['jenis_sepeda'] = $this->input->post('jenis_sepeda');
       $arr['merk_sepeda'] = $this->input->post('merk_sepeda');
       $arr['kerusakan'] = $this->input->post('kerusakan');
+      $arr['id_jadwal'] = $this->input->post('id_jadwal');
      
       $ql_masuk=$this->db->insert('unit_sepeda', $arr);
       return $ql_masuk;
@@ -42,6 +44,7 @@ class sepeda_m extends CI_Model {
       'jenis_sepeda'=>$this->input->post('jenis_sepeda_edit'),
       'merk_sepeda'=>$this->input->post('merk_sepeda_edit'),
       'kerusakan'=>$this->input->post('kerusakan_edit'),
+      'id_jadwal'=>$this->input->post('id_jadwal_edit'),
 		);
 	return $this->db->where('id_unit_sepeda',$this->input->post('id_unit_sepeda'))->update('unit_sepeda', $dt_up_sepeda);
   }

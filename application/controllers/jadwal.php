@@ -29,6 +29,8 @@ class jadwal extends CI_Controller {
           array('required' => 'Silahkan Isi JAM MULAI SERVIS'));
           $this->form_validation->set_rules('jadwal_selesai','JAM SELESAI SERVIS', 'trim|required',
           array('required' => 'Silahkan Isi JAM SELESAI SERVIS'));
+          $this->form_validation->set_rules('status','JAM SELESAI SERVIS', 'trim|required',
+          array('required' => 'Silahkan Isi Status'));
           $this->form_validation->set_rules('id_bengkel','ID BENGKEL', 'trim|required',
           array('required' => 'Silahkan Isi ID BENGKEL '));
          
@@ -63,6 +65,7 @@ class jadwal extends CI_Controller {
                 $this->form_validation->set_rules('jadwal_mulai_edit','JAM MULAI SERVIS', 'trim|required');
               
                 $this->form_validation->set_rules('jadwal_selesai_edit','JAM SELESAI SERVIS', 'trim|required');
+                $this->form_validation->set_rules('status_edit','JAM SELESAI SERVIS', 'trim|required');
               
             
                

@@ -16,6 +16,7 @@
                                         <th>ID JADWAL</th>
                                         <th>JAM MULAI SERVIS</th>
                                         <th>JAM SELESAI SERVIS</th>
+                                        <th>STATUS</th>
                                         <th>ID BENGKEL</th>
                                         <th>ACTION</th>
                                     </thead>
@@ -29,6 +30,7 @@
                                 <td>'.$dt_jadwal->id_jadwal.'</td>
                                 <td>'.$dt_jadwal->jadwal_mulai.'</td>
                                 <td>'.$dt_jadwal->jadwal_selesai.'</td>
+                                <td>'.$dt_jadwal->status.'</td>
                                 <td>'.$dt_jadwal->id_bengkel.'</td>
                               
                                 <td><a href="#update_jadwal" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$dt_jadwal->id_jadwal.')">Update</a> 
@@ -51,6 +53,8 @@
             <input type="time" name="jadwal_mulai" class="form-control"></br>
             JAM SELESAI SERVIS
             <input type="time" name="jadwal_selesai" class="form-control"></br>
+            STATUS
+            <input type="text" name="status" class="form-control"></br>
             ID BENGKEL
            <select name="id_bengkel" class="form-control">
               <option></option>
@@ -97,8 +101,16 @@
           <input id="jadwal_mulai" type="time" name="jadwal_mulai_edit" class="form-control"><br>
           JAM SELESAI SERVIS
           <input id="jadwal_selesai" type="time" name="jadwal_selesai_edit" class="form-control"><br>
+          STATUS
+          <input id="status" type="text" name="status_edit" class="form-control"><br>
           ID BENGKEL
-          <input id="id_bengkel" type="TEXT" name="id_bengkel_edit" class="form-control"><br>
+          <select name="id_bengkel_edit"  input id="id_bengkel" class="form-control">
+            
+              <?php foreach ($data_bengkel as $bengkel): ?>
+                  <option value="<?=$bengkel->id_bengkel?>"><?=$bengkel->id_bengkel?></option>
+              <?php endforeach ?>
+          </select>
+            <br>
          
           <input type="submit" name="simpan" value="Simpan" class="btn btn-success">
         </form>
@@ -119,6 +131,7 @@
         $("#id_jadwal").val(data['id_jadwal']);
         $("#jadwal_mulai").val(data['jadwal_mulai']);
         $("#jadwal_selesai").val(data['jadwal_selesai']);
+        $("#status").val(data['status']);
         $("#id_bengkel").val(data['id_bengkel']);
        
     });

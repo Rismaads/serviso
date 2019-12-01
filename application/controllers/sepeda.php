@@ -13,8 +13,9 @@ class sepeda extends CI_Controller {
 	public function index()
 	{
         $data['konten']="sepeda_v";
-
-        $this->load->model('sepeda_m');
+        $this->load->model('jadwal_m', 'jadwal');
+        $data['data_jadwal']=$this->jadwal->get_jadwal();
+        $this->load->model('jadwal_m');
 
         $data['arr']=$this->sepeda_m->get_sepeda();
         
@@ -33,6 +34,8 @@ class sepeda extends CI_Controller {
           array('required' => 'Silahkan Isi Merk Sepeda '));
           $this->form_validation->set_rules('kerusakan','KERUSAKAN', 'trim|required',
           array('required' => 'Silahkan Isi Kerusakan '));
+          $this->form_validation->set_rules('id_jadwal','ID JADWAL', 'trim|required',
+          array('required' => 'Silahkan Isi Id Jadwal '));
         
           if ($this->form_validation->run() == TRUE)
           {
@@ -70,6 +73,7 @@ class sepeda extends CI_Controller {
                 $this->form_validation->set_rules('merk_sepeda_edit','MERK SEPEDA', 'trim|required');
 
                 $this->form_validation->set_rules('kerusakan_edit','KERUSAKAN', 'trim|required');
+                $this->form_validation->set_rules('id_jadwal_edit','KERUSAKAN', 'trim|required');
 
               
                  

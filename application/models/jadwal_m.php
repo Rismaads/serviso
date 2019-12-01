@@ -16,6 +16,7 @@ class jadwal_m extends CI_Model {
     {
       $arr['jadwal_mulai'] = $this->input->post('jadwal_mulai');
       $arr['jadwal_selesai'] = $this->input->post('jadwal_selesai');
+      $arr['status'] = $this->input->post('status');
       $arr['id_bengkel'] = $this->input->post('id_bengkel');
      
      
@@ -35,6 +36,7 @@ class jadwal_m extends CI_Model {
 		$dt_up_jadwal=array(
       'jadwal_mulai'=>$this->input->post('jadwal_mulai_edit'),
       'jadwal_selesai'=>$this->input->post('jadwal_selesai_edit'),
+      'status'=>$this->input->post('status_edit'),
       'id_bengkel'=>$this->input->post('id_bengkel_edit'),
      
 		);
