@@ -115,7 +115,7 @@ a:hover, a:active, a:focus {
 }
 
 .section-btn {
-  background: transparent;
+  background: #000;
   color: #f9f9f9;
   border-radius: 100px;
   cursor: pointer;
@@ -534,7 +534,7 @@ section {
 }
 
 #blog-header {
-  background: url('../images/blog-header-bg.jpg') no-repeat center center;
+  background: url('../images/blog-header-bg2.jpg') no-repeat center center;
   background-size: cover;
   display: -webkit-box;
   display: -webkit-flex;

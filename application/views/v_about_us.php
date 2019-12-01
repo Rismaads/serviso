@@ -49,18 +49,22 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#home" class="smoothScroll">Home</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">About</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#blog" class="smoothScroll">Blog</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#work" class="smoothScroll">Our Work</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#panggil" class="smoothScroll">Contacts</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/home_user">Halaman Utama</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Bengkel</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Kesan</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Kontak</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in / Join</a></li>
+                         
+                         <?php if ($this->session->userdata('login_user') == FALSE) : ?>
+                         <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li>
+
+                         <?php else : ?>
+
+                              <li><a href="<?php echo base_url('index.php/Login/logout') ?>"><i class="fa fa-sign-out"></i></a></li>
+
+                         <?php endif ; ?>
                     </ul>
                </div>
 
@@ -75,7 +79,7 @@ http://www.templatemo.com/tm-509-hydro
                <div class="row">
 
                     <div class="col-md-offset-1 col-md-5 col-sm-12">
-                         <h2>Do you Know What Thing Really Makes Artist Nowadays?</h2>
+                         <h2>Serviso Membantu Hidup Anda Mulai Dari Hal-Hal Kecil</h2>
                     </div>
                     
                </div>
@@ -94,29 +98,22 @@ http://www.templatemo.com/tm-509-hydro
                               <div class="blog-image">
                                    <img src="<?php echo base_url(); ?>user/images/blog-detail-image.jpg" class="img-responsive" alt="Blog Image">
                               </div>
-                              <h2>What makes you happy everyday?</h2>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque</p>
+                              <h2>Serviso</h2>
 
-                              <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quisquam, aut, eum, natus excepturi impedit ipsa rerum ratione id dolores ducimus minus eos veniam similique.</blockquote>
+                              <p>Kami membantu hidup anda mulai dari hal-hal kecil seperti memperbaiki sepeda motor, Ide kami ini berawal dari salah satu anggota team kami, yaitu baihaqi.</p>
 
-                              <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
+                              <blockquote>Team Serviso terdiri dari siswa kelas XIIRPL 2... yaitu Baihaqi Ilman Haydar Permana, Risma Ayu Dwi Septyani, Mutiara Cinta Shaffa'na Wibisono Putri</blockquote>
 
-                              <div class="blog-ads">
-                                   <h4>Blog Sample Advertising</h4>
-                              </div>
-                              
                               <ul>
                                    <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
                                    <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
                                    <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
                               </ul>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
-                              <div class="blog-social-share">
-                                   <h4>Share this article</h4>
-                                   <a href="https://www.facebook.com/templatemo" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
-                                   <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
-                                   <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>google plus</a>
+
+                              <div class="blog-ads">
+                                   <h4>Blog Sample Advertising</h4>
                               </div>
+                              
                          </div>
                     </div>
                     
@@ -131,7 +128,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Our Story</h2>
+                              <h2>Team Kami</h2>
                               <span class="line-bar">___</span>
                          </div>
                     </div>
@@ -139,13 +136,13 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image1.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image1.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/face-hq.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/face-hq.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <!-- <h3>Clean &amp; Minimal</h3> -->
-                                        <h3>Refanza Pradhipta</h3>
-                                        <small>This web is very help me</small>
+                                        <h3>Baihaqi Ilman Haydar Permana</h3>
+                                        <small></small>
                                    </div>
                               </a>
                          </div>
@@ -154,12 +151,12 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image2.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image2.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/face-mutiara.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/face-mutiara.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Muhammad Fani</h3>
-                                        <small>I am a very lazy person... so this web is very help me to repair my motor without spending my time</small>
+                                        <h3>Mutiara Cinta Shaffa'na Wibisono Putri</h3>
+                                        <small></small>
                                    </div>
                               </a>
                          </div>
@@ -168,12 +165,12 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/work-image3.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/work-image3.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/face-risma.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/face-risma.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Hafiyyan Faza</h3>
-                                        <small>Such a breakthrough things to help our daily activities</small>
+                                        <h3>Risma Ayu Dwi Septyani</h3>
+                                        <small></small>
                                    </div>
                               </a>
                          </div>
@@ -183,26 +180,26 @@ http://www.templatemo.com/tm-509-hydro
           </div>
      </section>
 
-     <!-- FOOTER -->
-     <footer data-stellar-background-ratio="0.5">
+      <!-- FOOTER -->
+      <footer id="panggil" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
 
                     <div class="col-md-5 col-sm-12">
                          <div class="footer-thumb footer-info"> 
                               <h2>Serviso</h2>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <p>Membantu Hidup Anda Mulai Dari Hal-Hal Kecil Seperti memperbaiki Sepeda Motor, Gunakan jasa kami dan anda bisa lebih menghemat waktu</p>
                          </div>
                     </div>
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Company</h2>
+                              <h2>Halaman Utama</h2>
                               <ul class="footer-link">
-                                   <li><a href="#">About Us</a></li>
-                                   <li><a href="#">Join our team</a></li>
-                                   <li><a href="#">Read Blog</a></li>
-                                   <li><a href="#">Press</a></li>
+                                   <li><a href="<?php echo base_url(); ?>index.php/about_us">About Us</a></li>
+                                   <li><a href="#home">Home</a></li>
+                                   <li><a href="#blog">Bengkel</a></li>
+                                   <li><a href="#work">Testimoni</a></li>
                               </ul>
                          </div>
                     </div>
@@ -217,7 +214,7 @@ http://www.templatemo.com/tm-509-hydro
                               </ul>
                          </div>
                     </div>
-
+                    
                     <div class="col-md-4 col-sm-4">
                          <div class="map">
                          <div class="google-map">
@@ -227,26 +224,26 @@ http://www.templatemo.com/tm-509-hydro
             3. Click "Share" and choose "Embed map" tab
             4. Copy only URL and paste it within the src="" field below
 	-->
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" allowfullscreen></iframe>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.21390906776!2d112.65676931418928!3d-7.976829994254922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6285c5c1b44e3%3A0xf6c889ac7452dc3a!2sSMK%20Telkom%20Malang!5e0!3m2!1sen!2sid!4v1575185980613!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                          </div>
 
                          </div>
                          
-                    </div> 
+                    </div>                   
 
                     <div class="col-md-12 col-sm-12">
                          <div class="footer-bottom">
                               <div class="col-md-6 col-sm-5">
                                    <div class="copyright-text"> 
-                                        <p>Copyright &copy; 2017 Your Company</p>
+                                        <p>Copyright &copy; 2019 Your Company</p>
                                    </div>
                               </div>
                               <div class="col-md-6 col-sm-7">
-                                   <!-- <div class="phone-contact"> 
-                                        <p>Call us <span>(+66) 010-020-0340</span></p>
-                                   </div> -->
+                                   <div class="phone-contact"> 
+                                        <p> <span> </span></p>
+                                   </div>
                                    <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
                                         <li><a href="#" class="fa fa-twitter"></a></li>
                                         <li><a href="#" class="fa fa-instagram"></a></li>
                                    </ul>
@@ -257,6 +254,7 @@ http://www.templatemo.com/tm-509-hydro
                </div>
           </div>
      </footer>
+
 
      <!-- MODAL -->
      <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
