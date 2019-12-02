@@ -117,7 +117,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-4 col-sm-12">
                          <div class="about-image">
-                              <img src="<?php echo base_url(); ?>user/images/about-image3.jpg" class="img-responsive" alt="">
+                              <img src="<?php echo base_url(); ?>user/images/about-image5.jpg" class="img-responsive" alt="">
                          </div>
                     </div>
                     
@@ -152,7 +152,7 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Kesan-kesan</h2>
+                              <h2>Kesan Dari Pengguna Kami</h2>
                               <span class="line-bar">___</span>
                          </div>
                     </div>
@@ -160,8 +160,8 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/face-3.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/face-3.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/face-10.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/face-10.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <!-- <h3>Clean &amp; Minimal</h3> -->
@@ -175,8 +175,8 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/face-2.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/face-2.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/face-9.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/face-9.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Lebron James</h3>
@@ -189,8 +189,8 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/face-6.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/face-6.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/face-11.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/face-11.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Michael Jordan</h3>
@@ -203,11 +203,11 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/face-7.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/face-7.jpg" class="img-responsive" alt="Work">
+                              <a href="<?php echo base_url(); ?>user/images/face-8.jpg" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/face-8.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Luka Doncic</h3>
+                                        <h3>Dirk Nowitzki</h3>
                                         <small>Say goodbye to spend our time waiting for the motor to be fixed</small>
                                    </div>
                               </a>
@@ -233,10 +233,10 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Halaman Utama</h2>
+                              <h2>Rumah</h2>
                               <ul class="footer-link">
                                    <li><a href="<?php echo base_url(); ?>index.php/about_us">About Us</a></li>
-                                   <li><a href="#home">Home</a></li>
+                                   <li><a href="#home">Halaman Utama</a></li>
                                    <li><a href="#blog">Bengkel</a></li>
                                    <li><a href="#work">Testimoni</a></li>
                               </ul>
@@ -245,11 +245,11 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Services</h2>
+                              <h2>Layanan</h2>
                               <ul class="footer-link">
-                                   <li><a href="#">Pricing</a></li>
-                                   <li><a href="#">Documentation</a></li>
-                                   <li><a href="#">Support</a></li>
+                                   <li><a href="#">Terpercaya</a></li>
+                                   <li><a href="#">Cepat</a></li>
+                                   <li><a href="#">Sesuai dengan jadwal</a></li>
                               </ul>
                          </div>
                     </div>

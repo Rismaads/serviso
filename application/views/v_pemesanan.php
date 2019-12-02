@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Serviso - About Us</title>
+     <title>Serviso - Detail Pemesanan</title>
 <!-- 
 Hydro Template 
 http://www.templatemo.com/tm-509-hydro
@@ -78,7 +78,7 @@ http://www.templatemo.com/tm-509-hydro
                <div class="row">
 
                     <div class="col-md-offset-1 col-md-5 col-sm-12">
-                         <h2>Do you Know What Thing Really Makes Artist Nowadays?</h2>
+                         <h2>Serviso Membantu Hidup Anda Mulai Dari Hal-Hal Kecil</h2>
                     </div>
                     
                </div>
@@ -129,14 +129,17 @@ http://www.templatemo.com/tm-509-hydro
               </div>
             </div>
           </div>
-
+          
+          <li><a class="section-btn2" data-toggle="modal"data-target="#modal-pesan" >Repair</a></li>
   </div><!-- /.row -->
 
 </main><!-- /.container -->
 
 
 
-<footer id="panggil" data-stellar-background-ratio="0.5">
+
+    <!-- FOOTER -->
+    <footer id="panggil" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
 
@@ -144,15 +147,16 @@ http://www.templatemo.com/tm-509-hydro
                          <div class="footer-thumb footer-info"> 
                               <h2>Serviso</h2>
                               <p>Membantu Hidup Anda Mulai Dari Hal-Hal Kecil Seperti memperbaiki Sepeda Motor, Gunakan jasa kami dan anda bisa lebih menghemat waktu</p>
+                              <p>Kontak kami jika anda mempunyai pertanyaan +62 822-316-549</p>
                          </div>
                     </div>
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Halaman Utama</h2>
+                              <h2>Rumah</h2>
                               <ul class="footer-link">
                                    <li><a href="<?php echo base_url(); ?>index.php/about_us">About Us</a></li>
-                                   <li><a href="#home">Home</a></li>
+                                   <li><a href="#home">Halaman Utama</a></li>
                                    <li><a href="#blog">Bengkel</a></li>
                                    <li><a href="#work">Testimoni</a></li>
                               </ul>
@@ -161,11 +165,11 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Services</h2>
+                              <h2>Layanan</h2>
                               <ul class="footer-link">
-                                   <li><a href="#">Pricing</a></li>
-                                   <li><a href="#">Documentation</a></li>
-                                   <li><a href="#">Support</a></li>
+                                   <li><a href="#">Terpercaya</a></li>
+                                   <li><a href="#">Cepat</a></li>
+                                   <li><a href="#">Sesuai dengan jadwal</a></li>
                               </ul>
                          </div>
                     </div>

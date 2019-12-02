@@ -180,8 +180,8 @@ http://www.templatemo.com/tm-509-hydro
           </div>
      </section>
 
-      <!-- FOOTER -->
-      <footer id="panggil" data-stellar-background-ratio="0.5">
+         <!-- FOOTER -->
+         <footer id="panggil" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
 
@@ -189,15 +189,16 @@ http://www.templatemo.com/tm-509-hydro
                          <div class="footer-thumb footer-info"> 
                               <h2>Serviso</h2>
                               <p>Membantu Hidup Anda Mulai Dari Hal-Hal Kecil Seperti memperbaiki Sepeda Motor, Gunakan jasa kami dan anda bisa lebih menghemat waktu</p>
+                              <p>Kontak kami jika anda mempunyai pertanyaan +62 822-316-549</p>
                          </div>
                     </div>
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Halaman Utama</h2>
+                              <h2>Rumah</h2>
                               <ul class="footer-link">
                                    <li><a href="<?php echo base_url(); ?>index.php/about_us">About Us</a></li>
-                                   <li><a href="#home">Home</a></li>
+                                   <li><a href="#home">Halaman Utama</a></li>
                                    <li><a href="#blog">Bengkel</a></li>
                                    <li><a href="#work">Testimoni</a></li>
                               </ul>
@@ -206,11 +207,11 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Services</h2>
+                              <h2>Layanan</h2>
                               <ul class="footer-link">
-                                   <li><a href="#">Pricing</a></li>
-                                   <li><a href="#">Documentation</a></li>
-                                   <li><a href="#">Support</a></li>
+                                   <li><a href="#">Terpercaya</a></li>
+                                   <li><a href="#">Cepat</a></li>
+                                   <li><a href="#">Sesuai dengan jadwal</a></li>
                               </ul>
                          </div>
                     </div>
@@ -254,7 +255,6 @@ http://www.templatemo.com/tm-509-hydro
                </div>
           </div>
      </footer>
-
 
      <!-- MODAL -->
      <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

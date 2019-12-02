@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Serviso - About Us</title>
+     <title>Serviso - Detail Pemesanan</title>
 <!-- 
 Hydro Template 
 http://www.templatemo.com/tm-509-hydro
@@ -49,10 +49,10 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="<?php echo base_url(); ?>index.php/home_user">Halaman Utama</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Bengkel</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Kesan</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Kontak</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Halaman Utama</a></li>
+                         <li><a href=a href="<?php echo base_url(); ?>index.php/home_user">Bengkel</a></li>
+                         <li><a href=a href="<?php echo base_url(); ?>index.php/home_user">Kesan</a></li>
+                         <li><a href=a href="<?php echo base_url(); ?>index.php/home_user">Kontak</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -71,7 +71,6 @@ http://www.templatemo.com/tm-509-hydro
           </div>
      </section>
 
-
      <!-- BLOG HEADER -->
      <section id="blog-header" data-stellar-background-ratio="0.5">
           <div class="overlay"></div>
@@ -87,101 +86,70 @@ http://www.templatemo.com/tm-509-hydro
      </section>
 
 
-     <!-- BLOG DETAIL -->
-     <section id="blog-detail" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
+     <div class="container">
+  <h3 class="text-center mt-5  varian-cake">MY ACCOUNT</h3>
+  <hr class="mb-4">
+</div>
 
-                    <div class="col-md-offset-1 col-md-10 col-sm-12">
-                         <!-- BLOG THUMB -->
-                         <div class="blog-detail-thumb">
-                              <div class="blog-image">
-                                   <img src="<?php echo base_url(); ?>user/images/blog-detail-image.jpg" class="img-responsive" alt="Blog Image">
-                              </div>
-                              <h2>Serviso</h2>
+<main role="main" class="container">
+  <div class="row">
+    <aside class="col-md-3 blog-sidebar">
+      <div class="p-4 account-tab-menu">
 
-                              <p>Kami membantu hidup anda mulai dari hal-hal kecil seperti memperbaiki sepeda motor, Ide kami ini berawal dari salah satu anggota team kami, yaitu baihaqi.</p>
+        <ol class="list-unstyled mt-4">
+          
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
 
-                              <blockquote>Team Serviso terdiri dari siswa kelas XIIRPL 2... yaitu Baihaqi Ilman Haydar Permana, Risma Ayu Dwi Septyani, Mutiara Cinta Shaffa'na Wibisono Putri</blockquote>
+    <div class="col-md-9 blog-main">
+      <!-- <a href="index.php?pages=histori" class="btn btn-add mt-5" style="color:#615956;"> < </a> -->
+      <!-- <h3 class=" mt-4">
+        Detail Histori
+      </h3> -->
 
-                              <ul>
-                                   <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
-                                   <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
-                                   <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
-                              </ul>
-
-                              <div class="blog-ads">
-                                   <h4>Blog Sample Advertising</h4>
-                              </div>
-                              
-                         </div>
-                    </div>
-                    
-               </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="body-checkout">
+                <p>Nama</p>
+                <p>Username</p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="body-checkout">
+                <p>Baihaqi Ilman Haydar Permana</p>
+                <p>high-quality26</p>
+              </div>
+            </div>
           </div>
-     </section>
-
-     <!-- WORK -->
-     <section id="work" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title">
-                              <h2>Team Kami</h2>
-                              <span class="line-bar">___</span>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/face-hq.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/face-hq.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <!-- <h3>Clean &amp; Minimal</h3> -->
-                                        <h3>Baihaqi Ilman Haydar Permana</h3>
-                                        <small></small>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/face-mutiara.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/face-mutiara.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <h3>Mutiara Cinta Shaffa'na Wibisono Putri</h3>
-                                        <small></small>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <!-- WORK THUMB -->
-                         <div class="work-thumb">
-                              <a href="<?php echo base_url(); ?>user/images/face-risma.jpg" class="image-popup">
-                                   <img src="<?php echo base_url(); ?>user/images/face-risma.jpg" class="img-responsive" alt="Work">
-
-                                   <div class="work-info">
-                                        <h3>Risma Ayu Dwi Septyani</h3>
-                                        <small></small>
-                                   </div>
-                              </a>
-                         </div>
-                    </div>
-
-               </div>
+          
+          <h5 class="your_id2">YOUR ID RESERVATION KC1234567</h5>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="body-checkout">
+                <p>Nama</p>
+                <p>Username</p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="body-checkout">
+                <p>Baihaqi Ilman Haydar Permana</p>
+                <p>high-quality26</p>
+              </div>
+            </div>
           </div>
-     </section>
+          
+          
+          <li><a class="section-btn2" data-toggle="modal"data-target="#modal-pesan" >Repair</a></li>
+  </div><!-- /.row -->
 
-      <!-- FOOTER -->
-      <footer id="panggil" data-stellar-background-ratio="0.5">
+</main><!-- /.container -->
+
+
+
+
+    <!-- FOOTER -->
+    <footer id="panggil" data-stellar-background-ratio="0.5">
           <div class="container">
                <div class="row">
 
@@ -189,15 +157,16 @@ http://www.templatemo.com/tm-509-hydro
                          <div class="footer-thumb footer-info"> 
                               <h2>Serviso</h2>
                               <p>Membantu Hidup Anda Mulai Dari Hal-Hal Kecil Seperti memperbaiki Sepeda Motor, Gunakan jasa kami dan anda bisa lebih menghemat waktu</p>
+                              <p>Kontak kami jika anda mempunyai pertanyaan +62 822-316-549</p>
                          </div>
                     </div>
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Halaman Utama</h2>
+                              <h2>Rumah</h2>
                               <ul class="footer-link">
                                    <li><a href="<?php echo base_url(); ?>index.php/about_us">About Us</a></li>
-                                   <li><a href="#home">Home</a></li>
+                                   <li><a href="#home">Halaman Utama</a></li>
                                    <li><a href="#blog">Bengkel</a></li>
                                    <li><a href="#work">Testimoni</a></li>
                               </ul>
@@ -206,11 +175,11 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Services</h2>
+                              <h2>Layanan</h2>
                               <ul class="footer-link">
-                                   <li><a href="#">Pricing</a></li>
-                                   <li><a href="#">Documentation</a></li>
-                                   <li><a href="#">Support</a></li>
+                                   <li><a href="#">Terpercaya</a></li>
+                                   <li><a href="#">Cepat</a></li>
+                                   <li><a href="#">Sesuai dengan jadwal</a></li>
                               </ul>
                          </div>
                     </div>
@@ -255,7 +224,6 @@ http://www.templatemo.com/tm-509-hydro
           </div>
      </footer>
 
-
      <!-- MODAL -->
      <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
@@ -273,7 +241,7 @@ http://www.templatemo.com/tm-509-hydro
 
                                    <div class="col-md-12 col-sm-12">
                                         <div class="modal-title">
-                                             <h2>Serviso</h2>
+                                             <h2>Hydro Co</h2>
                                         </div>
 
                                         <!-- NAV TABS -->

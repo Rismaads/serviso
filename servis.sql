@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01 Des 2019 pada 06.54
--- Versi Server: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Waktu pembuatan: 01 Des 2019 pada 13.59
+-- Versi server: 10.3.16-MariaDB
+-- Versi PHP: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -126,7 +126,7 @@ CREATE TABLE `nota` (
   `id_bengkel` int(225) NOT NULL,
   `jadwal` datetime DEFAULT NULL,
   `id_unit_sepeda` int(50) NOT NULL,
-  `id_admin` int(50) NOT NULL,
+  `id_admin` int(50) DEFAULT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -145,41 +145,50 @@ CREATE TABLE `unit_sepeda` (
   `kerusakan` text NOT NULL,
   `no_hp` int(15) NOT NULL,
   `alamat` text NOT NULL,
-  `id_jadwal` int(50) NOT NULL
+  `id_jadwal` int(50) NOT NULL,
+  `id_bengkel` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `unit_sepeda`
+--
+
+INSERT INTO `unit_sepeda` (`id_unit_sepeda`, `nama_pelanggan`, `no_polisi`, `jenis_sepeda`, `merk_sepeda`, `kerusakan`, `no_hp`, `alamat`, `id_jadwal`, `id_bengkel`) VALUES
+(10, 'Baihaqi', 'N 7639 WI', 'matic', 'Vario', 'Ganti Oli', 2147483647, 'Malang', 8, 9),
+(11, 'Baihaqiok', 'N 7639 WI', 'matic', 'Vario', 'Ganti Oli', 2147483647, 'Malang', 8, 9);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`),
   ADD KEY `id_level` (`id_level`) USING BTREE;
 
 --
--- Indexes for table `bengkel`
+-- Indeks untuk tabel `bengkel`
 --
 ALTER TABLE `bengkel`
   ADD PRIMARY KEY (`id_bengkel`);
 
 --
--- Indexes for table `jadwal`
+-- Indeks untuk tabel `jadwal`
 --
 ALTER TABLE `jadwal`
   ADD PRIMARY KEY (`id_jadwal`),
   ADD KEY `id_bengkel` (`id_bengkel`);
 
 --
--- Indexes for table `level`
+-- Indeks untuk tabel `level`
 --
 ALTER TABLE `level`
   ADD PRIMARY KEY (`id_level`);
 
 --
--- Indexes for table `nota`
+-- Indeks untuk tabel `nota`
 --
 ALTER TABLE `nota`
   ADD PRIMARY KEY (`id_nota`),
@@ -189,51 +198,52 @@ ALTER TABLE `nota`
   ADD KEY `id_admin` (`id_admin`) USING BTREE;
 
 --
--- Indexes for table `unit_sepeda`
+-- Indeks untuk tabel `unit_sepeda`
 --
 ALTER TABLE `unit_sepeda`
   ADD PRIMARY KEY (`id_unit_sepeda`),
-  ADD KEY `id_jadwal` (`id_jadwal`);
+  ADD KEY `id_jadwal` (`id_jadwal`),
+  ADD KEY `id_bengkel` (`id_bengkel`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id_admin` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT for table `bengkel`
+-- AUTO_INCREMENT untuk tabel `bengkel`
 --
 ALTER TABLE `bengkel`
   MODIFY `id_bengkel` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `jadwal`
+-- AUTO_INCREMENT untuk tabel `jadwal`
 --
 ALTER TABLE `jadwal`
   MODIFY `id_jadwal` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `level`
+-- AUTO_INCREMENT untuk tabel `level`
 --
 ALTER TABLE `level`
   MODIFY `id_level` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `nota`
+-- AUTO_INCREMENT untuk tabel `nota`
 --
 ALTER TABLE `nota`
   MODIFY `id_nota` int(50) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `unit_sepeda`
+-- AUTO_INCREMENT untuk tabel `unit_sepeda`
 --
 ALTER TABLE `unit_sepeda`
-  MODIFY `id_unit_sepeda` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_unit_sepeda` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -263,7 +273,8 @@ ALTER TABLE `nota`
 -- Ketidakleluasaan untuk tabel `unit_sepeda`
 --
 ALTER TABLE `unit_sepeda`
-  ADD CONSTRAINT `unit_sepeda_ibfk_1` FOREIGN KEY (`id_jadwal`) REFERENCES `jadwal` (`id_jadwal`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `unit_sepeda_ibfk_1` FOREIGN KEY (`id_jadwal`) REFERENCES `jadwal` (`id_jadwal`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `unit_sepeda_ibfk_2` FOREIGN KEY (`id_bengkel`) REFERENCES `bengkel` (`id_bengkel`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
