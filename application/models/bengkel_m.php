@@ -92,7 +92,7 @@ public function detail_bengkel($id_bengkel)
 	public function add_antrian($id_bengkel)
 	{
 		$data = array(
-			'nama_pelanggan' => $this->input->post('nama_pelanggan'),
+			'nama_pelanggan' => $this->session->userdata('username'),
 			'no_polisi' => $this->input->post('no_polisi'),
 			'jenis_sepeda' => $this->input->post('jenis_sepeda'),
 			'merk_sepeda' => $this->input->post('merk_sepeda'),
@@ -105,5 +105,11 @@ public function detail_bengkel($id_bengkel)
 
 		return $this->db->insert('unit_sepeda', $data);
 	}
+	public function get_unit()
+	{
+		return $this->db->where('nama_pelanggan', $this->session->userdata('username'))->get('unit_sepeda')->result();
+	}
+
+	
 
 }

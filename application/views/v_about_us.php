@@ -58,7 +58,7 @@ http://www.templatemo.com/tm-509-hydro
                     <ul class="nav navbar-nav navbar-right">
                          
                          <?php if ($this->session->userdata('login_user') == FALSE) : ?>
-                         <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li>
+                         <!-- <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li> -->
 
                          <?php else : ?>
 

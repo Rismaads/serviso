@@ -22,6 +22,13 @@ class detail_bengkel extends CI_Controller {
 	public function tambah_antri($id_bengkel){
 		$this->load->model('bengkel_m','bm');
 		$masuk = $this->bm->add_antrian($id_bengkel);
+		$buat_order = $this->bm->get_unit();
+		$data = array(
+			'jadwal' => date('Y-m-d'),
+			'id_unit_sepeda' => $buat_order->id_unit_sepeda,
+			'keterangan' => "pending"
+		);
+		$add = $this->db->insert('nota', $data);
 		$dt['status']=1;
 		echo json_encode($dt);
 	}

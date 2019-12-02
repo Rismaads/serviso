@@ -34,8 +34,7 @@ class bengkel extends CI_Controller {
   array('required' => 'Silahkan Isi Jam Buka '));
   $this->form_validation->set_rules('jam_tutup','JAM TUTUP', 'trim|required',
   array('required' => 'Silahkan Isi Jam Tutup '));
-  $this->form_validation->set_rules('maps','MAPS', 'trim|required',
-  array('required' => 'Silahkan Isi MAPS '));
+ 
 
   if ($this->form_validation->run() == TRUE)
   {
@@ -47,7 +46,7 @@ class bengkel extends CI_Controller {
           if($this->bengkel_m->add_bengkel($this->upload->data()) == TRUE)
           {
       $this->session->set_flashdata('pesan', 'Berhasil Tambah Bengkel');
-      redirect('/bengkel');
+      redirect('bengkel');
   }else {
   $this->session->set_flashdata('pesan', 'Gagal Tambah Bengkel');
   redirect('bengkel');

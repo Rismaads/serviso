@@ -57,9 +57,9 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#contact" class="smoothScroll">Contacts</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <!-- <ul class="nav navbar-nav navbar-right">
                          <li class="section-btn" href="#" data-toggle="modal" data-target="#modal-form" ><a >Sign in</a></li>
-                    </ul>
+                    </ul> -->
                </div>
 
           </div>
@@ -115,9 +115,24 @@ http://www.templatemo.com/tm-509-hydro
                              
                               <?php
 
-                                        foreach($bengkel as $b){
-                                             echo ' <li><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Pemesanan</a></li>
+                                        foreach($bengkel as $b)
+                                        {
+                                             if ($this->session->userdata('login_user')==true) 
+                                             {
+                                                  echo ' <li><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Pemesanan</a></li>
                                                   ';
+                                             } 
+                                             else 
+                                             {
+                                                  echo ' <li><a class="alert alert-danger">Silahkan Login Terlebih Dahulu</a></li> <br>
+                                                  ';
+                                                 
+                                                 
+                                                  echo ' <li><a class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#modal-pesan" aria-disabled="true">Pemesanan</a></li>
+                                                  ';
+                                             }
+                                             
+                                             
                                         }
                                    ?> 
                               <div class="blog-social-share"> 
@@ -294,7 +309,7 @@ http://www.templatemo.com/tm-509-hydro
                                                   <form  method="post" id="tambah_antri">
                                                   <div id="pesan_kirim"></div>
                                                        <input type="hidden" id="id_bengkel">
-                                                       <input type="name" class="form-control" id="nama_pelanggan" name="nama_pelanggan" placeholder="Nama Lengkap" required>
+                                                       
                                                        <input type="text" class="form-control" id="no_polisi" name="no_polisi" placeholder="Nomer Polisi" required>
                                                        <input type="text" class="form-control" id="jenis_sepeda" name="jenis_sepeda" placeholder="Jenis Sepeda" required>
                                                        <input type="text" class="form-control" id="merk_sepeda" name="merk_sepeda" placeholder="Merek Sepeda" required>
