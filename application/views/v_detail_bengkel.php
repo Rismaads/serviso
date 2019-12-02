@@ -96,16 +96,17 @@ http://www.templatemo.com/tm-509-hydro
                                                   </div>
                                                   <h2>Deskripsi</h2>
                                                   <p>'.$b->deskripsi.'</p><br>
+                                                  <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
+
+                                                  <section id="section-map" class="clearfix">
+                                                       <iframe src='.$b->maps.' width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                                   </section>
                                                   ';
+
+                                                
                                         }
                                    ?> 
 
-                              <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
-
-                              <section id="section-map" class="clearfix">
-                                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15804.85564004626!2d112.65020321753796!3d-7.976829896587874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x766ed6bb0b564408!2sYamaha%20putra%20sawojajar!5e0!3m2!1sen!2sid!4v1575215382768!5m2!1sen!2sid" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-                               </section>
-                              
                               <ul>
                                    <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
                                    <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
@@ -312,7 +313,7 @@ http://www.templatemo.com/tm-509-hydro
                                                        
                                                        <input type="text" class="form-control" id="no_polisi" name="no_polisi" placeholder="Nomer Polisi" required>
                                                        <input type="text" class="form-control" id="jenis_sepeda" name="jenis_sepeda" placeholder="Jenis Sepeda" required>
-                                                       <input type="text" class="form-control" id="merk_sepeda" name="merk_sepeda" placeholder="Merek Sepeda" required>
+                                                       <input type="text" class="form-control" id="merk_sepeda" name="merk_sepeda" placeholder="Merk Sepeda" required>
                                                        <input type="text" class="form-control" id="kerusakan" name="kerusakan" placeholder="Kerusakkan" required>
                                                        <textarea class="form-control" name="alamat" id="alamat" cols="30" rows="10" placeholder="Alamat" required></textarea>
                                                        <select name="id_jadwal" id="id_jadwal" class="form-control"> 

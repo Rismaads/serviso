@@ -13,7 +13,7 @@ class home_user extends CI_Controller {
 	
 	public function index()
 	{	
-			$this->load->view('v_home_user');
+			$this->load->view('v_home_user');	
 	}
 
 	public function get_bengkel()

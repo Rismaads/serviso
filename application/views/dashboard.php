@@ -53,8 +53,14 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
+            <li class="active">
                 <a href="<?php echo base_url('index.php/home_user')?>">
+                        <i class="pe-7s-graph"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                <a href="<?php echo base_url('index.php/dashboard_c')?>">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>

@@ -55,11 +55,15 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href="#blog" class="smoothScroll">Bengkel</a></li>
                          <li><a href="#work" class="smoothScroll">Kesan</a></li>
                          <li><a href="#panggil" class="smoothScroll">Kontak</a></li>
+                         <?php if($this->session->userdata('id_level') == 2) :?>
+                         <li><a href="<?=base_url()?>index.php/dashboard_c" class="smoothScroll">Dashboard</a></li>
+                         <?php endif ; ?>
+                         
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                          
-                         <?php if ($this->session->userdata('login_user') == FALSE) : ?>
+                         <?php if ($this->session->userdata('login') == FALSE) : ?>
                          <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li>
 
                          <?php else : ?>

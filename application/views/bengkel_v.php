@@ -21,7 +21,7 @@
                                     	<th>ALAMAT</th>
                                       <th>JAM BUKA</th>
                                       <th>JAM TUTUP</th>
-                                      <!-- <th>MAPS</th> -->
+                                      <th>MAPS</th>
                                         <th>ACTION</th>
                                     </thead>
                                 
@@ -39,7 +39,7 @@
                                 <td>'.$dt_bengkel->alamat.'</td>
                                 <td>'.$dt_bengkel->jadwal.'</td>
                                 <td>'.$dt_bengkel->jam_tutup.'</td>
-                                
+                                <td>'.$dt_bengkel->maps.'</td>
                                 <td><a href="#update_bengkel" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$dt_bengkel->id_bengkel.')">Update</a> 
                                 <a href="'.base_url('index.php/bengkel/hapus_bengkel/'.$dt_bengkel->id_bengkel).'" onclick="return confirm(\'anda yakin ingin menghaus data?\')" class="btn btn-danger">Delete</a></td>
                              </tr>';
@@ -68,6 +68,8 @@
             <input type="time" name="jadwal" class="form-control"></br>
             JAM TUTUP
             <input type="time" name="jam_tutup" class="form-control"></br>
+            MAPS
+            <input type="text" name="maps" class="form-control"></br>
            
             <input type="file" class="form-control" placeholder="Foto" name="foto">
 
@@ -118,6 +120,8 @@
 	        	<br>
 	        	<input type="time" class="form-control" placeholder="Jam Tutup" name="ubah_jam_tutup" id="ubah_jam_tutup">
 	        	<br>
+            <input type="text" class="form-control" placeholder="Maps" name="ubah_maps" id="ubah_maps">
+	        	<br>
             
 	        	<input type="text" class="form-control" placeholder="Nama Bengkel" name="ubah_nama_bengkel" id="ubah_nama_bengkel">
 	        	<br>
@@ -151,7 +155,7 @@
 			$("#ubah_nama_bengkel").val(data.nama_bengkel);
       $("#ubah_maps").val(data.maps);
 			$("#data_foto").val(data.foto);
-      $("#ubah_maps").val(data.maps);
+   
     });
   }
 

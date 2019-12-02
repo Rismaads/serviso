@@ -12,7 +12,7 @@ class m_login extends CI_Model {
 											'username' => $user['username'],
 											'password' => $user['password'],
 											'id_level' => $user['id_level'],
-											'login_user' => true
+											'login' => TRUE
 											);
 			$this->session->set_userdata($array);
 			return true;

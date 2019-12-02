@@ -34,7 +34,8 @@ class bengkel extends CI_Controller {
   array('required' => 'Silahkan Isi Jam Buka '));
   $this->form_validation->set_rules('jam_tutup','JAM TUTUP', 'trim|required',
   array('required' => 'Silahkan Isi Jam Tutup '));
- 
+  $this->form_validation->set_rules('maps','MAPS', 'trim|required',
+  array('required' => 'Silahkan Isi Link MAPS '));
 
   if ($this->form_validation->run() == TRUE)
   {
