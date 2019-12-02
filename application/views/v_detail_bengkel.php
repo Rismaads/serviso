@@ -112,9 +112,11 @@ http://www.templatemo.com/tm-509-hydro
                                    <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
                               </ul>
                               <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
+                             
                               <?php
+
                                         foreach($bengkel as $b){
-                                             echo ' <li><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Repair</a></li>
+                                             echo ' <li><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Pemesanan</a></li>
                                                   ';
                                         }
                                    ?> 
