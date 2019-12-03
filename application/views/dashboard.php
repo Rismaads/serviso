@@ -102,20 +102,20 @@
                     </a>
                 </li>
                 <li>
-                <li>
+                <!-- <li>
                 <a href="<?php echo base_url('index.php/Nota')?>">
                 <i class="pe-7s-news-paper"></i>
                 <p>Nota</p>   
                 </a>           
-                </li>                 
+                </li>                  -->
                 
-                <li>
+                <!-- <li>
                     <a href="<?php echo base_url('index.php/Riwayat_transaksi')?>">
                         <i class="pe-7s-map-marker"></i>
                         <p>Riwayat Transaksi</p>
                     </a>
                 </li>
-               
+                -->
 				
             </ul>
     	</div>

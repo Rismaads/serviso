@@ -126,7 +126,7 @@ http://www.templatemo.com/tm-509-hydro
                                                   $cek = $this->db->get_where('unit_sepeda',['nama_pelanggan' => $this->session->userdata('username')])->row_array();
                                                   if ($cek) 
                                                   {
-                                                       echo ' <li style="display: block !important; margin-bottom:20px; text-align:center;><a class="alert alert-danger">Anda Melebihi Batas Hari ini</a></li> <br>
+                                                       echo ' <li style="display: block !important; margin-bottom:20px; text-align:center;"><a class="alert alert-danger">Anda Telah Melakukan Pemesanan</a></li> <br>
                                                        ';
                                                       
                                                       
