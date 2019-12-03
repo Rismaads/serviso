@@ -20,6 +20,7 @@ http://www.templatemo.com/tm-509-hydro
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="<?php echo base_url(); ?>user/css/templatemo-style.css">
+     <script src="<?php echo base_url(); ?>user/js/jquery.js"></script>
 </head>
 <body>
 
@@ -87,7 +88,7 @@ http://www.templatemo.com/tm-509-hydro
 
 
      <div class="container">
-  <h3 class="text-center mt-5  varian-cake">MY ACCOUNT</h3>
+  <h3 class="text-center mt-5  varian-cake">PESANAN</h3>
   <hr class="mb-4">
 </div>
 
@@ -108,31 +109,29 @@ http://www.templatemo.com/tm-509-hydro
         Detail Histori
       </h3> -->
 
-        <h5 class="your_id2">YOUR ID RESERVATION KC1234567</h5>
+        <div id="tampil_id">
+        
+        </div>
           <div class="row">
             <div class="col-md-4">
               <div class="body-checkout">
-                <p>No. Antrian</p>
+                <p>Nama Pelanggan</p>
                 <p>Tanggal</p>
                 <p>Jadwal</p>
-                <p>Unit Sepeda</p>
+                <p>Merk Sepeda</p>
+                <p>No. Polisi</p>
+                <p>Kerusakan</p>
                 <p>Keterangan</p>
               </div>
             </div>
             <div class="col-md-8">
-              <div class="body-checkout">
-                <p>26</p>
-                <p>13-11-19</p>
-                <p>14:00-15:00</p>
-                <p>3214</p>
-                <p>Rusak serusak rusaknya</p>
+              <div class="body-checkout" id="tampil">
+                
               </div>
             </div>
           </div>
-          
           <li><a class="section-btn2" data-toggle="modal"data-target="#modal-pesan" >Repair</a></li>
-  </div><!-- /.row -->
-
+  
 </main><!-- /.container -->
 
 
@@ -271,13 +270,30 @@ http://www.templatemo.com/tm-509-hydro
           </div>
      </section>
 
+         
      <!-- SCRIPTS -->
-     <script src="<?php echo base_url(); ?>user/js/jquery.js"></script>
+     
      <script src="<?php echo base_url(); ?>user/js/bootstrap.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/jquery.stellar.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/jquery.magnific-popup.min.js"></script>
      <script src="<?php echo base_url(); ?>user/js/smoothscroll.js"></script>
      <script src="<?php echo base_url(); ?>user/js/custom.js"></script>
+     <script type="text/javascript">
+          $.getJSON("<?= base_url()?>index.php/pemesanan/get",function(data){
+               $('#tampil').html(
+                    '<p>'+data['nama_pelanggan']+'</p>'+
+                    '<p>'+data['tanggal']+'</p>'+
+                    '<p>'+data['jadwal_mulai']+' - '+data['jadwal_selesai']+'</p>'+
+                    '<p>'+data['merk_sepeda']+'</p>'+
+                    '<p>'+data['no_polisi']+'</p>'+
+                    '<p>'+data['kerusakan']+'</p>'+
+                    '<p>'+data['keterangan']+'</p>'
+               );
 
+               $('#tampil_id').html(
+                    '<h5 class="your_id2">YOUR ID RESERVATION '+data['id_nota']+'</h5>'
+               );
+          });
+     </script>
 </body>
 </html>

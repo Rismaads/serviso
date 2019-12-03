@@ -336,7 +336,7 @@ http://www.templatemo.com/tm-509-hydro
                                                        <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No Telepon" required>
                                                        
                                                        
-                                                       <button type="submit" class="btn btn-success">Submit</button>
+                                                       <input type="submit" value="submit" class="btn btn-success">
                                                        
                                                   </form>
                                              </div>
