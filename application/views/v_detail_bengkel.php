@@ -91,37 +91,47 @@ http://www.templatemo.com/tm-509-hydro
                          <div class="blog-detail-thumb">
                                    <?php
                                         foreach($bengkel as $b){
-                                             echo ' <div class="blog-image">
-                                                       <img src="'.base_url().'assets/cover_bengkel/'.$b->foto.'" class="img-responsive" alt="Blog Image">
-                                                  </div>
-                                                  <h2>Deskripsi</h2>
-                                                  <p>'.$b->deskripsi.'</p><br>
-                                                  <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus nec risus mollis tempor.</p>
-
+                                             echo ' 
+                                             <h1>'.$b->nama_bengkel.'</h1>
                                                   <section id="section-map" class="clearfix">
                                                        <iframe src='.$b->maps.' width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
                                                    </section>
+                                                   <h2>Deskripsi</h2>
+                                                  <p>'.$b->deskripsi.'</p><br>
+                                                  <h3>Jam Buka : '.$b->jadwal.'</h3> 
+                                                  <h3>Jam Tutup : '.$b->jam_tutup.'</h3> 
+                                                  <h3>Alamat : '.$b->alamat.'</h3> 
                                                   ';
 
                                                 
                                         }
                                    ?> 
 
-                              <ul>
-                                   <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
-                                   <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
-                                   <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
-                              </ul>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
-                             
+                             <br>
+
                               <?php
 
                                         foreach($bengkel as $b)
                                         {
-                                             if ($this->session->userdata('login_user')==true) 
+                                             if ($this->session->userdata('login')==true) 
                                              {
-                                                  echo ' <li><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Pemesanan</a></li>
-                                                  ';
+                                                  $cek = $this->db->get_where('unit_sepeda',['nama_pelanggan' => $this->session->userdata('username')])->row_array();
+                                                  if ($cek) 
+                                                  {
+                                                       echo ' <li><a class="alert alert-danger">Anda Melebihi Batas Hari ini</a></li> <br>
+                                                       ';
+                                                      
+                                                      
+                                                       echo ' <li><a class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#modal-pesan" aria-disabled="true">Pemesanan</a></li>
+                                                       ';
+                                                  } 
+                                                  else 
+                                                  {
+                                                       echo ' <li><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Pemesanan</a></li>
+                                                       ';
+                                                  }
+                                                  
+                                                  
                                              } 
                                              else 
                                              {
@@ -310,7 +320,6 @@ http://www.templatemo.com/tm-509-hydro
                                                   <form  method="post" id="tambah_antri">
                                                   <div id="pesan_kirim"></div>
                                                        <input type="hidden" id="id_bengkel">
-                                                       
                                                        <input type="text" class="form-control" id="no_polisi" name="no_polisi" placeholder="Nomer Polisi" required>
                                                        <input type="text" class="form-control" id="jenis_sepeda" name="jenis_sepeda" placeholder="Jenis Sepeda" required>
                                                        <input type="text" class="form-control" id="merk_sepeda" name="merk_sepeda" placeholder="Merk Sepeda" required>
@@ -324,7 +333,7 @@ http://www.templatemo.com/tm-509-hydro
                                                                  }
                                                             ?>
                                                        </select>
-                                                       <input type="telephone" class="form-control" id="no_hp" name="no_hp" placeholder="No Telepon" required>
+                                                       <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No Telepon" required>
                                                        
                                                        
                                                        <button type="submit" class="btn btn-success">Submit</button>
@@ -362,7 +371,7 @@ http://www.templatemo.com/tm-509-hydro
               event.preventDefault();
               var id_bengkel = $('#id_bengkel').val();
               var url="<?= base_url()?>index.php/detail_bengkel/tambah_antri/"+id_bengkel;
-              var formData = new FormData($("#tambah_antri")[0]);
+              var formData =  new FormData($("#tambah_antri")[0]);
                $.ajax({
                     url:url,
                     type:"post",

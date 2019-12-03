@@ -16,7 +16,7 @@
                                       <th>ID BENGKEL</th>
                                       <th>NAMA BENGKEL</th>
                                       <th>FOTO</th>
-                                      <th>STOK</th>
+                                     
                                     	<th>DESKRIPSI</th>
                                     	<th>ALAMAT</th>
                                       <th>JAM BUKA</th>
@@ -34,14 +34,14 @@
                                 <td>'.$dt_bengkel->id_bengkel.'</td>
                                 <td>'.$dt_bengkel->nama_bengkel.'</td>
                                 <td><img src="'.base_url().'assets/cover_bengkel/'.$dt_bengkel->foto.'" width="50px" /></td>
-                                <td>'.$dt_bengkel->stok.'</td>
+                             
                                 <td>'.$dt_bengkel->deskripsi.'</td>
                                 <td>'.$dt_bengkel->alamat.'</td>
                                 <td>'.$dt_bengkel->jadwal.'</td>
                                 <td>'.$dt_bengkel->jam_tutup.'</td>
                                 <td>'.$dt_bengkel->maps.'</td>
                                 <td><a href="#update_bengkel" class="btn btn-warning" data-toggle="modal" onclick="tm_detail('.$dt_bengkel->id_bengkel.')">Update</a> 
-                                <a href="'.base_url('index.php/bengkel/hapus_bengkel/'.$dt_bengkel->id_bengkel).'" onclick="return confirm(\'anda yakin ingin menghaus data?\')" class="btn btn-danger">Delete</a></td>
+                                <a href="'.base_url('index.php/bengkel/hapus_bengkel/'.$dt_bengkel->id_bengkel).'" onclick="return confirm(\'anda yakin ingin menghapus data?\')" class="btn btn-danger">Delete</a></td>
                              </tr>';
                                 }
                                 ?>
@@ -58,8 +58,7 @@
             <form action="<?php echo base_url('index.php/bengkel/add_bengkel') ?>" method="post"  enctype="multipart/form-data">
             NAMA BENGKEL
             <input type="text" name="nama_bengkel" class="form-control"></br>
-            STOK
-            <input type="text" name="stok" class="form-control"></br>
+           
             DESKRIPSI
             <input type="text" name="deskripsi" class="form-control"></br>
            ALAMAT
@@ -110,8 +109,7 @@
         <div class="modal-body">
 	        	<input type="hidden" name="ubah_id_bengkel"  id="ubah_id_bengkel">
 	        	<br>
-	        	<input type="text" class="form-control" placeholder="Stok" name="ubah_stok" id="ubah_stok">
-	        	<br>
+	        	
 	        	<input type="text" class="form-control" placeholder="Deskripsi" name="ubah_deskripsi"  id="ubah_deskripsi">
 	        	<br>
 	        	<input type="text" class="form-control" placeholder="Alamat" name="ubah_alamat" id="ubah_alamat">
@@ -147,7 +145,7 @@
 
     $.getJSON("<?=base_url()?>index.php/bengkel/get_detail_bengkel/"+id_bengkel,function(data){
       $("#ubah_id_bengkel").val(data.id_bengkel);
-			$("#ubah_stok").val(data.stok);
+		
 			$("#ubah_deskripsi").val(data.deskripsi);
 			$("#ubah_alamat").val(data.alamat);
 			$("#ubah_jadwal").val(data.jadwal);

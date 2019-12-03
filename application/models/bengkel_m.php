@@ -20,7 +20,7 @@ class bengkel_m extends CI_Model {
 	public function add_bengkel($foto)
 {
 			$arr['nama_bengkel'] = $this->input->post('nama_bengkel');
-			$arr['stok'] = $this->input->post('stok');
+			
 			$arr['deskripsi'] = $this->input->post('deskripsi');
 			$arr['alamat'] = $this->input->post('alamat');
 			$arr['jadwal'] = $this->input->post('jadwal');
@@ -56,7 +56,7 @@ public function detail_bengkel($id_bengkel)
 			{
 				$dt_up_bengkel=array(
 					'nama_bengkel' 	=> $this->input->post('ubah_nama_bengkel'),
-					'stok' 		=> $this->input->post('ubah_stok'),
+					
 					'deskripsi'			=> $this->input->post('ubah_deskripsi'),
 					'alamat'		=> $this->input->post('ubah_alamat'),
 					'jadwal'		=> $this->input->post('ubah_jadwal'),
@@ -72,7 +72,7 @@ public function detail_bengkel($id_bengkel)
 		{
 			$dt_up_bengkel=array(
 				'nama_bengkel' 	=> $this->input->post('ubah_nama_bengkel'),
-				'stok' 		=> $this->input->post('ubah_stok'),
+				
 				'deskripsi'			=> $this->input->post('ubah_deskripsi'),
 				'alamat'		=> $this->input->post('ubah_alamat'),
 				'jadwal'		=> $this->input->post('ubah_jadwal'),
@@ -87,9 +87,9 @@ public function detail_bengkel($id_bengkel)
 	{
 		return $this->db->where('id_bengkel',$id_bengkel)->delete('bengkel');
 	}
-	public function tampil_jadwal()
+	public function tampil_jadwal($id_bengkel)
 	{
-		return $this->db->get('jadwal')->result();
+		return $this->db->where('id_bengkel',$id_bengkel)->where('status',"tersedia")->get('jadwal')->result();
 	}
 	public function add_antrian($id_bengkel)
 	{
@@ -109,7 +109,7 @@ public function detail_bengkel($id_bengkel)
 	}
 	public function get_unit()
 	{
-		return $this->db->where('nama_pelanggan', $this->session->userdata('username'))->get('unit_sepeda')->result();
+		return $this->db->where('nama_pelanggan', $this->session->userdata('username'))->get('unit_sepeda')->row();
 	}
 
 	

@@ -6,7 +6,7 @@ class detail_bengkel extends CI_Controller {
 	public function index($id_bengkel)
 	{
 		$this->load->model('bengkel_m','bm');
-		$data['jadwal']=$this->bm->tampil_jadwal();
+		$data['jadwal']=$this->bm->tampil_jadwal($id_bengkel);
 		$data['bengkel']=$this->bm->get_bengkel_by_id($id_bengkel);
 		$this->load->view('v_detail_bengkel',$data);
 	}
@@ -22,15 +22,32 @@ class detail_bengkel extends CI_Controller {
 	public function tambah_antri($id_bengkel){
 		$this->load->model('bengkel_m','bm');
 		$masuk = $this->bm->add_antrian($id_bengkel);
-		$buat_order = $this->bm->get_unit();
-		$data = array(
-			'jadwal' => date('Y-m-d'),
-			'id_unit_sepeda' => $buat_order->id_unit_sepeda,
-			'keterangan' => "pending"
-		);
-		$add = $this->db->insert('nota', $data);
-		$dt['status']=1;
-		echo json_encode($dt);
+		if ($masuk) 
+		{
+			date_default_timezone_set('Asia/Jakarta');
+			$now = date("Y-m-d");
+			$data = array(
+				'tanggal' => $now,
+				'nama_pelanggan' => $this->session->userdata('username'),
+				'keterangan' => "pending",
+				'id_bengkel' => $id_bengkel
+			);
+			$in = $this->db->insert('nota', $data);
+			$get = $this->bm->get_unit();
+			$data2 = array(
+				'status' => "terpakai"
+			);
+			$in2 = $this->db->where('id_jadwal', $get->id_jadwal )->update('jadwal',$data2);
+			$dt['status']=1;
+			echo json_encode($dt);
+		} 
+		else 
+		{
+			$dt['status']=0;
+			echo json_encode($dt);
+		}
+		
+		
 	}
 	
 	
