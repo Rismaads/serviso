@@ -53,7 +53,7 @@ http://www.templatemo.com/tm-509-hydro
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#home" class="smoothScroll">Home</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">Workshop</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#work" class="smoothScroll">Testimonials</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/pemesanan" class="smoothScroll">Lihat Detail Bengkel</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#contact" class="smoothScroll">Contacts</a></li>
                     </ul>
 
