@@ -55,18 +55,6 @@ http://www.templatemo.com/tm-509-hydro
                          <li><a href=a href="<?php echo base_url(); ?>index.php/home_user">Kesan</a></li>
                          <li><a href=a href="<?php echo base_url(); ?>index.php/home_user">Kontak</a></li>
                     </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                         
-                         <?php if ($this->session->userdata('login_user') == FALSE) : ?>
-                         <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li>
-
-                         <?php else : ?>
-
-                              <li><a href="<?php echo base_url('index.php/Login/logout') ?>"><i class="fa fa-sign-out"></i></a></li>
-
-                         <?php endif ; ?>
-                    </ul>
                </div>
 
           </div>

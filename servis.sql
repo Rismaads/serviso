@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Des 2019 pada 13.51
--- Versi server: 10.3.16-MariaDB
--- Versi PHP: 7.3.7
+-- Generation Time: 03 Des 2019 pada 17.24
+-- Versi Server: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,8 +34,18 @@ CREATE TABLE `admin` (
   `username` varchar(225) NOT NULL,
   `password` varchar(225) NOT NULL,
   `id_level` int(50) DEFAULT NULL,
-  `id_bengkel` int(50) NOT NULL
+  `id_bengkel` int(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `nama_admin`, `username`, `password`, `id_level`, `id_bengkel`) VALUES
+(44, 'dwi', 'ok', '$2y$10$AfKSonZzMMECp2LggYRNQ.tPDjkNlmhMcHinMPhIrBsVxmRio9sGq', 1, NULL),
+(46, 'Fani', 'fani', '$2y$10$PyMEEGExX7cnui6yYPWYUOZgYhM2Xx.UHep.Jzvt7iNaxIs3PMhOW', 3, 18),
+(47, 'mutiara', 'mutiara', '$2y$10$WdTSY.DD5NPqdhv4ij4ljur84qtTw3PjYdVZrh73NVnCpuXFCxtTi', 2, NULL),
+(48, 'haqi', 'haqi', '$2y$10$U9DAp/oqiuYFOZFml9UtueDOkvVOvmbSkMvuKRpODNN7LqqkLCd5m', 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -81,9 +91,7 @@ CREATE TABLE `jadwal` (
 --
 
 INSERT INTO `jadwal` (`id_jadwal`, `jadwal_mulai`, `jadwal_selesai`, `id_bengkel`, `status`) VALUES
-(3, '05:00:00', '07:00:00', 18, 'terpakai'),
-(5, '07:00:00', '09:00:00', 18, 'terpakai'),
-(7, '02:00:00', '15:00:00', 18, 'terpakai');
+(3, '05:00:00', '07:00:00', 18, 'terpakai');
 
 -- --------------------------------------------------------
 
@@ -115,19 +123,17 @@ CREATE TABLE `nota` (
   `id_nota` int(50) NOT NULL,
   `nama_pelanggan` varchar(50) NOT NULL,
   `tanggal` date DEFAULT NULL,
-  `no_antrian` int(225) NOT NULL,
   `id_bengkel` int(225) NOT NULL,
   `id_admin` int(50) DEFAULT NULL,
-  `keterangan` text NOT NULL
+  `keterangan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `nota`
 --
 
-INSERT INTO `nota` (`id_nota`, `nama_pelanggan`, `tanggal`, `no_antrian`, `id_bengkel`, `id_admin`, `keterangan`) VALUES
-(34, 'user1', '2019-12-03', 0, 18, NULL, 'pending'),
-(35, 'angga', '2019-12-03', 0, 18, NULL, 'pending');
+INSERT INTO `nota` (`id_nota`, `nama_pelanggan`, `tanggal`, `id_bengkel`, `id_admin`, `keterangan`) VALUES
+(39, 'ok', '2019-12-03', 18, 46, 'diterima');
 
 -- --------------------------------------------------------
 
@@ -153,17 +159,14 @@ CREATE TABLE `unit_sepeda` (
 --
 
 INSERT INTO `unit_sepeda` (`id_unit_sepeda`, `nama_pelanggan`, `no_polisi`, `jenis_sepeda`, `merk_sepeda`, `kerusakan`, `no_hp`, `alamat`, `id_jadwal`, `id_bengkel`) VALUES
-(22, 'admin', 'AG 123 F', 'honda', 'beat', 'ban', '2147483647', 'cdcddrf', 3, 18),
-(23, 'dwi', '12adsds', '1323', 'beat', 'djk', '812121812', 'edrf', 5, 18),
-(44, 'user1', 'bbbbbbbb', 'bbbbbbbbbbb', 'bbbbbb', 'bbbbbbbbbb', '123242', 'bbbbbbb', 3, 18),
-(45, 'angga', 'qwerty', 'matic', 'Vario', 'Ganti Oli', '0898765434', 'jalannn', 7, 18);
+(49, 'ok', '12adsds', 'honda', 'beat', 'ban', '08882222', '123', 3, 18);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`),
@@ -171,26 +174,26 @@ ALTER TABLE `admin`
   ADD KEY `id_bengkel` (`id_bengkel`);
 
 --
--- Indeks untuk tabel `bengkel`
+-- Indexes for table `bengkel`
 --
 ALTER TABLE `bengkel`
   ADD PRIMARY KEY (`id_bengkel`);
 
 --
--- Indeks untuk tabel `jadwal`
+-- Indexes for table `jadwal`
 --
 ALTER TABLE `jadwal`
   ADD PRIMARY KEY (`id_jadwal`),
   ADD KEY `id_bengkel` (`id_bengkel`);
 
 --
--- Indeks untuk tabel `level`
+-- Indexes for table `level`
 --
 ALTER TABLE `level`
   ADD PRIMARY KEY (`id_level`);
 
 --
--- Indeks untuk tabel `nota`
+-- Indexes for table `nota`
 --
 ALTER TABLE `nota`
   ADD PRIMARY KEY (`id_nota`),
@@ -198,7 +201,7 @@ ALTER TABLE `nota`
   ADD KEY `id_bengkel` (`id_bengkel`);
 
 --
--- Indeks untuk tabel `unit_sepeda`
+-- Indexes for table `unit_sepeda`
 --
 ALTER TABLE `unit_sepeda`
   ADD PRIMARY KEY (`id_unit_sepeda`),
@@ -206,44 +209,44 @@ ALTER TABLE `unit_sepeda`
   ADD KEY `id_bengkel` (`id_bengkel`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_admin` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT untuk tabel `bengkel`
+-- AUTO_INCREMENT for table `bengkel`
 --
 ALTER TABLE `bengkel`
   MODIFY `id_bengkel` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT untuk tabel `jadwal`
+-- AUTO_INCREMENT for table `jadwal`
 --
 ALTER TABLE `jadwal`
   MODIFY `id_jadwal` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `level`
+-- AUTO_INCREMENT for table `level`
 --
 ALTER TABLE `level`
   MODIFY `id_level` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `nota`
+-- AUTO_INCREMENT for table `nota`
 --
 ALTER TABLE `nota`
-  MODIFY `id_nota` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_nota` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT untuk tabel `unit_sepeda`
+-- AUTO_INCREMENT for table `unit_sepeda`
 --
 ALTER TABLE `unit_sepeda`
-  MODIFY `id_unit_sepeda` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_unit_sepeda` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -254,7 +257,7 @@ ALTER TABLE `unit_sepeda`
 --
 ALTER TABLE `admin`
   ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`id_level`) REFERENCES `level` (`id_level`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `admin_ibfk_2` FOREIGN KEY (`id_admin`) REFERENCES `bengkel` (`id_bengkel`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `admin_ibfk_2` FOREIGN KEY (`id_bengkel`) REFERENCES `bengkel` (`id_bengkel`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `jadwal`

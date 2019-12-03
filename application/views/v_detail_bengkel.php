@@ -53,13 +53,21 @@ http://www.templatemo.com/tm-509-hydro
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#home" class="smoothScroll">Home</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">Workshop</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/pemesanan" class="smoothScroll">Lihat Detail Bengkel</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/pemesanan" class="smoothScroll">Lihat Detail Pemesanan</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#contact" class="smoothScroll">Contacts</a></li>
                     </ul>
 
-                    <!-- <ul class="nav navbar-nav navbar-right">
-                         <li class="section-btn" href="#" data-toggle="modal" data-target="#modal-form" ><a >Sign in</a></li>
-                    </ul> -->
+                    <ul class="nav navbar-nav navbar-right">
+                         
+                         <?php if ($this->session->userdata('login') == FALSE) : ?>
+                         <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li>
+
+                         <?php else : ?>
+
+                              <li><a href="<?php echo base_url('index.php/Login/logout') ?>"><i class="fa fa-sign-out"></i></a></li>
+
+                         <?php endif ; ?>
+                    </ul>
                </div>
 
           </div>
@@ -118,16 +126,16 @@ http://www.templatemo.com/tm-509-hydro
                                                   $cek = $this->db->get_where('unit_sepeda',['nama_pelanggan' => $this->session->userdata('username')])->row_array();
                                                   if ($cek) 
                                                   {
-                                                       echo ' <li><a class="alert alert-danger">Anda Melebihi Batas Hari ini</a></li> <br>
+                                                       echo ' <li style="display: block !important; margin-bottom:20px; text-align:center;><a class="alert alert-danger">Anda Melebihi Batas Hari ini</a></li> <br>
                                                        ';
                                                       
                                                       
-                                                       echo ' <li><a class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#modal-pesan" aria-disabled="true">Pemesanan</a></li>
+                                                       echo ' <li style="display: block !important;text-align:center;"><a class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#modal-pesan" aria-disabled="true">Pemesanan</a></li>
                                                        ';
                                                   } 
                                                   else 
                                                   {
-                                                       echo ' <li><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Pemesanan</a></li>
+                                                       echo ' <li style="display: block !important;text-align:center;"><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Pemesanan</a></li>
                                                        ';
                                                   }
                                                   
@@ -135,11 +143,11 @@ http://www.templatemo.com/tm-509-hydro
                                              } 
                                              else 
                                              {
-                                                  echo ' <li><a class="alert alert-danger">Silahkan Login Terlebih Dahulu</a></li> <br>
+                                                  echo ' <li style="display: block !important; margin-bottom:20px; text-align:center;"><a class="alert alert-danger">Silahkan Login Terlebih Dahulu</a></li> <br>
                                                   ';
                                                  
                                                  
-                                                  echo ' <li><a class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#modal-pesan" aria-disabled="true">Pemesanan</a></li>
+                                                  echo ' <li style="display: block !important;text-align:center;"><a class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#modal-pesan" aria-disabled="true">Pemesanan</a></li>
                                                   ';
                                              }
                                              
