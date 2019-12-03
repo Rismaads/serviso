@@ -51,15 +51,27 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#home" class="smoothScroll">Home</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">Workshop</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#work" class="smoothScroll">Testimonials</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user#contact" class="smoothScroll">Contacts</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Halaman Utama</a></li>
+                         <li><a href="#blog" class="smoothScroll">Bengkel</a></li>
+                         <li><a href="#work" class="smoothScroll">Kesan</a></li>
+                         <li><a href="#panggil" class="smoothScroll">Kontak</a></li>
+                         <?php if($this->session->userdata('id_level') == 2) :?>
+                         <li><a href="<?=base_url()?>index.php/dashboard_c" class="smoothScroll">Dashboard</a></li>
+                         <?php endif ; ?>
+                         
                     </ul>
 
-                    <!-- <ul class="nav navbar-nav navbar-right">
-                         <li class="section-btn" href="#" data-toggle="modal" data-target="#modal-form" ><a >Sign in</a></li>
-                    </ul> -->
+                    <ul class="nav navbar-nav navbar-right">
+                         
+                         <?php if ($this->session->userdata('login') == FALSE) : ?>
+                         <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li>
+
+                         <?php else : ?>
+
+                              <li><a href="<?php echo base_url('index.php/Login/logout') ?>"><i class="fa fa-sign-out"></i></a></li>
+
+                         <?php endif ; ?>
+                    </ul>
                </div>
 
           </div>
@@ -92,11 +104,11 @@ http://www.templatemo.com/tm-509-hydro
                                    <?php
                                         foreach($bengkel as $b){
                                              echo ' 
-                                             <h1>'.$b->nama_bengkel.'</h1>
+                                             <h1 style="margin-top:-100px">'.$b->nama_bengkel.'</h1>
                                                   <section id="section-map" class="clearfix">
                                                        <iframe src='.$b->maps.' width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
                                                    </section>
-                                                   <h2>Deskripsi</h2>
+                                                   <h2 style="margin-top: -50px">Deskripsi</h2>
                                                   <p>'.$b->deskripsi.'</p><br>
                                                   <h3>Jam Buka : '.$b->jadwal.'</h3> 
                                                   <h3>Jam Tutup : '.$b->jam_tutup.'</h3> 
@@ -135,11 +147,11 @@ http://www.templatemo.com/tm-509-hydro
                                              } 
                                              else 
                                              {
-                                                  echo ' <li><a class="alert alert-danger">Silahkan Login Terlebih Dahulu</a></li> <br>
+                                                  echo ' <li style="display: block !important; margin-bottom:20px; text-align:center;"><a class="alert alert-danger">Silahkan Login Terlebih Dahulu</a></li> <br>
                                                   ';
                                                  
                                                  
-                                                  echo ' <li><a class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#modal-pesan" aria-disabled="true">Pemesanan</a></li>
+                                                  echo ' <li style="display: block !important;text-align:center;"><a class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#modal-pesan" aria-disabled="true">Pemesanan</a></li>
                                                   ';
                                              }
                                              

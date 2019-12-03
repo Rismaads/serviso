@@ -529,8 +529,9 @@ section {
 }
 
 #blog-header,
-#blog-detail {
+#blog-detail {  
   text-align: left;
+  margin-bottom: 5em;
 }
 
 #blog-header {
@@ -585,11 +586,16 @@ section {
 }
 
 #blog-detail h2 {
-  padding: 25px 0 10px 0;
+  padding: 10px 0 10px 0;
 }
 
 .blog-info {
   padding: 75px 25px;
+}
+
+.blog-image1{
+  height: 800px;
+  width: 800px;
 }
 
 .blog-info h3 {
