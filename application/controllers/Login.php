@@ -29,6 +29,9 @@ class Login extends CI_Controller {
 						 redirect('home_user', 'refresh');
 					
 					}
+					else {
+						redirect('dashboard_bengkel', 'refresh');
+					}
 					
 				} else {
 					$this->session->set_flashdata('notif', 'Login gagal');

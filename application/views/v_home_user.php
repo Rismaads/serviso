@@ -233,6 +233,7 @@ http://www.templatemo.com/tm-509-hydro
                               <p>Membantu Hidup Anda Mulai Dari Hal-Hal Kecil Seperti memperbaiki Sepeda Motor, Gunakan jasa kami dan anda bisa lebih menghemat waktu</p>
                               <p>Kontak kami jika anda mempunyai pertanyaan +62 822-316-549</p>
                          </div>
+                         <?= $this->session->flashdata('pesan'); ?>
                     </div>
 
                     <div class="col-md-2 col-sm-4"> 
@@ -340,10 +341,11 @@ http://www.templatemo.com/tm-509-hydro
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
 
                                                   <form action="<?=base_url()?>index.php/Register/simpan_pelanggan" method="post">
-                                                  <input type="text" class="form-control" name="nama_admin" placeholder="Nama Lengkap" required>
-                                                  <input type="text" class="form-control" name="username" placeholder="Username" required>
-                                                  <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                  <input type="submit" class="form-control" name="submit" value="Submit">
+                                                       <input type="text" class="form-control" name="nama_admin" placeholder="Nama Lengkap" required>
+                                                       <input type="text" class="form-control" name="username" placeholder="Username" required>
+                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                       <input type="hidden" name="id_level" value="1">
+                                                       <input type="submit" class="form-control" name="submit" value="Submit">
                                                   </form>
                                              </div>
 
