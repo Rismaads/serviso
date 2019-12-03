@@ -56,15 +56,10 @@
             <li class="active">
                 <a href="<?php echo base_url('index.php/dashboard_c')?>">
                         <i class="pe-7s-graph"></i>
-                        <p>Home</p>
-                    </a>
-                </li>
-                <li>
-                <a href="<?php echo base_url('index.php/daftarpesanan')?>">
-                        <i class="pe-7s-graph"></i>
                         <p>Daftar Pesanan</p>
                     </a>
                 </li>
+                
         
 				
             </ul>
