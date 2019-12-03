@@ -49,16 +49,20 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="<?php echo base_url(); ?>index.php/home_user">Halaman Utama</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Bengkel</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Kesan</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Kontak</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user">Halaman Utama</a></li>
+                         <li><a href="#blog" class="smoothScroll">Bengkel</a></li>
+                         <li><a href="#work" class="smoothScroll">Kesan</a></li>
+                         <li><a href="#panggil" class="smoothScroll">Kontak</a></li>
+                         <?php if($this->session->userdata('id_level') == 2) :?>
+                         <li><a href="<?=base_url()?>index.php/dashboard_c" class="smoothScroll">Dashboard</a></li>
+                         <?php endif ; ?>
+                         
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                          
-                         <?php if ($this->session->userdata('login_user') == FALSE) : ?>
-                         <!-- <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li> -->
+                         <?php if ($this->session->userdata('login') == FALSE) : ?>
+                         <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li>
 
                          <?php else : ?>
 
@@ -94,21 +98,20 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-offset-1 col-md-10 col-sm-12">
                          <!-- BLOG THUMB -->
-                         <div class="blog-detail-thumb">
-                              <div class="blog-image">
-                                   <img src="<?php echo base_url(); ?>user/images/blog-detail-image.jpg" class="img-responsive" alt="Blog Image">
+                         <div class="blog-detail-thumb" style="margin-top:-8em;">
+                              <div class="blog-image1">
+                                   <img src="<?php echo base_url(); ?>user/images/HQ-8.png" style="height: 250px !important; width:250px !important; margin-left:300px !important" class="img-responsive" alt="Blog Image" height="1000px" width="1000px">
                               </div>
-                              <h2>Serviso</h2>
+                              <div style="margin-top:-40em;">
 
-                              <p>Kami membantu hidup anda mulai dari hal-hal kecil seperti memperbaiki sepeda motor, Ide kami ini berawal dari salah satu anggota team kami, yaitu baihaqi.</p>
-
-                              <blockquote>Team Serviso terdiri dari siswa kelas XIIRPL 2... yaitu Baihaqi Ilman Haydar Permana, Risma Ayu Dwi Septyani, Mutiara Cinta Shaffa'na Wibisono Putri</blockquote>
-
-                              <ul>
-                                   <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
-                                   <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique leo luctus.</li>
-                                   <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.</li>
-                              </ul>
+                                   <h2>Serviso</h2>
+     
+                                   <p>Kami membantu hidup anda mulai dari hal-hal kecil.</p>
+                                   <p>Seperti mulai dari memperbaiki sepeda motor anda, Ide kami bermula dari persoalan sehari hari yang dialami oleh para pekerja, mahasiswa, dan terutama orang-orang yang memakai sepeda motor untuk keperluan sehari harinya baik itu untuk alat transportasi, bekerja, disewakan dan lain lain. sesuai dengan moto kami</p>
+                                   <blockquote>KAMI MEMBANTU HIDUP ANDA MULAI DARI HAL-HAL KECIL</blockquote>
+                                   <p>Tujuan kami adalah ingin mempermudah orang orang yang memakai sepeda motor untuk keperluan sehari hari dan tidak mempunyai waktu untuk memperbaiki sepeda motornya diwaktu luang atau sudah datang kebengkel tetapi bengkel tersebut tutup dengan cara menjembatani antara pengguna dengan bengkel untuk mempermudah proses antrian dalam mengantri urutan untuk memperbaiki sepeda motor agar pengguna dapat menyesuaikan antrian dengan jadwal kesibukannya masing masing dan dapat mengetauhi kapan bengkel itu akan tutup, akan buka dan antrian mana yang belum dibooking oleh pengguna lain</p>
+                              
+                              </div>
 
                               <div class="blog-ads">
                                    <h4>Blog Sample Advertising</h4>
@@ -176,10 +179,25 @@ http://www.templatemo.com/tm-509-hydro
                          </div>
                     </div>
 
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="<?php echo base_url(); ?>user/images/HQ-9.png" class="image-popup">
+                                   <img src="<?php echo base_url(); ?>user/images/HQ-9.png" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>SERVISO</h3>
+                                        <small>Kami dari team Serviso mengucapkan termiakasih sebsar-besarnya atas bantuan teman-teman dan bapak ibu guru yang telah membantu web ini berdiri</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
                </div>
           </div>
      </section>
 
+     
          <!-- FOOTER -->
          <footer id="panggil" data-stellar-background-ratio="0.5">
           <div class="container">

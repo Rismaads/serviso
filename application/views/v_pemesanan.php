@@ -112,7 +112,7 @@ http://www.templatemo.com/tm-509-hydro
         <div id="tampil_id">
         
         </div>
-          <div class="row">
+          <div class="row" style="margin-bottom:50px; !important">
             <div class="col-md-4">
               <div class="body-checkout">
                 <p>Nama Pelanggan</p>
@@ -130,7 +130,7 @@ http://www.templatemo.com/tm-509-hydro
               </div>
             </div>
           </div>
-          <li><a class="section-btn2" data-toggle="modal"data-target="#modal-pesan" >Repair</a></li>
+          
   
 </main><!-- /.container -->
 
