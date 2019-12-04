@@ -344,7 +344,7 @@ http://www.templatemo.com/tm-509-hydro
                                                        <input type="text" class="form-control" name="nama_admin" placeholder="Nama Lengkap" required>
                                                        <input type="text" class="form-control" name="username" placeholder="Username" required>
                                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                       <input type="hidden" name="id_level" value="1">
+                                                       <input type="hidden" name="id_level" value="">
                                                        <input type="submit" class="form-control" name="submit" value="Submit">
                                                   </form>
                                              </div>

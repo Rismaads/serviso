@@ -50,9 +50,9 @@ http://www.templatemo.com/tm-509-hydro
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="<?php echo base_url(); ?>index.php/home_user">Halaman Utama</a></li>
-                         <li><a href="#blog" class="smoothScroll">Bengkel</a></li>
-                         <li><a href="#work" class="smoothScroll">Kesan</a></li>
-                         <li><a href="#panggil" class="smoothScroll">Kontak</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user#blog" class="smoothScroll">Bengkel</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user#work" class="smoothScroll">Kesan</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user#panggil" class="smoothScroll">Kontak</a></li>
                          <?php if($this->session->userdata('id_level') == 2) :?>
                          <li><a href="<?=base_url()?>index.php/dashboard_c" class="smoothScroll">Dashboard</a></li>
                          <?php endif ; ?>

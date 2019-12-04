@@ -52,12 +52,12 @@ http://www.templatemo.com/tm-509-hydro
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#home" class="smoothScroll">Home</a></li>
-                         <li><a href="<?php echo base_url(); ?>index.php/about_user" class="smoothScroll">Workshop</a></li>
+                         <li><a href="<?php echo base_url(); ?>index.php/home_user#blog" class="smoothScroll">Bengkel</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/pemesanan" class="smoothScroll">Lihat Detail Pemesanan</a></li>
                          <li><a href="<?php echo base_url(); ?>index.php/home_user#contact" class="smoothScroll">Contacts</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <!-- <ul class="nav navbar-nav navbar-right">
                          
                          <?php if ($this->session->userdata('login') == FALSE) : ?>
                          <li class="section-btn" href="#modal-form" data-toggle="modal" data-target="#modal-form"><a>Masuk</a></li>
@@ -67,7 +67,7 @@ http://www.templatemo.com/tm-509-hydro
                               <li><a href="<?php echo base_url('index.php/Login/logout') ?>"><i class="fa fa-sign-out"></i></a></li>
 
                          <?php endif ; ?>
-                    </ul>
+                    </ul> -->
                </div>
 
           </div>
@@ -100,13 +100,13 @@ http://www.templatemo.com/tm-509-hydro
                                    <?php
                                         foreach($bengkel as $b){
                                              echo ' 
-                                             <h1>'.$b->nama_bengkel.'</h1>
+                                             <h1 style="margin-top:-80px; margin-bottom:-60px;">'.$b->nama_bengkel.'</h1>
                                                   <section id="section-map" class="clearfix">
                                                        <iframe src='.$b->maps.' width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
                                                    </section>
-                                                   <h2>Deskripsi</h2>
-                                                  <p>'.$b->deskripsi.'</p><br>
-                                                  <h3>Jam Buka : '.$b->jadwal.'</h3> 
+                                                   <h2 style="margin-top:-75px;">Deskripsi</h2>
+                                                  <p style="margin-top:-10px; !important">'.$b->deskripsi.'</p><br>
+                                                  <h3 style="margin-top: -15px;">Jam Buka : '.$b->jadwal.'</h3> 
                                                   <h3>Jam Tutup : '.$b->jam_tutup.'</h3> 
                                                   <h3>Alamat : '.$b->alamat.'</h3> 
                                                   ';
@@ -123,7 +123,7 @@ http://www.templatemo.com/tm-509-hydro
                                         {
                                              if ($this->session->userdata('login')==true) 
                                              {
-                                                  $cek = $this->db->get_where('unit_sepeda',['nama_pelanggan' => $this->session->userdata('username')])->row_array();
+                                                  $cek = $this->db->get_where('unit_sepeda',['nama_pelanggan' => $this->session->userdata('username'),'id_bengkel' => $b->id_bengkel])->row_array();
                                                   if ($cek) 
                                                   {
                                                        echo ' <li style="display: block !important; margin-bottom:20px; text-align:center;"><a class="alert alert-danger">Anda Telah Melakukan Pemesanan</a></li> <br>
@@ -136,7 +136,7 @@ http://www.templatemo.com/tm-509-hydro
                                                   else 
                                                   {
                                                        echo ' <li style="display: block !important;text-align:center;"><a class="section-btn2" data-toggle="modal" onclick="tm_detail('.$b->id_bengkel.')" data-target="#modal-pesan" >Pemesanan</a></li>
-                                                       ';
+                                                            ';
                                                   }
                                                   
                                                   
