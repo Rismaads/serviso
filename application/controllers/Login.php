@@ -30,6 +30,7 @@ class Login extends CI_Controller {
 					
 					}
 					else {
+						
 						redirect('dashboard_bengkel', 'refresh');
 					}
 					
